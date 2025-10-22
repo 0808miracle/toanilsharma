@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Download, ArrowRight, Settings, Users, LineChart, Briefcase, GraduationCap, Network, Award } from 'lucide-react';
+import { Download, ArrowRight, Settings, Users, LineChart, Briefcase, GraduationCap, Network, Award, Target } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 import { useInView } from '@/hooks/useInView';
 import { useEffect, useState } from 'react';
@@ -32,7 +32,7 @@ const AnimatedCounter = ({ to }: { to: number }) => {
 const metrics = [
     { icon: Briefcase, value: 28, label: "Years Experience" },
     { icon: GraduationCap, value: 200, label: "Engineers Trained" },
-    { icon: Users, value: 40, label: "Leaders Mentored" },
+    { icon: Target, value: 40, label: "High Value Projects" },
     { icon: LineChart, value: 20, label: "Reliability Boost %" },
 ];
 
@@ -74,7 +74,7 @@ export const About = () => {
                 <Users className="w-8 h-8 mr-4 text-primary" />
                 <div>
                   <h4 className="font-semibold">Leadership & Training</h4>
-                  <p className="text-sm text-muted-foreground">Successfully trained 200+ engineers and mentored 40+ future leaders.</p>
+                  <p className="text-sm text-muted-foreground">Successfully trained 200+ engineers and delivered impactful leadership programs.</p>
                 </div>
               </CardContent>
             </Card>
