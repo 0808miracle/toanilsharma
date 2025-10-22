@@ -18,10 +18,10 @@ export const Contact = () => {
       <SectionHeader>
         <SectionLabel>Get In Touch</SectionLabel>
         <SectionTitle>
-          Ready to Transform <TextGradient>Your Reliability?</TextGradient>
+          Ready to Elevate <TextGradient>Your Operations?</TextGradient>
         </SectionTitle>
         <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-          Let's discuss how I can help you achieve operational excellence and maximize your plant reliability.
+          Let's discuss how my expertise in projects, reliability, maintenance, and training can help you achieve operational excellence.
         </p>
       </SectionHeader>
       <div className="grid lg:grid-cols-2 gap-12">
