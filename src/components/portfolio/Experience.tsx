@@ -8,19 +8,19 @@ const experienceData = [
     date: "2008 - Present",
     role: "AGM – Central Engineering Services",
     achievements: [
+      "Overseeing reliability for 15+ large-scale petrochemical plants and multiple townships.",
       "Led automation of 27 substations, removing the need for 39 personnel and boosting operational excellence.",
       "Improved system availability from 96% to 99% with an online compliance monitoring system.",
-      "Reduced spares inventory by ₹8 Cr through process re-engineering and criticality analysis.",
       "Mentored 40+ young professionals into senior roles through structured coaching.",
     ],
-    tags: ["Automation", "Reliability", "Leadership", "Cost Optimization"],
+    tags: ["Multi-Site Management", "Automation", "Reliability", "Leadership"],
   },
   {
     company: "RIL - Petroleum Retail",
     date: "2004 - 2008",
-    role: "Commissioning & Reliability Lead",
+    role: "Engineering Incharge (Commissioning & Reliability)",
     achievements: [
-      "Directed end-to-end engineering commissioning for highly automated retail outlets.",
+      "Directed end-to-end engineering commissioning across multiple sites in Punjab & Rajasthan, leading all technical disciplines.",
       "Delivered hands-on hazardous area training to 350+ technicians, achieving zero incidents.",
       "Served as RCA and Electrical Systems Trainer for in-house talent development.",
     ],

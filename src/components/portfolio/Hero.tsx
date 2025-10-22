@@ -11,7 +11,7 @@ export const Hero = () => {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center bg-secondary text-secondary-foreground rounded-full px-4 py-1 text-sm font-medium mb-4">
               <Shield className="w-4 h-4 mr-2 text-primary" />
-              Reliability Expert | Trainer | AI & Web Tools Developer
+              Reliability Expert & Trainer
             </div>
             <h1 className="font-grotesk text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
               Enhance Your
@@ -19,7 +19,7 @@ export const Hero = () => {
               <TextGradient>By Over 20%</TextGradient>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              Accomplished Reliability Expert with 28+ years of experience, specializing in <span className="font-semibold text-foreground">RCM, FMEA, and RCA</span>. I improve system reliability, design high-impact training, and build capable technical teams.
+              Accomplished Reliability Expert with 28+ years of experience improving system reliability across <span className="font-semibold text-foreground">multiple sites</span>. I design high-impact training and lead <span className="font-semibold text-foreground">diverse engineering teams</span> to achieve operational excellence.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#contact">
@@ -41,8 +41,8 @@ export const Hero = () => {
                 <p className="text-muted-foreground">Engineers Trained</p>
               </div>
               <div className="text-center">
-                <p className="font-bold text-2xl font-grotesk">40+</p>
-                <p className="text-muted-foreground">Leaders Mentored</p>
+                <p className="font-bold text-2xl font-grotesk">15+</p>
+                <p className="text-muted-foreground">Petrochemical Plants</p>
               </div>
               <div className="text-center">
                 <p className="font-bold text-2xl font-grotesk">28+</p>

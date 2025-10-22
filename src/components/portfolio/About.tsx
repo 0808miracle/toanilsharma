@@ -48,9 +48,18 @@ export const About = () => {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-lg text-muted-foreground mb-6">
-            Accomplished Reliability Expert and Trainer with over <strong>28 years</strong> of multi-sectoral experience in Electrical, Power Electronics, and Industrial Instrumentation. Adept in improving system reliability, designing and delivering high-impact training programs and building capable technical teams.
+            Accomplished Reliability Expert and Trainer with over <strong>28 years</strong> of multi-sectoral experience. Adept in improving system reliability across complex, multi-site operations, currently overseeing <strong>15+ petrochemical plants and multiple townships</strong>. I specialize in designing high-impact training programs and building capable technical teams.
           </p>
           <div className="space-y-4 mb-8">
+            <Card>
+              <CardContent className="flex items-center p-4">
+                <Network className="w-8 h-8 mr-4 text-primary" />
+                <div>
+                  <h4 className="font-semibold">Multi-Site & Multi-Discipline Leadership</h4>
+                  <p className="text-sm text-muted-foreground">Proven ability to manage all engineering disciplines across numerous large-scale sites.</p>
+                </div>
+              </CardContent>
+            </Card>
             <Card>
               <CardContent className="flex items-center p-4">
                 <Settings className="w-8 h-8 mr-4 text-primary" />
@@ -66,15 +75,6 @@ export const About = () => {
                 <div>
                   <h4 className="font-semibold">Leadership & Training</h4>
                   <p className="text-sm text-muted-foreground">Successfully trained 200+ engineers and mentored 40+ future leaders.</p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex items-center p-4">
-                <Award className="w-8 h-8 mr-4 text-primary" />
-                <div>
-                  <h4 className="font-semibold">Award-Winning Performance</h4>
-                  <p className="text-sm text-muted-foreground">Multiple awards in Safety Leadership, Learning & Development, and Business Transformation.</p>
                 </div>
               </CardContent>
             </Card>
