@@ -14,8 +14,7 @@ export const Hero = () => {
               Reliability Expert & Trainer
             </div>
             <h1 className="font-grotesk text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              Driving Industrial Excellence in
-              <TextGradient>Projects, Reliability, Maintenance & Training</TextGradient>
+              Driving Industrial Excellence in <TextGradient>Projects, Reliability, Maintenance & Training</TextGradient>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
               With 28+ years of experience, I deliver comprehensive solutions—from leading complex <span className="font-semibold text-foreground">projects</span> and optimizing <span className="font-semibold text-foreground">maintenance</span> to enhancing system <span className="font-semibold text-foreground">reliability</span> and delivering world-class <span className="font-semibold text-foreground">training</span>.
