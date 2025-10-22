@@ -56,9 +56,12 @@ export const Header = () => {
     >
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a href="#home" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold bg-primary text-primary-foreground w-10 h-10 flex items-center justify-center rounded-md">AS</span>
-            <span className="font-grotesk font-bold text-lg">Reliability Expert</span>
+          <a href="#home" className="flex items-center space-x-3">
+            <span className="text-2xl font-bold bg-primary text-primary-foreground w-10 h-10 flex items-center justify-center rounded-md flex-shrink-0">AS</span>
+            <div>
+              <span className="font-grotesk font-bold text-lg leading-tight block">Anil Sharma</span>
+              <span className="text-xs text-muted-foreground leading-tight block">Reliability Expert & Trainer</span>
+            </div>
           </a>
 
           <nav className="hidden md:flex items-center space-x-6">
