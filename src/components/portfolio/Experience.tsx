@@ -10,10 +10,12 @@ const experienceData = [
     achievements: [
       "Overseeing reliability for 15+ large-scale petrochemical plants and multiple townships.",
       "Led commissioning of major petrochemical plants including PTA, PET, GCU, and Utilities (2008-2016).",
-      "Led automation of 27 substations, removing the need for 39 personnel and boosting operational excellence.",
+      "Engineered and implemented a PLC-based Electrical Distribution & Load Shedding System across 27 substations (220KV to 6.6KV), automating operations and eliminating the need for 39 personnel.",
+      "Managed the end-to-end lifecycle of minor projects across the complex, ensuring timely completion and adherence to Management of Change (MOC) protocols.",
+      "Serve as a SHRM Certified Facilitator, DVN Certified IMS Auditor, and Process & Electrical Safety Auditor for the complex.",
       "Mentored 40+ young professionals into senior roles through structured coaching.",
     ],
-    tags: ["Multi-Site Management", "Commissioning", "Automation", "Leadership"],
+    tags: ["Multi-Site Management", "Commissioning", "Automation", "Leadership", "Project Management", "Safety Audits"],
   },
   {
     company: "RIL - Petroleum Retail",
