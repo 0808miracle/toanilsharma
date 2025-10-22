@@ -1,17 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
-
-import { MadeWithDyad } from "@/components/made-with-dyad";
+import { Header } from '@/components/portfolio/Header';
+import { Hero } from '@/components/portfolio/Hero';
+import { About } from '@/components/portfolio/About';
+import { Expertise } from '@/components/portfolio/Expertise';
+import { Experience } from '@/components/portfolio/Experience';
+import { Projects } from '@/components/portfolio/Projects';
+import { Testimonials } from '@/components/portfolio/Testimonials';
+import { Contact } from '@/components/portfolio/Contact';
+import { Footer } from '@/components/portfolio/Footer';
+import { BackToTopButton } from '@/components/portfolio/BackToTopButton';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">
-          Start building your amazing project here!
-        </p>
-      </div>
-      <MadeWithDyad />
+    <div className="bg-background text-foreground">
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Expertise />
+        <Experience />
+        <Projects />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
+      <BackToTopButton />
     </div>
   );
 };
