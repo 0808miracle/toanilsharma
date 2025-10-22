@@ -9,33 +9,33 @@ const experienceData = [
     role: "AGM – Central Engineering Services",
     achievements: [
       "Overseeing reliability for 15+ large-scale petrochemical plants and multiple townships.",
+      "Led commissioning of major petrochemical plants including PTA, PET, GCU, and Utilities (2008-2016).",
       "Led automation of 27 substations, removing the need for 39 personnel and boosting operational excellence.",
-      "Improved system availability from 96% to 99% with an online compliance monitoring system.",
       "Mentored 40+ young professionals into senior roles through structured coaching.",
     ],
-    tags: ["Multi-Site Management", "Automation", "Reliability", "Leadership"],
+    tags: ["Multi-Site Management", "Commissioning", "Automation", "Leadership"],
   },
   {
     company: "RIL - Petroleum Retail",
     date: "2004 - 2008",
     role: "Engineering Incharge (Commissioning & Reliability)",
     achievements: [
-      "Directed end-to-end engineering commissioning across multiple sites in Punjab & Rajasthan, leading all technical disciplines.",
+      "Independently managed end-to-end commissioning of retail outlets across Punjab & Rajasthan, from design to legal compliance.",
       "Delivered hands-on hazardous area training to 350+ technicians, achieving zero incidents.",
       "Served as RCA and Electrical Systems Trainer for in-house talent development.",
     ],
-    tags: ["Project Management", "Safety Training", "Commissioning"],
+    tags: ["Project Management", "End-to-End Commissioning", "Safety Training"],
   },
   {
     company: "Ambuja Cements Ltd.",
     date: "1995 - 2004",
     role: "Engineer – Electrical & Instrumentation",
     achievements: [
-      "Participated in commissioning of a greenfield 2.5 MT Cement Plant.",
+      "Key member of the commissioning team for a 2.5 MTPA greenfield cement plant in Punjab (1995-2000).",
       "Spearheaded plant-wide automation and energy-saving projects, reducing energy usage by 2.5%.",
       "Automated substation and capacitor systems, improving power factor and system uptime.",
     ],
-    tags: ["Energy Efficiency", "Plant Commissioning", "Automation"],
+    tags: ["Cement Plant Commissioning", "Energy Efficiency", "Automation"],
   },
 ];
 

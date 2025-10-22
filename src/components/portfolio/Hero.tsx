@@ -14,9 +14,9 @@ export const Hero = () => {
               Reliability Expert & Trainer
             </div>
             <h1 className="font-grotesk text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              Enhance Your
-              <span className="block">Plant Reliability</span>
-              <TextGradient>By Over 20%</TextGradient>
+              Mastering Reliability for
+              <span className="block">Complex Industrial Assets</span>
+              <TextGradient>Boosting Uptime by 20%+</TextGradient>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
               Accomplished Reliability Expert with 28+ years of experience improving system reliability across <span className="font-semibold text-foreground">multiple sites</span>. I design high-impact training and lead <span className="font-semibold text-foreground">diverse engineering teams</span> to achieve operational excellence.
