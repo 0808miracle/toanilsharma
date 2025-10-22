@@ -14,12 +14,11 @@ export const Hero = () => {
               Reliability Expert & Trainer
             </div>
             <h1 className="font-grotesk text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              Mastering Reliability for
-              <span className="block">Complex Industrial Assets</span>
-              <TextGradient>Boosting Uptime by 20%+</TextGradient>
+              Driving Industrial Excellence in
+              <TextGradient>Projects, Reliability, Maintenance & Training</TextGradient>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              Accomplished Reliability Expert with 28+ years of experience improving system reliability across <span className="font-semibold text-foreground">multiple sites</span>. I design high-impact training and lead <span className="font-semibold text-foreground">diverse engineering teams</span> to achieve operational excellence.
+              With 28+ years of experience, I deliver comprehensive solutions—from leading complex <span className="font-semibold text-foreground">projects</span> and optimizing <span className="font-semibold text-foreground">maintenance</span> to enhancing system <span className="font-semibold text-foreground">reliability</span> and delivering world-class <span className="font-semibold text-foreground">training</span>.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#contact">
