@@ -8,20 +8,21 @@ const experienceData = [
     date: "2008 - Present",
     role: "AGM – Central Engineering Services",
     achievements: [
-      "Automated 27 substations, redeploying 39 personnel",
-      "Increased system availability from 96% to 99%",
-      "Reduced spares inventory by 50% through optimization",
+      "Led automation of 27 substations, removing the need for 39 personnel and boosting operational excellence.",
+      "Improved system availability from 96% to 99% with an online compliance monitoring system.",
+      "Reduced spares inventory by ₹8 Cr through process re-engineering and criticality analysis.",
+      "Mentored 40+ young professionals into senior roles through structured coaching.",
     ],
-    tags: ["Automation", "Reliability", "Cost Optimization"],
+    tags: ["Automation", "Reliability", "Leadership", "Cost Optimization"],
   },
   {
-    company: "RIL Petroleum Retail",
+    company: "RIL - Petroleum Retail",
     date: "2004 - 2008",
     role: "Commissioning & Reliability Lead",
     achievements: [
-      "Led commissioning of 15 high-automation retail outlets",
-      "Trained 350+ technicians in hazardous area operations",
-      "Achieved record-time project delivery",
+      "Directed end-to-end engineering commissioning for highly automated retail outlets.",
+      "Delivered hands-on hazardous area training to 350+ technicians, achieving zero incidents.",
+      "Served as RCA and Electrical Systems Trainer for in-house talent development.",
     ],
     tags: ["Project Management", "Safety Training", "Commissioning"],
   },
@@ -30,9 +31,9 @@ const experienceData = [
     date: "1995 - 2004",
     role: "Engineer – Electrical & Instrumentation",
     achievements: [
-      "Commissioned greenfield 2.5 MT Cement Plant",
-      "Reduced energy consumption by 2.5%",
-      "Implemented plant-wide automation systems",
+      "Participated in commissioning of a greenfield 2.5 MT Cement Plant.",
+      "Spearheaded plant-wide automation and energy-saving projects, reducing energy usage by 2.5%.",
+      "Automated substation and capacitor systems, improving power factor and system uptime.",
     ],
     tags: ["Energy Efficiency", "Plant Commissioning", "Automation"],
   },
@@ -52,21 +53,21 @@ export const Experience = () => {
         {experienceData.map((item, index) => (
           <div key={index} className="relative mb-12">
             <div className="absolute left-1/2 -translate-x-1/2 top-1 w-4 h-4 bg-primary rounded-full border-4 border-secondary"></div>
-            <div className="md:w-5/12 p-6 bg-background rounded-lg shadow-md ml-auto md:ml-[54%]">
-              <div className="flex justify-between items-start mb-2">
+            <div className={`md:w-5/12 p-6 bg-background rounded-lg shadow-md ${index % 2 === 0 ? 'ml-auto md:ml-[54%]' : 'mr-auto md:mr-[54%] md:text-right'}`}>
+              <div className={`flex items-start mb-2 ${index % 2 === 0 ? 'justify-between' : 'md:flex-row-reverse justify-between'}`}>
                 <h3 className="font-bold text-lg">{item.company}</h3>
                 <span className="text-sm text-muted-foreground">{item.date}</span>
               </div>
               <h4 className="font-semibold text-primary mb-4">{item.role}</h4>
               <ul className="space-y-2 mb-4">
                 {item.achievements.map((ach, i) => (
-                  <li key={i} className="flex items-start text-sm">
-                    <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
+                  <li key={i} className={`flex items-start text-sm ${index % 2 !== 0 && 'md:flex-row-reverse'}`}>
+                    <CheckCircle className={`w-4 h-4 mt-0.5 text-green-500 flex-shrink-0 ${index % 2 === 0 ? 'mr-2' : 'md:ml-2'}`} />
                     <span>{ach}</span>
                   </li>
                 ))}
               </ul>
-              <div className="flex flex-wrap gap-2">
+              <div className={`flex flex-wrap gap-2 ${index % 2 !== 0 && 'md:justify-end'}`}>
                 {item.tags.map((tag, i) => (
                   <Badge key={i} variant="secondary">{tag}</Badge>
                 ))}

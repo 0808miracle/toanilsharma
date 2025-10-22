@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Download, ArrowRight, Settings, Users, LineChart, Briefcase, GraduationCap, Network, Percent, Award } from 'lucide-react';
+import { Download, ArrowRight, Settings, Users, LineChart, Briefcase, GraduationCap, Network, Award } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 import { useInView } from '@/hooks/useInView';
 import { useEffect, useState } from 'react';
@@ -32,8 +32,8 @@ const AnimatedCounter = ({ to }: { to: number }) => {
 const metrics = [
     { icon: Briefcase, value: 28, label: "Years Experience" },
     { icon: GraduationCap, value: 200, label: "Engineers Trained" },
-    { icon: Network, value: 50, label: "Projects Completed" },
-    { icon: Percent, value: 99, label: "Success Rate" },
+    { icon: Users, value: 40, label: "Leaders Mentored" },
+    { icon: LineChart, value: 20, label: "Reliability Boost %" },
 ];
 
 export const About = () => {
@@ -48,7 +48,7 @@ export const About = () => {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-lg text-muted-foreground mb-6">
-            With over <strong>28 years</strong> of hands-on experience across manufacturing, oil & gas, and cement industries, I've dedicated my career to transforming how organizations approach reliability and maintenance.
+            Accomplished Reliability Expert and Trainer with over <strong>28 years</strong> of multi-sectoral experience in Electrical, Power Electronics, and Industrial Instrumentation. Adept in improving system reliability, designing and delivering high-impact training programs and building capable technical teams.
           </p>
           <div className="space-y-4 mb-8">
             <Card>
@@ -56,7 +56,7 @@ export const About = () => {
                 <Settings className="w-8 h-8 mr-4 text-primary" />
                 <div>
                   <h4 className="font-semibold">Proven Methodologies</h4>
-                  <p className="text-sm text-muted-foreground">Expert in RCM, FMEA, and RCA implementation with measurable results.</p>
+                  <p className="text-sm text-muted-foreground">Expertise in RCM, FMEA, RCA, and electrical safety standards (IEC, IEEE, ISO).</p>
                 </div>
               </CardContent>
             </Card>
@@ -64,17 +64,17 @@ export const About = () => {
               <CardContent className="flex items-center p-4">
                 <Users className="w-8 h-8 mr-4 text-primary" />
                 <div>
-                  <h4 className="font-semibold">Knowledge Transfer</h4>
-                  <p className="text-sm text-muted-foreground">Trained 200+ engineers in reliability best practices and safety protocols.</p>
+                  <h4 className="font-semibold">Leadership & Training</h4>
+                  <p className="text-sm text-muted-foreground">Successfully trained 200+ engineers and mentored 40+ future leaders.</p>
                 </div>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="flex items-center p-4">
-                <LineChart className="w-8 h-8 mr-4 text-primary" />
+                <Award className="w-8 h-8 mr-4 text-primary" />
                 <div>
-                  <h4 className="font-semibold">Tangible Results</h4>
-                  <p className="text-sm text-muted-foreground">Average 20% reliability improvement across all client engagements.</p>
+                  <h4 className="font-semibold">Award-Winning Performance</h4>
+                  <p className="text-sm text-muted-foreground">Multiple awards in Safety Leadership, Learning & Development, and Business Transformation.</p>
                 </div>
               </CardContent>
             </Card>
@@ -99,7 +99,7 @@ export const About = () => {
             {/* You can replace the src above with "/images/anil-sharma-about.jpg" after adding your image to the public/images folder. */}
             <div className="absolute -bottom-4 -right-4 bg-background p-3 rounded-full shadow-lg flex items-center space-x-2 text-sm font-semibold">
               <Award className="w-5 h-5 text-primary" />
-              <span>ISO Certified</span>
+              <span>SHRM Certified</span>
             </div>
           </div>
         </div>

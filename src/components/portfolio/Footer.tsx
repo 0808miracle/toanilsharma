@@ -12,7 +12,7 @@ export const Footer = () => {
             </div>
             <p className="text-sm text-muted-foreground">Transforming industrial reliability through expertise, innovation, and dedication to excellence.</p>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/in/anil-sharma-a4822918" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
+              <a href="https://www.linkedin.com/in/toanilsharma" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
               <a href="mailto:toanilsharma@gmail.com" className="text-muted-foreground hover:text-primary"><Mail /></a>
               <a href="tel:+917600025028" className="text-muted-foreground hover:text-primary"><Phone /></a>
             </div>
@@ -31,7 +31,6 @@ export const Footer = () => {
               <h4 className="font-semibold mb-4">Digital Platforms</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="http://toolboxtalk.co.in" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">ToolboxTalk</a></li>
-                <li><a href="http://electrosafe.homes" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">ElectroSafe</a></li>
                 <li><a href="http://designcalculators.co.in" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Design Calculators</a></li>
               </ul>
             </div>

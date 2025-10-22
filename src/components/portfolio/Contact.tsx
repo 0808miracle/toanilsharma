@@ -7,8 +7,8 @@ import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from
 
 const contactDetails = [
   { icon: Phone, title: "Phone", lines: ["+91 7600025028", "+91 9724179160"], hrefs: ["tel:+917600025028", "tel:+919724179160"] },
-  { icon: Mail, title: "Email", lines: ["toanilsharma@gmail.com"], hrefs: ["mailto:toanilsharma@gmail.com"] },
-  { icon: Linkedin, title: "LinkedIn", lines: ["Connect on LinkedIn"], hrefs: ["https://www.linkedin.com/in/anil-sharma-a4822918"] },
+  { icon: Mail, title: "Email", lines: ["toanilsharma@gmail.com", "anil_roopnagar@yahoo.com"], hrefs: ["mailto:toanilsharma@gmail.com", "mailto:anil_roopnagar@yahoo.com"] },
+  { icon: Linkedin, title: "LinkedIn", lines: ["/in/toanilsharma"], hrefs: ["https://www.linkedin.com/in/toanilsharma"] },
   { icon: MapPin, title: "Location", lines: ["Mumbai, India", "Available for global projects"] },
 ];
 

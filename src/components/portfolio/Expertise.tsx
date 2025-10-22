@@ -3,21 +3,21 @@ import { Settings, Zap, Bot, Presentation, Shield, Laptop } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 
 const expertiseData = [
-  { icon: Settings, title: "Reliability Engineering", description: "Advanced RCM, FMEA, and RCA implementation for maximum asset performance.", features: ["Reliability Centered Maintenance", "Failure Mode Analysis", "Root Cause Analysis", "Asset Lifecycle Management"] },
-  { icon: Zap, title: "Electrical Systems", description: "Comprehensive electrical infrastructure optimization and safety enhancement.", features: ["Power Distribution Systems", "UPS & Backup Solutions", "Motor Control Centers", "HT/LT Switchyards"] },
-  { icon: Bot, title: "Industrial Automation", description: "Cutting-edge automation solutions for enhanced operational efficiency.", features: ["PLC Programming & Integration", "SCADA Systems", "DCS Implementation", "Process Optimization"] },
-  { icon: Presentation, title: "Training & Development", description: "Transformative training programs that build high-performing technical teams.", features: ["Technical Skills Development", "Safety Training Programs", "Leadership Development", "SHRM Certified Training"] },
-  { icon: Shield, title: "Safety & Compliance", description: "Ensuring operational excellence through rigorous safety standards.", features: ["IEC 61508 Compliance", "NFPA Standards", "Safety Audits", "Risk Assessment"] },
-  { icon: Laptop, title: "Digital Solutions", description: "Innovative engineering tools and AI-powered platforms.", features: ["AI-Based Safety Tools", "Engineering Calculators", "Web Applications", "Technical Consulting"] },
+  { icon: Settings, title: "Reliability Engineering", description: "Enhancing asset performance and lifecycle through proven methodologies.", features: ["RCA & FMEA", "Asset Lifecycle Management", "Predictive Maintenance", "SAP-PM"] },
+  { icon: Zap, title: "Electrical & Instrumentation", description: "Expertise in power systems, drives, and control instrumentation.", features: ["UPS, Inverters, Batteries", "HT/LT Motors & Switch-yards", "MCC/PCC", "CP Systems"] },
+  { icon: Bot, title: "Automation Systems", description: "Implementing robust automation for process and building efficiency.", features: ["PLC & DCS", "SCADA Systems", "OFC Networks", "Load Shedding Systems"] },
+  { icon: Presentation, title: "Training & Development", description: "Designing and delivering high-impact technical training as a SHRM Certified Trainer.", features: ["Technical Facilitation", "Learning Design", "Leadership Mentoring", "Safety Programs"] },
+  { icon: Shield, title: "Standards & Compliance", description: "Ensuring operational safety and excellence through rigorous standards.", features: ["IEC 61508, NFPA, IS/IEEE", "ISO 9001/14001/55000", "Safety Audits", "Risk Assessment"] },
+  { icon: Laptop, title: "AI & Digital Solutions", description: "Developing innovative AI-powered and web-based engineering tools.", features: ["AI-Based Tool Development", "Web Safety Applications", "User-Centric UI Design", "Engineering Calculators"] },
 ];
 
 export const Expertise = () => {
   return (
     <Section id="expertise">
       <SectionHeader>
-        <SectionLabel>What I Do</SectionLabel>
+        <SectionLabel>Core Competencies</SectionLabel>
         <SectionTitle>
-          Comprehensive <TextGradient>Reliability Solutions</TextGradient>
+          A Spectrum of <TextGradient>Technical Expertise</TextGradient>
         </SectionTitle>
       </SectionHeader>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

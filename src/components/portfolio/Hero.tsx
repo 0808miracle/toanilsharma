@@ -11,15 +11,15 @@ export const Hero = () => {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center bg-secondary text-secondary-foreground rounded-full px-4 py-1 text-sm font-medium mb-4">
               <Shield className="w-4 h-4 mr-2 text-primary" />
-              28+ Years of Excellence
+              Reliability Expert | Trainer | AI & Web Tools Developer
             </div>
             <h1 className="font-grotesk text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              Transform Your
+              Enhance Your
               <span className="block">Plant Reliability</span>
-              <TextGradient>By 20%</TextGradient>
+              <TextGradient>By Over 20%</TextGradient>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              Senior Reliability Expert specializing in <span className="font-semibold text-foreground">RCM</span>, <span className="font-semibold text-foreground">FMEA</span>, and <span className="font-semibold text-foreground">RCA</span> methodologies. I help industrial plants maximize uptime, reduce costs, and achieve operational excellence.
+              Accomplished Reliability Expert with 28+ years of experience, specializing in <span className="font-semibold text-foreground">RCM, FMEA, and RCA</span>. I improve system reliability, design high-impact training, and build capable technical teams.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#contact">
@@ -31,7 +31,7 @@ export const Hero = () => {
               <a href="#projects">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto">
                   <PlayCircle className="mr-2 h-5 w-5" />
-                  View Success Stories
+                  View My Projects
                 </Button>
               </a>
             </div>
@@ -41,12 +41,12 @@ export const Hero = () => {
                 <p className="text-muted-foreground">Engineers Trained</p>
               </div>
               <div className="text-center">
-                <p className="font-bold text-2xl font-grotesk">50+</p>
-                <p className="text-muted-foreground">Projects Delivered</p>
+                <p className="font-bold text-2xl font-grotesk">40+</p>
+                <p className="text-muted-foreground">Leaders Mentored</p>
               </div>
               <div className="text-center">
-                <p className="font-bold text-2xl font-grotesk">99%</p>
-                <p className="text-muted-foreground">Client Satisfaction</p>
+                <p className="font-bold text-2xl font-grotesk">28+</p>
+                <p className="text-muted-foreground">Years of Experience</p>
               </div>
             </div>
           </div>

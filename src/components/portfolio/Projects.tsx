@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, ExternalLink, BrainCircuit, Shield, Clock } from 'lucide-react';
+import { ArrowRight, BrainCircuit, Shield, Clock, Calculator } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 
 const projectsData = [
@@ -9,8 +9,8 @@ const projectsData = [
     featured: true,
     image: "/placeholder.svg",
     title: "ToolboxTalk.co.in",
-    badge: "AI-Powered",
-    description: "Revolutionary AI platform that instantly generates structured toolbox talks for site engineers, mapping hazards and mitigation strategies based on industry safety standards.",
+    badge: "AI-Powered Safety",
+    description: "Independently designed and launched India’s first AI-powered free platform that enables site engineers and supervisors to instantly generate structured toolbox talks by simply entering the work activity. The tool intelligently maps hazards, risk scenarios, and mitigation plans based on industry safety norms (IEC, OSHA, IS).",
     features: [
       { icon: BrainCircuit, text: "AI Generation" },
       { icon: Shield, text: "Safety Focused" },
@@ -20,18 +20,10 @@ const projectsData = [
   },
   {
     image: "/placeholder.svg",
-    title: "ElectroSafe.homes",
-    badge: "Free Tool",
-    description: "AI-powered residential electrical safety tool that helps non-technical users identify and mitigate hazards with simple, actionable guidance.",
-    tags: ["AI", "Safety", "Accessibility"],
-    link: "http://electrosafe.homes",
-  },
-  {
-    image: "/placeholder.svg",
     title: "DesignCalculators.co.in",
-    badge: "Engineering Tools",
-    description: "Comprehensive platform of online engineering calculators aligned with international standards for electrical, mechanical, and instrumentation engineers.",
-    tags: ["Calculators", "Standards", "Engineering"],
+    badge: "Free Engineering Tools",
+    description: "Initiated and built a free online engineering calculators platform enabling electrical, mechanical, and instrumentation engineers to perform precise calculations aligned with international standards (IEC, IEEE, NFPA, NEC, ASME, etc.).",
+    tags: ["Calculators", "Standards", "Engineering", "Free Resource"],
     link: "http://designcalculators.co.in",
   },
 ];
@@ -47,11 +39,11 @@ export const Projects = () => {
       </SectionHeader>
       <div className="grid lg:grid-cols-2 gap-8">
         {projectsData.map((project, index) => (
-          <Card key={index} className={project.featured ? "lg:col-span-2 flex flex-col md:flex-row overflow-hidden" : "overflow-hidden"}>
+          <Card key={index} className={project.featured ? "lg:col-span-2 flex flex-col md:flex-row overflow-hidden" : "overflow-hidden flex flex-col"}>
             <div className={project.featured ? "md:w-1/2" : ""}>
-              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+              <img src={project.image} alt={project.title} className="w-full h-48 md:h-full object-cover" />
             </div>
-            <div className={project.featured ? "md:w-1/2 p-8 flex flex-col" : "p-6"}>
+            <div className={project.featured ? "md:w-1/2 p-8 flex flex-col" : "p-6 flex flex-col flex-grow"}>
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-bold text-xl">{project.title}</h3>
                 <Badge>{project.badge}</Badge>
