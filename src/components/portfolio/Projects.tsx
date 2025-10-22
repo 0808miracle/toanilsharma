@@ -7,7 +7,7 @@ import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from
 const projectsData = [
   {
     featured: true,
-    image: "/placeholder.svg",
+    image: "/images/toolboxtalk.png",
     title: "ToolboxTalk.co.in",
     badge: "AI-Powered Safety",
     description: "Independently designed and launched India’s first AI-powered free platform that enables site engineers and supervisors to instantly generate structured toolbox talks by simply entering the work activity. The tool intelligently maps hazards, risk scenarios, and mitigation plans based on industry safety norms (IEC, OSHA, IS).",
@@ -19,7 +19,7 @@ const projectsData = [
     link: "http://toolboxtalk.co.in",
   },
   {
-    image: "/placeholder.svg",
+    image: "/images/designcalculators.png",
     title: "DesignCalculators.co.in",
     badge: "Free Engineering Tools",
     description: "Initiated and built a free online engineering calculators platform enabling electrical, mechanical, and instrumentation engineers to perform precise calculations aligned with international standards (IEC, IEEE, NFPA, NEC, ASME, etc.).",
