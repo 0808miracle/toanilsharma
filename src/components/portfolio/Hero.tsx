@@ -52,11 +52,10 @@ export const Hero = () => {
             <div className="relative w-full max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary to-blue-500 rounded-full blur-2xl opacity-20"></div>
               <img
-                src="/placeholder.svg"
+                src="/images/anil-sharma.png"
                 alt="Anil Sharma - Reliability Expert"
                 className="relative w-full h-auto rounded-full border-8 border-background shadow-2xl"
               />
-              {/* You can replace the src above with "/images/anil-sharma.jpg" after adding your image to the public/images folder. */}
             </div>
           </div>
         </div>

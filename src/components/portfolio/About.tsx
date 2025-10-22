@@ -95,8 +95,7 @@ export const About = () => {
         <div className="relative">
           <div className="relative w-full max-w-md mx-auto">
             <div className="absolute -inset-2 bg-gradient-to-tr from-primary to-blue-500 rounded-lg blur-xl opacity-20"></div>
-            <img src="/placeholder.svg" alt="Anil Sharma" className="relative w-full h-auto rounded-lg shadow-2xl" />
-            {/* You can replace the src above with "/images/anil-sharma-about.jpg" after adding your image to the public/images folder. */}
+            <img src="/images/anil-sharma.png" alt="Anil Sharma" className="relative w-full h-auto rounded-lg shadow-2xl" />
             <div className="absolute -bottom-4 -right-4 bg-background p-3 rounded-full shadow-lg flex items-center space-x-2 text-sm font-semibold">
               <Award className="w-5 h-5 text-primary" />
               <span>SHRM Certified</span>
