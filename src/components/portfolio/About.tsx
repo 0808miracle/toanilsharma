@@ -85,7 +85,7 @@ export const About = () => {
                 Work With Me <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
-            <a href="/Anil-Sharma-Resume.pdf" download>
+            <a href="/Anil-Sharma-CV-2025.docx" download>
               <Button size="lg" variant="outline" className="w-full sm:w-auto">
                 <Download className="mr-2 h-5 w-5" /> Download Resume
               </Button>
