@@ -10,7 +10,7 @@ const projectsData = [
     image: "/images/designcalculators.png",
     title: "DesignCalculators.co.in",
     badge: "Engineering Cloud",
-    description: "A massive library of 150+ calculators for electrical, mechanical, and instrumentation engineering.",
+    description: "I created this massive library of 150+ calculators to help electrical, mechanical, and instrumentation engineers perform complex design validations with a 100% free and ad-free experience.",
     caseStudy: {
       goal: "Centralize multi-disciplinary engineering calculations under one digital roof.",
       action: "Built a standards-based validator suite for NFPA, IEEE, and ASME.",
@@ -23,7 +23,7 @@ const projectsData = [
     image: "/images/reliabilitytools.png",
     title: "ReliabilityTools.co.in",
     badge: "Industrial Engineering",
-    description: "A professional-grade reliability suite for industrial modeling and asset optimization.",
+    description: "Developed as a professional-grade suite to help the community master industrial modeling and asset optimization through high-precision, accessible digital tools.",
     caseStudy: {
       goal: "Eliminate manual modeling errors in complex reliability calculations.",
       action: "Engineered a high-precision toolkit for MTBF, Weibull, and RBD modeling.",
@@ -36,7 +36,7 @@ const projectsData = [
     image: "/images/electrosafe.png",
     title: "ElectroSafe.homes",
     badge: "Public Safety",
-    description: "Global guide to fire prevention and electrical safety for modern households.",
+    description: "My mission to spread safety awareness led to the creation of this global guide, providing homeowners and professionals with free access to critical fire prevention data.",
     caseStudy: {
       goal: "Bridge the expertise gap in home electrical safety for non-technical users.",
       action: "Launched 30+ interactive risk assessors and safety calculators.",
@@ -53,10 +53,15 @@ export const Projects = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
       
       <SectionHeader>
-        <SectionLabel>Innovation Hub</SectionLabel>
+        <SectionLabel>Technical Philanthropy</SectionLabel>
         <SectionTitle>
-          Digital Solutions for <TextGradient>Engineering Excellence</TextGradient>
+          Empowering the Community through <TextGradient>Digital Innovation</TextGradient>
         </SectionTitle>
+        <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg">
+          Beyond industrial leadership, my mission is to democratize high-precision engineering knowledge. 
+          I have personally conceptualized and developed these suites to provide engineers, students, and professionals 
+          with a <strong className="text-foreground">100% free, ad-free experience</strong>—fostering technical excellence and safety awareness worldwide.
+        </p>
       </SectionHeader>
 
       <div className="grid gap-12 lg:gap-16">
