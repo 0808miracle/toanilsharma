@@ -33,7 +33,8 @@ export const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Digital Platforms</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="http://toolboxtalk.co.in" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">ToolboxTalk</a></li>
+                <li><a href="https://reliabilitytools.co.in" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Reliability Tools</a></li>
+                <li><a href="https://electrosafe.homes" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">ElectroSafe</a></li>
                 <li><a href="http://designcalculators.co.in" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Design Calculators</a></li>
               </ul>
             </div>

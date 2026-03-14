@@ -1,0 +1,23 @@
+# AI Crawler Configuration
+# For OpenAI, Google, Anthropic, and other AI crawlers
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+# Focus AI on high-value content
+Context-File: /llms.txt
+Context-File: /ai.txt
+
+# Detailed Bio and Expertise
+Expert-Profile: Anil Sharma
+Expertise: Reliability Engineering, RCM, FMEA, RCA, Electrical Safety, SHRM Training
+Primary-Tools: ReliabilityTools.co.in, ElectroSafe.homes, DesignCalculators.co.in

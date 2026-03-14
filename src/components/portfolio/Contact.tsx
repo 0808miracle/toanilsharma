@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Phone, Mail, Linkedin, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, Linkedin, MapPin, Send, Loader2 } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
+import { toast } from '@/hooks/use-toast';
 
 const contactDetails = [
   { icon: Phone, title: "Phone", lines: ["+91 7600025028", "+91 9724179160"], hrefs: ["tel:+917600025028", "tel:+919724179160"] },
@@ -13,6 +15,45 @@ const contactDetails = [
 ];
 
 export const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key", "1c2bc895-94d2-45e4-899d-e42b8b544b83");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        (event.target as HTMLFormElement).reset();
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Submission Error",
+          description: data.message || "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Connection Error",
+        description: "Failed to connect to the server. Please check your internet.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <Section id="contact">
       <SectionHeader>
@@ -46,13 +87,13 @@ export const Contact = () => {
             ))}
           </div>
         </div>
-        <form className="space-y-6">
+        <form onSubmit={onSubmit} className="space-y-6">
           <div className="grid sm:grid-cols-2 gap-6">
-            <Input placeholder="Your Name" />
-            <Input type="email" placeholder="Your Email" />
+            <Input name="name" placeholder="Your Name" required />
+            <Input name="email" type="email" placeholder="Your Email" required />
           </div>
-          <Input placeholder="Subject" />
-          <Select>
+          <Input name="subject" placeholder="Subject" required />
+          <Select name="service">
             <SelectTrigger>
               <SelectValue placeholder="Select Service" />
             </SelectTrigger>
@@ -63,12 +104,21 @@ export const Contact = () => {
               <SelectItem value="other">Other</SelectItem>
             </SelectContent>
           </Select>
-          <Textarea placeholder="Your Message" rows={5} />
-          <Button type="submit" size="lg" className="w-full group">
-            Send Message <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+          <Textarea name="message" placeholder="Your Message" rows={5} required />
+          <Button type="submit" size="lg" className="w-full group" disabled={isSubmitting}>
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                Send Message <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </>
+            )}
           </Button>
         </form>
       </div>
     </Section>
   );
-};
+};

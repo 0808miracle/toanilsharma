@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
+  { href: '#philosophy', label: 'Philosophy' },
   { href: '#expertise', label: 'Expertise' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
@@ -64,7 +65,7 @@ export const Header = () => {
             </div>
           </a>
 
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-6" aria-label="Main Navigation">
             {navLinks.map(link => (
               <NavLink key={link.href} {...link} />
             ))}
@@ -79,7 +80,7 @@ export const Header = () => {
             </a>
             <Sheet>
               <SheetTrigger asChild className="md:hidden">
-                <Button variant="outline" size="icon">
+                <Button variant="outline" size="icon" aria-label="Open Menu">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>

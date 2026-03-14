@@ -46,27 +46,49 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Schema Markup (JSON-LD) for Person -->
+    <!-- Schema Markup (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Anil Sharma",
-      "url": "https://anilsharma-reliabilityexpert.com",
-      "image": "/images/anil-sharma.png",
-      "sameAs": [
-        "https://www.linkedin.com/in/toanilsharma",
-        "https://toolboxtalk.co.in",
-        "https://designcalculators.co.in"
-      ],
-      "jobTitle": "Reliability Expert & Trainer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Reliability Consulting & Training"
-      },
-      "description": "A seasoned Reliability Expert, Trainer, and Engineering Web Tools Developer with over 28 years of multi-sectoral experience, adept at enhancing system reliability, crafting impactful training programs, and fostering high-performing technical teams.",
-      "knowsAbout": ["Reliability Engineering", "RCM", "FMEA", "RCA", "Electrical Safety", "Industrial Automation", "Training", "Plant Maintenance"],
-      "hasCredential": ["MBA Project Management", "Diploma in Electrical Engineering", "SHRM Certified Facilitator", "ISO 9001/14001 Lead Auditor"]
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://anilsharma-reliabilityexpert.com/#person",
+          "name": "Anil Sharma",
+          "url": "https://anilsharma-reliabilityexpert.com",
+          "image": "/images/anil-sharma.png",
+          "sameAs": [
+            "https://www.linkedin.com/in/toanilsharma",
+            "https://reliabilitytools.co.in",
+            "https://electrosafe.homes",
+            "https://designcalculators.co.in"
+          ],
+          "jobTitle": "Reliability Expert & Trainer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Reliability Consulting & Training"
+          },
+          "description": "A seasoned Reliability Expert, Trainer, and Engineering Web Tools Developer with over 28 years of multi-sectoral experience.",
+          "knowsAbout": ["Reliability Engineering", "RCM", "FMEA", "RCA", "Electrical Safety", "Industrial Automation", "Training", "Plant Maintenance"],
+          "hasCredential": ["MBA Project Management", "Diploma in Electrical Engineering", "SHRM Certified Facilitator", "ISO 9001/14001 Lead Auditor"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://anilsharma-reliabilityexpert.com/#website",
+          "url": "https://anilsharma-reliabilityexpert.com",
+          "name": "Anil Sharma - Reliability Expert",
+          "publisher": { "@id": "https://anilsharma-reliabilityexpert.com/#person" },
+          "description": "Portfolio of Anil Sharma, a Reliability Engineering Expert and SHRM Certified Trainer."
+        },
+        {
+          "@type": "ProfessionalService",
+          "serviceType": ["Reliability Consulting", "Technical Training", "Safety Audits"],
+          "provider": { "@id": "https://anilsharma-reliabilityexpert.com/#person" },
+          "areaServed": "Global",
+          "name": "Anil Sharma Industrial Consulting",
+          "description": "Professional consulting and training services in industrial reliability, electrical safety, and automation."
+        }
+      ]
     }
     </script>
   </head>

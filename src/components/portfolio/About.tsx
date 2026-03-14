@@ -32,8 +32,8 @@ const AnimatedCounter = ({ to }: { to: number }) => {
 const metrics = [
     { icon: Briefcase, value: 28, label: "Years Experience" },
     { icon: GraduationCap, value: 200, label: "Engineers Trained" },
-    { icon: Target, value: 40, label: "High Value Projects" },
-    { icon: LineChart, value: 20, label: "Reliability Boost %" },
+    { icon: Target, value: 15, label: "Petrochemical Plants" },
+    { icon: LineChart, value: 100, label: "Reliability Focus %" },
 ];
 
 export const About = () => {
