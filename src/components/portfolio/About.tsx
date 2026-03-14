@@ -47,6 +47,17 @@ export const About = () => {
       </SectionHeader>
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
+          <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-xl mb-8">
+            <h4 className="font-bold text-primary mb-2 flex items-center">
+              <ArrowRight className="w-4 h-4 mr-2" />
+              Quick Summary for Recruiters
+            </h4>
+            <p className="text-sm leading-relaxed text-foreground/80">
+              28+ years of core industrial experience with <strong className="text-primary">Reliance Industries Limited</strong> and <strong className="text-primary">Ambuja Cements Limited</strong>. 
+              Expert in Plant Reliability (RCM/FMEA) and a SHRM Certified trainer for 200+ engineers. 
+              Currently managing reliability for 15+ plants.
+            </p>
+          </div>
           <p className="text-lg text-muted-foreground mb-6">
             Accomplished Reliability Expert and Trainer with over <strong>28 years</strong> of multi-sectoral experience. Adept in improving system reliability across complex, multi-site operations, currently overseeing <strong>15+ petrochemical plants and multiple townships</strong>. I specialize in designing high-impact training programs and building capable technical teams.
           </p>

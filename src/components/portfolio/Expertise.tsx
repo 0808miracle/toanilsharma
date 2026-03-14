@@ -3,12 +3,12 @@ import { Settings, Zap, Bot, Presentation, Shield, Laptop } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 
 const expertiseData = [
-  { icon: Settings, title: "Reliability Engineering", description: "Driving Operational Excellence through proven RCM and TPM methodologies.", features: ["RCA & FMEA (Expert)", "Asset Lifecycle Management", "TPM & Lean Maintenance", "Predictive Analytics"] },
-  { icon: Zap, title: "Electrical & Instrumentation", description: "Management of critical power systems and high-value industrial assets.", features: ["HT/LT System Reliability", "Infrastructure Protection", "Manpower Optimization", "Condition Monitoring"] },
-  { icon: Bot, title: "Automation & Industry 4.0", description: "Strategic implementation of SCADA and DCS for smart manufacturing.", features: ["Digital Transformation", "Distributed Control (DCS)", "Intelligent Load Management", "Network Resilience"] },
-  { icon: Presentation, title: "Strategic Mentorship", description: "Cultivating technical leadership as a SHRM Certified technical facilitator.", features: ["Leadership Mentorship", "Technical Facilitation", "Change Management", "Capability Building"] },
-  { icon: Shield, title: "Risk & Compliance", description: "Zero-breakdown mindset applied to global safety and quality standards.", features: ["Process Safety (NFPA/IEEE)", "ISO 55000 (Asset Mgmt)", "Root Cause Mastery", "Safety Culture Design"] },
-  { icon: Laptop, title: "Technical Philanthropy", description: "Building high-precision digital tools to democratize engineering knowledge.", features: ["Tool Conceptualization", "Engineering Algorithm Dev", "Community Resource Design", "Ad-Free Safety Platforms"] },
+  { icon: Settings, title: "Reliability & Integrity", description: "Focused on keeping industrial plants running without breakdowns using RCM and TPM.", features: ["Asset Integrity Management (AIM)", "Risk-Based Inspection (RBI)", "TPM & Lean Maintenance", "RCA & FMEA Expert"] },
+  { icon: Zap, title: "Electrical Systems", description: "Management of high-voltage power systems and critical industrial assets.", features: ["HT/LT System Reliability", "Infrastructure Protection", "Manpower Optimization", "Condition Monitoring"] },
+  { icon: Bot, title: "Smart Automation", description: "Implementing SCADA and DCS for better control and efficiency in manufacturing.", features: ["Digital Twin Strategy", "Distributed Control (DCS)", "Intelligent Load Management", "Digital Transformation"] },
+  { icon: Presentation, title: "Technical Mentorship", description: "Helpful training for engineers as a SHRM Certified facilitator.", features: ["Leadership Mentoring", "Technical Facilitation", "Change Management", "Skill Building"] },
+  { icon: Shield, title: "Risk & Standards", description: "Ensuring safety by following global engineering standards with a simple mindset.", features: ["Process Safety (NFPA/IEEE)", "ISO 55000 (Asset Mgmt)", "Root Cause Mastery", "Safety Culture Design"] },
+  { icon: Laptop, title: "Digital Solutions", description: "Building free engineering tools to help students and working professionals.", features: ["Tool Conceptualization", "Engineering Algorithms", "Free Community Resources", "Ad-Free Platforms"] },
 ];
 
 export const Expertise = () => {

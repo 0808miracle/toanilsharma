@@ -29,7 +29,7 @@ const experienceData = [
     tags: ["Project Management", "End-to-End Commissioning", "Safety Training"],
   },
   {
-    company: "Ambuja Cements Ltd.",
+    company: "Ambuja Cements Limited",
     date: "1995 - 2004",
     role: "Engineer – Electrical & Instrumentation",
     achievements: [

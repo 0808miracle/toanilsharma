@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 
 const logos = [
-  { name: "Reliance Industries", logo: "RELIANCE" },
-  { name: "Ambuja Cements", logo: "AMBUJA" },
+  { name: "Reliance Industries Limited", logo: "RELIANCE INDUSTRIES LIMITED" },
+  { name: "Ambuja Cements Limited", logo: "AMBUJA CEMENTS LIMITED" },
 ];
 
 export const LogoWall = () => {

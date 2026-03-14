@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, PlayCircle, Shield } from 'lucide-react';
+import { ArrowRight, PlayCircle, Shield, Download } from 'lucide-react';
 import { TextGradient } from '@/components/portfolio/Section';
 
 export const Hero = () => {
@@ -17,7 +17,7 @@ export const Hero = () => {
               Driving Industrial Excellence in <TextGradient>Projects, Reliability, Maintenance & Training</TextGradient>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              With 28+ years of experience, I deliver comprehensive solutions—from leading complex <span className="font-semibold text-foreground">projects</span> and optimizing <span className="font-semibold text-foreground">maintenance</span> to enhancing system <span className="font-semibold text-foreground">reliability</span> and delivering world-class <span className="font-semibold text-foreground">training</span>.
+              With 28+ years of experience, I lead complex <span className="font-semibold text-foreground">projects</span>, optimize <span className="font-semibold text-foreground">maintenance</span>, enhance system <span className="font-semibold text-foreground">reliability</span>, and deliver world-class <span className="font-semibold text-foreground">training</span>.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#contact">
@@ -30,6 +30,12 @@ export const Hero = () => {
                 <Button size="lg" variant="outline" className="w-full sm:w-auto">
                   <PlayCircle className="mr-2 h-5 w-5" />
                   View My Projects
+                </Button>
+              </a>
+              <a href="/Anil-Sharma-CV-2025.docx" download>
+                <Button size="lg" variant="ghost" className="w-full sm:w-auto text-primary border-primary/20 hover:bg-primary/5">
+                  <Download className="mr-2 h-5 w-5" />
+                  One-Page Summary
                 </Button>
               </a>
             </div>
@@ -54,6 +60,7 @@ export const Hero = () => {
               <img
                 src="/images/anil-sharma.png"
                 alt="Anil Sharma - Reliability Expert"
+                loading="lazy"
                 className="relative w-full h-auto rounded-full border-8 border-background shadow-2xl"
               />
             </div>

@@ -4,6 +4,7 @@ import { LogoWall } from '@/components/portfolio/LogoWall';
 import { About } from '@/components/portfolio/About';
 import { Philosophy } from '@/components/portfolio/Philosophy';
 import { Expertise } from '@/components/portfolio/Expertise';
+import { Insights } from '@/components/portfolio/Insights';
 import { Experience } from '@/components/portfolio/Experience';
 import { Projects } from '@/components/portfolio/Projects';
 import { Awards } from '@/components/portfolio/Awards';
@@ -22,6 +23,7 @@ const Index = () => {
         <About />
         <Philosophy />
         <Expertise />
+        <Insights />
         <Experience />
         <Projects />
         <Awards />
