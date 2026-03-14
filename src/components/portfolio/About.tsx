@@ -82,7 +82,7 @@ export const About = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#contact">
               <Button size="lg" className="w-full sm:w-auto group">
-                Work With Me <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                Connect with Me <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
             <a href="/Anil-Sharma-CV-2025.docx" download>

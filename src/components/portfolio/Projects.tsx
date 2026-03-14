@@ -7,6 +7,19 @@ import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from
 const projectsData = [
   {
     featured: true,
+    image: "/images/designcalculators.png",
+    title: "DesignCalculators.co.in",
+    badge: "Engineering Cloud",
+    description: "A massive library of 150+ calculators for electrical, mechanical, and instrumentation engineering.",
+    caseStudy: {
+      goal: "Centralize multi-disciplinary engineering calculations under one digital roof.",
+      action: "Built a standards-based validator suite for NFPA, IEEE, and ASME.",
+      result: "70% reduction in design cycles with high-precision digital validation."
+    },
+    metrics: ["150+ Calculators", "Multi-Disciplinary", "Standardized"],
+    link: "http://designcalculators.co.in",
+  },
+  {
     image: "/images/reliabilitytools.png",
     title: "ReliabilityTools.co.in",
     badge: "Industrial Engineering",
@@ -31,19 +44,6 @@ const projectsData = [
     },
     metrics: ["Fire Prevention", "Risk Assessment", "Global Guides"],
     link: "https://electrosafe.homes",
-  },
-  {
-    image: "/images/designcalculators.png",
-    title: "DesignCalculators.co.in",
-    badge: "Engineering Cloud",
-    description: "A massive library of 150+ calculators for electrical, mechanical, and instrumentation engineering.",
-    caseStudy: {
-      goal: "Centralize multi-disciplinary engineering calculations under one digital roof.",
-      action: "Built a standards-based validator suite for NFPA, IEEE, and ASME.",
-      result: "70% reduction in design cycles with high-precision digital validation."
-    },
-    metrics: ["150+ Calculators", "Multi-Disciplinary", "Standardized"],
-    link: "http://designcalculators.co.in",
   },
 ];
 
@@ -74,12 +74,14 @@ export const Projects = () => {
                 {/* Logo & Visual Area */}
                 <div className="lg:w-1/3 p-8 lg:p-12 flex flex-col items-center justify-center bg-secondary/30 relative">
                   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--primary)_0,transparent_70%)]"></div>
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    itemProp="image" 
-                    className="w-48 lg:w-full h-auto object-contain z-10 drop-shadow-2xl transition-transform duration-700 group-hover:scale-110" 
-                  />
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative z-10 transition-all duration-700 group-hover:scale-110 flex items-center justify-center h-48 w-full px-4">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      itemProp="image" 
+                      className="max-h-full max-w-full object-contain drop-shadow-2xl" 
+                    />
+                  </a>
                   <div className="mt-8 flex flex-wrap gap-2 justify-center z-10">
                     {project.metrics.map((metric, mIndex) => (
                       <span key={mIndex} className="px-3 py-1 bg-background/50 border border-border/50 text-[10px] font-bold uppercase tracking-widest rounded-full opacity-70 group-hover:opacity-100 transition-opacity">
@@ -97,9 +99,11 @@ export const Projects = () => {
                     </Badge>
                   </div>
                   
-                  <h3 className="text-3xl lg:text-4xl font-bold font-grotesk mb-4" itemProp="name">
-                    {project.title}
-                  </h3>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block group/title">
+                    <h3 className="text-3xl lg:text-4xl font-bold font-grotesk mb-4 group-hover/title:text-primary transition-colors" itemProp="name">
+                      {project.title}
+                    </h3>
+                  </a>
                   
                   <p className="text-lg text-muted-foreground mb-8 line-clamp-2" itemProp="description">
                     {project.description}

@@ -59,16 +59,16 @@ export const Contact = () => {
       <SectionHeader>
         <SectionLabel>Get In Touch</SectionLabel>
         <SectionTitle>
-          Ready to Elevate <TextGradient>Your Operations?</TextGradient>
+          Let's Share <TextGradient>Engineering Insights</TextGradient>
         </SectionTitle>
         <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-          Let's discuss how my expertise in projects, reliability, maintenance, and training can help you achieve operational excellence.
+          I am passionate about discussing the future of reliability engineering and industrial excellence. Reach out to share knowledge, discuss trends, or connect with a fellow expert.
         </p>
       </SectionHeader>
       <div className="grid lg:grid-cols-2 gap-12">
         <div>
-          <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
-          <p className="text-muted-foreground mb-8">I'm available for consulting, training, and long-term reliability improvement projects globally.</p>
+          <h3 className="text-2xl font-bold mb-4">Professional Networking</h3>
+          <p className="text-muted-foreground mb-8">Open to discussing reliability engineering, industrial automation, and professional development within the engineering community.</p>
           <div className="space-y-6">
             {contactDetails.map((item, index) => (
               <div key={index} className="flex items-start">
@@ -100,7 +100,6 @@ export const Contact = () => {
             <SelectContent>
               <SelectItem value="consulting">Reliability Consulting</SelectItem>
               <SelectItem value="training">Training Programs</SelectItem>
-              <SelectItem value="audit">Safety Audit</SelectItem>
               <SelectItem value="other">Other</SelectItem>
             </SelectContent>
           </Select>

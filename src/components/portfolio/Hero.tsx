@@ -22,7 +22,7 @@ export const Hero = () => {
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#contact">
                 <Button size="lg" className="w-full sm:w-auto group">
-                  Start Your Transformation
+                  Let's Connect
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </a>
