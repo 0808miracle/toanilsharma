@@ -77,7 +77,7 @@ export const Projects = () => {
             <Card className="relative bg-background/80 backdrop-blur-xl border border-border/50 rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500 group-hover:translate-y-[-4px]">
               <div className="flex flex-col lg:flex-row">
                 {/* Logo & Visual Area */}
-                <div className="lg:w-1/3 p-8 lg:p-12 flex flex-col items-center justify-center bg-secondary/30 relative">
+                <div className="lg:w-1/3 p-6 lg:p-12 flex flex-col items-center justify-center bg-secondary/30 relative">
                   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--primary)_0,transparent_70%)]"></div>
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative z-10 transition-all duration-700 group-hover:scale-110 flex items-center justify-center h-48 w-full px-4">
                     <img 
@@ -89,7 +89,7 @@ export const Projects = () => {
                   </a>
                   <div className="mt-8 flex flex-wrap gap-2 justify-center z-10">
                     {project.metrics.map((metric, mIndex) => (
-                      <span key={mIndex} className="px-3 py-1 bg-background/50 border border-border/50 text-[10px] font-bold uppercase tracking-widest rounded-full opacity-70 group-hover:opacity-100 transition-opacity">
+                      <span key={mIndex} className="px-3 py-1 bg-background/50 border border-border/50 text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full opacity-70 group-hover:opacity-100 transition-opacity">
                         {metric}
                       </span>
                     ))}
@@ -97,9 +97,9 @@ export const Projects = () => {
                 </div>
 
                 {/* Content Area */}
-                <div className="lg:w-2/3 p-8 lg:p-12 flex flex-col">
+                <div className="lg:w-2/3 p-6 lg:p-12 flex flex-col">
                   <div className="flex justify-between items-center mb-4">
-                    <Badge variant="outline" className="text-primary border-primary/20 px-4 py-1 rounded-full uppercase tracking-widest text-[10px]">
+                    <Badge variant="outline" className="text-primary border-primary/20 px-4 py-1 rounded-full uppercase tracking-widest text-[10px] sm:text-xs">
                       {project.badge}
                     </Badge>
                   </div>
@@ -127,8 +127,8 @@ export const Projects = () => {
                         <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-secondary/50", step.color)}>
                           <step.icon className="w-5 h-5" />
                         </div>
-                        <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-1">{step.label}</p>
-                        <p className="text-xs font-medium leading-relaxed">{step.value}</p>
+                        <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-muted-foreground mb-1">{step.label}</p>
+                        <p className="text-xs sm:text-sm font-medium leading-relaxed">{step.value}</p>
                       </div>
                     ))}
                   </div>
