@@ -72,14 +72,14 @@ export const Projects = () => {
             itemScope itemType="https://schema.org/CreativeWork"
           >
             {/* Background Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-2xl sm:rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             
-            <Card className="relative bg-background/80 backdrop-blur-xl border border-border/50 rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500 group-hover:translate-y-[-4px]">
+            <Card className="relative bg-background/80 backdrop-blur-xl border border-border/50 rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500 group-hover:translate-y-[-4px]">
               <div className="flex flex-col lg:flex-row">
                 {/* Logo & Visual Area */}
-                <div className="lg:w-1/3 p-6 lg:p-12 flex flex-col items-center justify-center bg-secondary/30 relative">
+                <div className="lg:w-1/3 p-4 sm:p-6 lg:p-12 flex flex-col items-center justify-center bg-secondary/30 relative">
                   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--primary)_0,transparent_70%)]"></div>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative z-10 transition-all duration-700 group-hover:scale-110 flex items-center justify-center h-48 w-full px-4">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative z-10 transition-all duration-700 group-hover:scale-110 flex items-center justify-center h-32 sm:h-48 w-full px-4">
                     <img 
                       src={project.image} 
                       alt={project.title} 
@@ -97,7 +97,7 @@ export const Projects = () => {
                 </div>
 
                 {/* Content Area */}
-                <div className="lg:w-2/3 p-6 lg:p-12 flex flex-col">
+                <div className="lg:w-2/3 p-4 sm:p-6 lg:p-12 flex flex-col">
                   <div className="flex justify-between items-center mb-4">
                     <Badge variant="outline" className="text-primary border-primary/20 px-4 py-1 rounded-full uppercase tracking-widest text-[10px] sm:text-xs">
                       {project.badge}
@@ -110,7 +110,7 @@ export const Projects = () => {
                     </h3>
                   </a>
                   
-                  <p className="text-lg text-muted-foreground mb-8 line-clamp-2" itemProp="description">
+                  <p className="text-lg text-muted-foreground mb-8 line-clamp-3 sm:line-clamp-2 overflow-wrap-anywhere break-words" itemProp="description">
                     {project.description}
                   </p>
 
