@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Download, ArrowRight, Settings, Users, LineChart, Briefcase, GraduationCap, Network, Award, Target } from 'lucide-react';
+import { Download, ArrowRight, Settings, Users, LineChart, Briefcase, GraduationCap, Network, Award, Target, CheckCircle } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 import { useInView } from '@/hooks/useInView';
 import { useEffect, useState } from 'react';
@@ -129,6 +129,61 @@ export const About = () => {
             <p className="text-muted-foreground">{metric.label}</p>
           </div>
         ))}
+      </div>
+
+      {/* Verified Academic & Professional Credentials */}
+      <div className="mt-16 pt-12 border-t border-border/40">
+        <div className="text-center mb-8">
+          <span className="text-xs font-mono font-bold tracking-widest uppercase text-primary">
+            VERIFIED CREDENTIALS &amp; CERTIFICATIONS
+          </span>
+          <h3 className="text-2xl font-bold font-grotesk mt-1">
+            Formal Qualifications &amp; Industry Accreditations
+          </h3>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            {
+              title: "MBA – Project Management",
+              institution: "Sikkim Manipal University (SMU)",
+              detail: "Graduated with 74% • Focus on industrial operations and capital project lifecycle"
+            },
+            {
+              title: "Diploma in Electrical Engineering",
+              institution: "Chandigarh College of Engg. & Technology",
+              detail: "CCET Chandigarh • Strong foundational power systems & machine control"
+            },
+            {
+              title: "SHRM Certified Facilitator & Trainer",
+              institution: "Society for Human Resource Management",
+              detail: "Master technical trainer for 200+ engineers & 40+ future plant leaders"
+            },
+            {
+              title: "DVN Certified IMS Lead Auditor",
+              institution: "Integrated Management Systems",
+              detail: "Certified in ISO 9001 (Quality), ISO 14001 (Environment) & ISO 45001 (Safety)"
+            },
+            {
+              title: "Process & Electrical Safety Auditor",
+              institution: "Reliance Industries Limited",
+              detail: "Authorized complex safety auditor for mega-scale petrochemical sites"
+            },
+            {
+              title: "RCM & FMEA Masterclass Certified",
+              institution: "Reliability Engineering Excellence",
+              detail: "Advanced implementation of SAE JA1011 RCM and AIAG/VDA FMEA standards"
+            }
+          ].map((cred, cIndex) => (
+            <div key={cIndex} className="p-4 rounded-xl bg-background/60 border border-border/50 hover:border-primary/40 transition-colors">
+              <div className="flex items-center gap-2 mb-1.5">
+                <CheckCircle className="w-4 h-4 text-primary shrink-0" />
+                <h4 className="font-semibold text-sm">{cred.title}</h4>
+              </div>
+              <p className="text-xs text-primary/80 font-medium mb-1 pl-6">{cred.institution}</p>
+              <p className="text-[11px] text-muted-foreground pl-6 leading-relaxed">{cred.detail}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </Section>
   );

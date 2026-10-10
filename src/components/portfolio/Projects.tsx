@@ -7,13 +7,26 @@ import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from
 const projectsData = [
   {
     featured: true,
+    image: "/images/livesimulators.svg",
+    title: "LiveSimulators.com",
+    badge: "Virtual Laboratory Cloud",
+    description: "An advanced suite of 65+ interactive first-principles browser simulations and virtual engineering laboratories covering Power Electronics, Power Systems & Grid Automation, SafeOps UPS, ElectroLive Safety, and Turbomachinery.",
+    caseStudy: {
+      goal: "Eliminate abstract theoretical barriers by turning complex engineering equations into interactive browser physics.",
+      action: "Built real-time float64 numerical solvers for switching circuits, transient waveforms, and rotor dynamics.",
+      result: "Real-time interactive experimentation in the browser with zero installation, 100% free."
+    },
+    metrics: ["Virtual Labs", "Float64 Physics", "Interactive Solvers"],
+    link: "https://livesimulators.com",
+  },
+  {
     image: "/images/designcalculators.webp",
     title: "DesignCalculators.co.in",
     badge: "Engineering Cloud",
     description: "I created this massive library of 150+ calculators to help electrical, mechanical, and instrumentation engineers perform complex design validations with a 100% free and ad-free experience.",
     caseStudy: {
       goal: "Centralize multi-disciplinary engineering calculations under one digital roof.",
-      action: "Built a standards-based validator suite for NFPA, IEEE, and ASME.",
+      action: "Built a standards-based validator suite for NFPA, IEEE, IEC, and ASME.",
       result: "70% reduction in design cycles with high-precision digital validation."
     },
     metrics: ["150+ Calculators", "Multi-Disciplinary", "Standardized"],
@@ -23,23 +36,36 @@ const projectsData = [
     image: "/images/reliabilitytools.webp",
     title: "ReliabilityTools.co.in",
     badge: "Industrial Engineering",
-    description: "Developed as a professional-grade suite to help the community master industrial modeling and asset optimization through high-precision, accessible digital tools.",
+    description: "Developed as a professional-grade suite to help the engineering community master industrial modeling and asset optimization through high-precision, accessible digital tools.",
     caseStudy: {
-      goal: "Eliminate manual modeling errors in complex reliability calculations.",
-      action: "Engineered a high-precision toolkit for MTBF, Weibull, and RBD modeling.",
-      result: "Standardized reliability modeling for global maintenance professionals."
+      goal: "Eliminate manual modeling errors in complex plant reliability calculations.",
+      action: "Engineered a high-precision toolkit for MTBF, Weibull distribution, and RBD availability modeling.",
+      result: "Standardized reliability modeling for global maintenance and plant asset managers."
     },
-    metrics: ["MTBF", "Weibull Analysis", "Availability"],
+    metrics: ["MTBF Modeling", "Weibull Analysis", "Availability"],
     link: "https://reliabilitytools.co.in",
+  },
+  {
+    image: "/images/toolboxtalk.svg",
+    title: "ToolboxTalk.co.in",
+    badge: "AI Safety Innovation",
+    description: "India's first AI-powered free platform that enables site engineers and supervisors to instantly generate structured toolbox talks by simply entering the work activity, mapping hazards and mitigation based on OSHA and IS norms.",
+    caseStudy: {
+      goal: "Empower ground-level site teams with instant, standardized hazard briefings.",
+      action: "Trained an intelligent mapping engine aligning field hazards to OSHA, IEC, and IS standards.",
+      result: "Instant structured safety talks eliminating high-risk field oversight."
+    },
+    metrics: ["AI Safety Tool", "Hazard Mapping", "OSHA & IS Norms"],
+    link: "https://toolboxtalk.co.in",
   },
   {
     image: "/images/electrosafe.webp",
     title: "ElectroSafe.homes",
     badge: "Public Safety",
-    description: "My mission to spread safety awareness led to the creation of this global guide, providing homeowners and professionals with free access to critical fire prevention data.",
+    description: "My mission to spread safety awareness led to the creation of this global guide, providing homeowners and professionals with free access to critical electrical fire prevention data.",
     caseStudy: {
       goal: "Bridge the expertise gap in home electrical safety for non-technical users.",
-      action: "Launched 30+ interactive risk assessors and safety calculators.",
+      action: "Launched 30+ interactive risk assessors, breaker calculators, and safety guides.",
       result: "Empowering homeowners worldwide with actionable fire prevention data."
     },
     metrics: ["Fire Prevention", "Risk Assessment", "Global Guides"],

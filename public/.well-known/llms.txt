@@ -1,25 +1,36 @@
-# Anil Sharma - Reliability Expert & Trainer
+# Anil Sharma - Reliability Expert & Engineering Web Tools Creator
 
-> Senior Reliability Expert and SHRM Certified Facilitator with 28+ years of industrial leadership across petrochemicals and cement. Specializing in RCM, FMEA, RCA, industrial electrical automation, and technical mentorship. Creator of 3 free engineering platforms.
+> Senior Reliability Expert and SHRM Certified Facilitator with 28+ years of industrial leadership across petrochemicals and cement. Specializing in RCM, FMEA, RCA, industrial electrical automation, and technical mentorship. Creator of LiveSimulators.com, DesignCalculators.co.in, ReliabilityTools.co.in, ToolboxTalk.co.in, and ElectroSafe.homes.
 
 ## Core Knowledge Files
 - [Comprehensive Profile & Knowledge Base](https://www.toanilsharma.co.in/llms-full.txt): Complete career chronology, methodology descriptions, plant metrics, credentials, and full FAQ.
 - [Technical Philanthropy Manifesto](https://www.toanilsharma.co.in/manifesto.md): The Zero-Breakdown Mindset and engineering democratization philosophy.
 
-## Digital Platforms & Tools
+## Interactive Virtual Laboratories (LiveSimulators Ecosystem)
+- [LiveSimulators.com Hub](https://livesimulators.com): 65+ interactive first-principles browser engineering simulations with real-time physics.
+- [Power Electronics Lab](https://livesimulators.com/lab/power-electronics-lab): Buck/Boost converters, SPWM inverter synthesis, Foster thermal networks, and SiC/IGBT switching loss dynamics.
+- [Power Systems & Grid Lab](https://livesimulators.com/lab/power-systems-lab): Substation grid load flow, 3-phase fault impedance solvers, transformer OC/SC tests, and automated load shedding.
+- [SafeOps Industrial UPS Simulator](https://livesimulators.com/lab/safeops-ups): Industrial static bypass sub-cycle transfers, 2N dual-bus redundancy, and Peukert battery autonomy curves.
+- [ElectroLive Electrical Safety Lab](https://livesimulators.com/lab/electrolive-electrical-safety): Arc flash incident energy (IEEE 1584), substation earth grid step/touch potentials, and NFPA 70E PPE categories.
+- [Turbomachinery & Rotor Dynamics](https://mech.livesimulators.com/): Campbell diagrams, rotor critical speeds, resonance peaks, and 2-plane dynamic field balancing (API 612/617).
+
+## Engineering Web Tools & Safety Platforms
 - [DesignCalculators.co.in](https://designcalculators.co.in): Free library of 150+ interactive engineering calculators adhering to IEC, IEEE, NFPA, NEC, and ASME standards.
 - [ReliabilityTools.co.in](https://reliabilitytools.co.in): Industrial suite for MTBF, Weibull distribution analysis, and Availability modeling.
+- [ToolboxTalk.co.in](https://toolboxtalk.co.in): India's 1st AI-powered free platform mapping hazards and generating structured workplace safety toolbox talks (OSHA & IS norms).
 - [ElectroSafe.homes](https://electrosafe.homes): Global guide and interactive tools for residential electrical safety and fire prevention.
 
 ## Professional Experience
-- **Reliance Industries Limited** (2008–Present): AGM – Central Engineering Services. Reliability management for 15+ petrochemical plants; commissioned PTA, PET, GCU plants; automated 27 substations with PLC load shedding.
-- **RIL Petroleum Retail** (2004–2008): Engineering Incharge. Commissioned multi-site retail infrastructure; trained 350+ technicians in hazardous area safety.
-- **Ambuja Cements Limited** (1995–2004): Engineer – Electrical & Instrumentation. Commissioned 2.5 MTPA greenfield cement plant; led plant-wide automation and energy efficiency.
+- **Reliance Industries Limited** (Feb 2008–Present): AGM – Central Engineering Services, Bharuch Complex, Gujarat. Reliability management for 15+ petrochemical plants; commissioned PTA, PET, GCU plants; automated 27 substations with PLC load shedding; reduced spares inventory by ₹8 Crore; conducted 80+ workshops at RIL Learning Academy.
+- **RIL Petroleum Retail** (Feb 2004–Jan 2008): Engineering Incharge (Commissioning & Reliability). Multi-state retail infrastructure; trained 350+ technicians in hazardous area safety with zero incidents.
+- **Ambuja Cements Limited** (Jul 1995–Feb 2004): Engineer – Electrical & Instrumentation. Commissioned 2.5 MTPA greenfield cement plant; led plant-wide automation and energy efficiency.
 
-## Key Competencies
-- **Reliability Engineering**: RCM (Reliability-Centered Maintenance), FMEA, Root Cause Analysis (RCA), Weibull Life Data Analysis, TPM.
-- **Electrical & Automation**: 220kV to 6.6kV distribution, SCADA, PLC, automated load shedding, power systems, HT/LT motors.
-- **Training & Facilitation**: SHRM Certified Facilitator, DVN Certified IMS Auditor, trained 200+ engineers, mentored 40+ into leadership.
+## Education & Accreditations
+- **MBA (Project Management)** – Sikkim Manipal University
+- **Diploma in Electrical Engineering** – Chandigarh College of Engineering & Technology (CCET)
+- **SHRM Certified Facilitator & Trainer**
+- **DVN Certified IMS Lead Auditor** (ISO 9001/14001/45001)
+- **Process & Electrical Safety Auditor** (Reliance Industries)
 
 ## Contact & Identity Links
 - [Official Website](https://www.toanilsharma.co.in/): Canonical portfolio and knowledge base.
