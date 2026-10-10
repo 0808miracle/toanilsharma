@@ -27,6 +27,7 @@ export const Footer = () => {
                 <li><a href="#about" className="text-muted-foreground hover:text-primary">About Me</a></li>
                 <li><a href="#expertise" className="text-muted-foreground hover:text-primary">Expertise</a></li>
                 <li><a href="#experience" className="text-muted-foreground hover:text-primary">Experience</a></li>
+                <li><a href="#faq" className="text-muted-foreground hover:text-primary">FAQ</a></li>
                 <li><a href="#contact" className="text-muted-foreground hover:text-primary">Contact</a></li>
               </ul>
             </div>
@@ -35,7 +36,7 @@ export const Footer = () => {
               <ul className="space-y-2 text-sm">
                 <li><a href="https://reliabilitytools.co.in" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Reliability Tools</a></li>
                 <li><a href="https://electrosafe.homes" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">ElectroSafe</a></li>
-                <li><a href="http://designcalculators.co.in" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Design Calculators</a></li>
+                <li><a href="https://designcalculators.co.in" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Design Calculators</a></li>
               </ul>
             </div>
           </div>

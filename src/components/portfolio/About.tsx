@@ -48,10 +48,10 @@ export const About = () => {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-xl mb-8">
-            <h4 className="font-bold text-primary mb-2 flex items-center">
+            <h3 className="font-bold text-primary mb-2 flex items-center">
               <ArrowRight className="w-4 h-4 mr-2" />
               Quick Summary for Recruiters
-            </h4>
+            </h3>
             <p className="text-sm leading-relaxed text-foreground/80">
               28+ years of core industrial experience with <strong className="text-primary">Reliance Industries Limited</strong> and <strong className="text-primary">Ambuja Cements Limited</strong>. 
               Expert in Plant Reliability (RCM/FMEA) and a SHRM Certified trainer for 200+ engineers. 
@@ -66,7 +66,7 @@ export const About = () => {
               <CardContent className="flex items-center p-4">
                 <Network className="w-8 h-8 mr-4 text-primary" />
                 <div>
-                  <h4 className="font-semibold">Multi-Site & Multi-Discipline Leadership</h4>
+                  <h3 className="font-semibold">Multi-Site & Multi-Discipline Leadership</h3>
                   <p className="text-sm text-muted-foreground">Proven ability to manage all engineering disciplines across numerous large-scale sites.</p>
                 </div>
               </CardContent>
@@ -75,7 +75,7 @@ export const About = () => {
               <CardContent className="flex items-center p-4">
                 <Settings className="w-8 h-8 mr-4 text-primary" />
                 <div>
-                  <h4 className="font-semibold">Proven Methodologies</h4>
+                  <h3 className="font-semibold">Proven Methodologies</h3>
                   <p className="text-sm text-muted-foreground">Expertise in RCM, FMEA, RCA, and electrical safety standards (IEC, IEEE, ISO).</p>
                 </div>
               </CardContent>
@@ -84,7 +84,7 @@ export const About = () => {
               <CardContent className="flex items-center p-4">
                 <Users className="w-8 h-8 mr-4 text-primary" />
                 <div>
-                  <h4 className="font-semibold">Leadership & Training</h4>
+                  <h3 className="font-semibold">Leadership & Training</h3>
                   <p className="text-sm text-muted-foreground">Successfully trained 200+ engineers and delivered impactful leadership programs.</p>
                 </div>
               </CardContent>
@@ -106,7 +106,14 @@ export const About = () => {
         <div className="relative">
           <div className="relative w-full max-w-md mx-auto">
             <div className="absolute -inset-2 bg-gradient-to-tr from-primary to-blue-500 rounded-lg blur-xl opacity-20"></div>
-            <img src="/images/anil-sharma.png" alt="Anil Sharma" className="relative w-full h-auto rounded-lg shadow-2xl" />
+            <img
+              src="/images/anil-sharma.webp"
+              alt="Anil Sharma - Senior Reliability Expert"
+              width={781}
+              height={1159}
+              loading="lazy"
+              className="relative w-full h-auto rounded-lg shadow-2xl"
+            />
             <div className="absolute -bottom-4 -right-4 bg-background p-3 rounded-full shadow-lg flex items-center space-x-2 text-sm font-semibold">
               <Award className="w-5 h-5 text-primary" />
               <span>SHRM Certified</span>

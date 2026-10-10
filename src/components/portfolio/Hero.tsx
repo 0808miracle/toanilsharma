@@ -58,9 +58,11 @@ export const Hero = () => {
             <div className="relative w-full max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary to-blue-500 rounded-full blur-2xl opacity-20"></div>
               <img
-                src="/images/anil-sharma.png"
-                alt="Anil Sharma - Reliability Expert"
-                loading="lazy"
+                src="/images/anil-sharma.webp"
+                alt="Anil Sharma - Senior Reliability Expert & Trainer"
+                width={781}
+                height={1159}
+                fetchPriority="high"
                 className="relative w-full h-auto rounded-full border-8 border-background shadow-2xl"
               />
             </div>

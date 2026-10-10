@@ -1,0 +1,27 @@
+# Anil Sharma - Reliability Expert & Trainer
+
+> Senior Reliability Expert and SHRM Certified Facilitator with 28+ years of industrial leadership across petrochemicals and cement. Specializing in RCM, FMEA, RCA, industrial electrical automation, and technical mentorship. Creator of 3 free engineering platforms.
+
+## Core Knowledge Files
+- [Comprehensive Profile & Knowledge Base](https://www.toanilsharma.co.in/llms-full.txt): Complete career chronology, methodology descriptions, plant metrics, credentials, and full FAQ.
+- [Technical Philanthropy Manifesto](https://www.toanilsharma.co.in/manifesto.md): The Zero-Breakdown Mindset and engineering democratization philosophy.
+
+## Digital Platforms & Tools
+- [DesignCalculators.co.in](https://designcalculators.co.in): Free library of 150+ interactive engineering calculators adhering to IEC, IEEE, NFPA, NEC, and ASME standards.
+- [ReliabilityTools.co.in](https://reliabilitytools.co.in): Industrial suite for MTBF, Weibull distribution analysis, and Availability modeling.
+- [ElectroSafe.homes](https://electrosafe.homes): Global guide and interactive tools for residential electrical safety and fire prevention.
+
+## Professional Experience
+- **Reliance Industries Limited** (2008–Present): AGM – Central Engineering Services. Reliability management for 15+ petrochemical plants; commissioned PTA, PET, GCU plants; automated 27 substations with PLC load shedding.
+- **RIL Petroleum Retail** (2004–2008): Engineering Incharge. Commissioned multi-site retail infrastructure; trained 350+ technicians in hazardous area safety.
+- **Ambuja Cements Limited** (1995–2004): Engineer – Electrical & Instrumentation. Commissioned 2.5 MTPA greenfield cement plant; led plant-wide automation and energy efficiency.
+
+## Key Competencies
+- **Reliability Engineering**: RCM (Reliability-Centered Maintenance), FMEA, Root Cause Analysis (RCA), Weibull Life Data Analysis, TPM.
+- **Electrical & Automation**: 220kV to 6.6kV distribution, SCADA, PLC, automated load shedding, power systems, HT/LT motors.
+- **Training & Facilitation**: SHRM Certified Facilitator, DVN Certified IMS Auditor, trained 200+ engineers, mentored 40+ into leadership.
+
+## Contact & Identity Links
+- [Official Website](https://www.toanilsharma.co.in/): Canonical portfolio and knowledge base.
+- [LinkedIn Profile](https://www.linkedin.com/in/toanilsharma): Professional network and career verification.
+- **Email**: toanilsharma@gmail.com

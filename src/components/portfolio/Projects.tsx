@@ -7,7 +7,7 @@ import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from
 const projectsData = [
   {
     featured: true,
-    image: "/images/designcalculators.png",
+    image: "/images/designcalculators.webp",
     title: "DesignCalculators.co.in",
     badge: "Engineering Cloud",
     description: "I created this massive library of 150+ calculators to help electrical, mechanical, and instrumentation engineers perform complex design validations with a 100% free and ad-free experience.",
@@ -17,10 +17,10 @@ const projectsData = [
       result: "70% reduction in design cycles with high-precision digital validation."
     },
     metrics: ["150+ Calculators", "Multi-Disciplinary", "Standardized"],
-    link: "http://designcalculators.co.in",
+    link: "https://designcalculators.co.in",
   },
   {
-    image: "/images/reliabilitytools.png",
+    image: "/images/reliabilitytools.webp",
     title: "ReliabilityTools.co.in",
     badge: "Industrial Engineering",
     description: "Developed as a professional-grade suite to help the community master industrial modeling and asset optimization through high-precision, accessible digital tools.",
@@ -33,7 +33,7 @@ const projectsData = [
     link: "https://reliabilitytools.co.in",
   },
   {
-    image: "/images/electrosafe.png",
+    image: "/images/electrosafe.webp",
     title: "ElectroSafe.homes",
     badge: "Public Safety",
     description: "My mission to spread safety awareness led to the creation of this global guide, providing homeowners and professionals with free access to critical fire prevention data.",

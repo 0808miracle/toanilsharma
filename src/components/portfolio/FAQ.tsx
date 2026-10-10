@@ -9,20 +9,24 @@ import { HelpCircle } from "lucide-react";
 
 const faqData = [
   {
-    question: "What is the 'Zero-Breakdown Mindset'?",
-    answer: "It is a strategic philosophy where maintenance is viewed as an investment in operational uptime rather than a cost. By using RCM, FMEA, and RCA, we shift from reactive fixes to predictive excellence, aiming for 100% asset reliability."
+    question: "Who is Anil Sharma and what is his background in industrial reliability?",
+    answer: "Anil Sharma is a Senior Reliability Expert and SHRM Certified Facilitator with over 28 years of core industrial experience across Reliance Industries Limited and Ambuja Cements. He oversees reliability for 15+ large-scale petrochemical plants, specializing in RCM (Reliability Centered Maintenance), FMEA, RCA, and industrial automation."
   },
   {
-    question: "How do your digital engineering tools help the community?",
-    answer: "I developed ReliabilityTools, DesignCalculators, and ElectroSafe as free, ad-free platforms. They help engineers, students, and professionals perform complex industrial calculations and safety assessments with 100% precision and zero cost."
+    question: "What is the 'Zero-Breakdown Mindset' in reliability engineering?",
+    answer: "It is a strategic philosophy where maintenance is treated as an investment in operational uptime rather than an operational cost center. By deploying RCM, FMEA, and RCA, plant teams transition from reactive firefighting to predictive asset integrity, targeting 100% operational reliability."
   },
   {
-    question: "What industries do you specialize in?",
-    answer: "With 28+ years of experience, I specialize in the Petrochemical, Cement, and Industrial Automation sectors, focusing on large-scale plant reliability and technical workforce development."
+    question: "Where can engineers access Anil Sharma's free reliability engineering tools?",
+    answer: "As part of his technical philanthropy mission to democratize engineering knowledge, Anil Sharma created ReliabilityTools.co.in (for Weibull analysis and MTBF modeling), DesignCalculators.co.in (150+ calculators across IEC, IEEE, and NFPA standards), and ElectroSafe.homes (home electrical fire prevention)—all completely free and ad-free."
   },
   {
-    question: "Are you available for professional mentorship?",
-    answer: "Yes, as a SHRM Certified technical facilitator, I am passionate about mentoring the next generation of engineers. I am open to professional networking and sharing insights within the engineering community."
+    question: "What industries and systems does Anil Sharma specialize in?",
+    answer: "With 28+ years of hands-on industrial leadership, Anil Sharma specializes in the Petrochemical, Refinery, Cement, and Industrial Automation sectors, with deep expertise in HT/LT electrical distribution, PLC-based automated load shedding, substation automation, and asset lifecycle management."
+  },
+  {
+    question: "What training, mentorship, and certification programs does Anil Sharma offer?",
+    answer: "As a SHRM Certified Facilitator and IMS Lead Auditor, Anil Sharma has trained and mentored over 200 engineers in RCM, FMEA, electrical safety compliance, and leadership development. He conducts structured workshops for industrial teams and young professionals."
   }
 ];
 

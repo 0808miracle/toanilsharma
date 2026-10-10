@@ -13,8 +13,8 @@ export const Section = ({ children, className, ...props }: SectionProps) => {
     <section
       ref={ref}
       className={cn(
-        'py-16 sm:py-24 px-4 sm:px-6 lg:px-8 opacity-0 transition-opacity duration-500',
-        isInView ? 'animate-fade-in-up' : '',
+        'py-16 sm:py-24 px-4 sm:px-6 lg:px-8 transition-all duration-700 ease-out',
+        isInView ? 'opacity-100 translate-y-0' : 'opacity-100 sm:opacity-0 sm:translate-y-6',
         className
       )}
       {...props}
