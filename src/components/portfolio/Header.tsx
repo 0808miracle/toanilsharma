@@ -8,14 +8,14 @@ import { sounds } from '@/utils/soundEffects';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { href: '#about', label: 'About' },
-  { href: '#expertise', label: 'Expertise' },
-  { href: '#experience', label: 'Journey Map' },
-  { href: '#simulators', label: 'Simulators', badge: 'Live' },
-  { href: '#projects', label: 'Platforms' },
-  { href: '#architecture', label: 'Architecture' },
-  { href: '#awards', label: 'Accolades' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/#about', label: 'About' },
+  { href: '/#expertise', label: 'Expertise' },
+  { href: '/#experience', label: 'Journey Map' },
+  { href: '/#simulators', label: 'Simulators', badge: 'Live' },
+  { href: '/#projects', label: 'Platforms' },
+  { href: '/#architecture', label: 'Architecture' },
+  { href: '/#awards', label: 'Accolades' },
+  { href: '/#faq', label: 'FAQ' },
 ];
 
 export const Header = () => {
@@ -128,7 +128,8 @@ export const Header = () => {
               aria-label="Main Navigation"
             >
               {navItems.map(item => {
-                const isActive = activeSection === item.href.substring(1);
+                const sectionKey = item.href.replace('/#', '').replace('#', '');
+                const isActive = activeSection === sectionKey;
                 return (
                   <a
                     key={item.href}
@@ -236,7 +237,7 @@ export const Header = () => {
                           onClick={() => setMobileMenuOpen(false)}
                           className={cn(
                             'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors',
-                            activeSection === item.href.substring(1)
+                            activeSection === item.href.replace('/#', '').replace('#', '')
                               ? 'bg-primary/10 text-primary font-semibold'
                               : 'text-foreground hover:bg-secondary'
                           )}

@@ -204,4 +204,26 @@
     opacity: 0.7;
     filter: drop-shadow(0 0 28px rgba(0, 240, 255, 0.6));
   }
+}
+
+/* Executive Clean Print Optimization */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt;
+  }
+
+  header, footer, .print\:hidden, [aria-hidden="true"] {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+
+  .scada-glow, .scada-glow-lg {
+    box-shadow: none !important;
+  }
 }

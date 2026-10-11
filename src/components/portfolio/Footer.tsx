@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Linkedin, Mail, Phone, Copy, Check, ExternalLink, ArrowUp, ShieldCheck, Clock, MapPin,
-  ShieldAlert, Scale, FileText, CheckCircle2 
+  ShieldAlert, Scale, FileText, CheckCircle2, Shield
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
@@ -169,15 +170,15 @@ export const Footer = () => {
               Navigation
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About &amp; Credentials</a></li>
-              <li><a href="#expertise" className="text-muted-foreground hover:text-primary transition-colors">Core Competencies</a></li>
-              <li><a href="#philosophy" className="text-muted-foreground hover:text-primary transition-colors">Zero-Breakdown Creed</a></li>
-              <li><a href="#experience" className="text-muted-foreground hover:text-primary transition-colors">Career Timeline (28y)</a></li>
-              <li><a href="#calculator" className="text-muted-foreground hover:text-primary transition-colors">Reliability Modeler</a></li>
-              <li><a href="#architecture" className="text-muted-foreground hover:text-primary transition-colors">Tool Architecture</a></li>
-              <li><a href="#awards" className="text-muted-foreground hover:text-primary transition-colors">Accolades &amp; Honors</a></li>
-              <li><a href="#faq" className="text-muted-foreground hover:text-primary transition-colors">Technical FAQ</a></li>
-              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Academic &amp; Student Inquiries</a></li>
+              <li><a href="/#about" className="text-muted-foreground hover:text-primary transition-colors">About &amp; Credentials</a></li>
+              <li><a href="/#expertise" className="text-muted-foreground hover:text-primary transition-colors">Core Competencies</a></li>
+              <li><a href="/#philosophy" className="text-muted-foreground hover:text-primary transition-colors">Zero-Breakdown Creed</a></li>
+              <li><a href="/#experience" className="text-muted-foreground hover:text-primary transition-colors">Career Timeline (28y)</a></li>
+              <li><a href="/#calculator" className="text-muted-foreground hover:text-primary transition-colors">Reliability Modeler</a></li>
+              <li><a href="/#architecture" className="text-muted-foreground hover:text-primary transition-colors">Tool Architecture</a></li>
+              <li><a href="/#awards" className="text-muted-foreground hover:text-primary transition-colors">Accolades &amp; Honors</a></li>
+              <li><a href="/#faq" className="text-muted-foreground hover:text-primary transition-colors">Technical FAQ</a></li>
+              <li><a href="/#contact" className="text-muted-foreground hover:text-primary transition-colors">Academic &amp; Student Inquiries</a></li>
             </ul>
           </div>
 
@@ -347,7 +348,23 @@ export const Footer = () => {
               </DialogContent>
             </Dialog>
 
-            <span className="text-[11px] text-muted-foreground/80 hidden sm:inline">Zero Tracking Cookies</span>
+            <Link
+              to="/terms"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-background dark:bg-card border border-border/80 hover:border-primary/50 text-foreground hover:text-primary transition-all text-xs font-medium shadow-sm"
+              aria-label="View legal disclaimer and terms"
+            >
+              <Scale className="w-3.5 h-3.5 text-primary" />
+              <span>Site Disclaimer</span>
+            </Link>
+
+            <Link
+              to="/privacy"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-background dark:bg-card border border-border/80 hover:border-primary/50 text-foreground hover:text-primary transition-all text-xs font-medium shadow-sm"
+              aria-label="View privacy policy and telemetry notice"
+            >
+              <Shield className="w-3.5 h-3.5 text-emerald-500" />
+              <span>Privacy Policy</span>
+            </Link>
 
             <button
               onClick={scrollToTop}

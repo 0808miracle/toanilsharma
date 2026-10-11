@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   CommandDialog, 
   CommandInput, 
@@ -22,7 +23,10 @@ import {
   ExternalLink,
   Flame,
   FileCheck2,
-  Quote
+  Quote,
+  FileText,
+  Scale,
+  Shield
 } from 'lucide-react';
 
 interface CommandMenuProps {
@@ -31,6 +35,7 @@ interface CommandMenuProps {
 }
 
 export const CommandMenu = ({ open, setOpen }: CommandMenuProps) => {
+  const navigate = useNavigate();
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
@@ -169,6 +174,27 @@ export const CommandMenu = ({ open, setOpen }: CommandMenuProps) => {
             <div className="flex flex-col">
               <span className="font-semibold text-xs text-foreground">Contact & Feedback</span>
               <span className="text-[10px] text-muted-foreground">Academic inquiries & simulator suggestions</span>
+            </div>
+          </CommandItem>
+        </CommandGroup>
+
+        <CommandSeparator className="my-1.5" />
+
+        <CommandGroup heading="Official Documentation & Governance">
+
+          <CommandItem onSelect={() => handleSelect(() => navigate('/terms'))} className="cursor-pointer">
+            <Scale className="mr-2.5 h-4 w-4 text-amber-500" />
+            <div className="flex flex-col">
+              <span className="font-semibold text-xs text-foreground">Engineering Disclaimer & Terms</span>
+              <span className="text-[10px] text-muted-foreground">IEEE / IEC simulation limitations & legal framework</span>
+            </div>
+          </CommandItem>
+
+          <CommandItem onSelect={() => handleSelect(() => navigate('/privacy'))} className="cursor-pointer">
+            <Shield className="mr-2.5 h-4 w-4 text-cyan-400" />
+            <div className="flex flex-col">
+              <span className="font-semibold text-xs text-foreground">Privacy Policy & Telemetry Notice</span>
+              <span className="text-[10px] text-muted-foreground">GDPR/CCPA compliance & zero data monetization</span>
             </div>
           </CommandItem>
         </CommandGroup>
