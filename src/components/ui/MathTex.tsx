@@ -89,7 +89,7 @@ export const MathTex: React.FC<MathTexProps> = ({
       return (
         <div className="group/math relative my-1">
           <div
-            className={`katex-block-container overflow-x-auto py-1 text-center font-normal ${className}`}
+            className={`katex-block-container overflow-hidden py-1 text-center font-normal ${className}`}
             dangerouslySetInnerHTML={{ __html: html }}
           />
           {allowCopy && (

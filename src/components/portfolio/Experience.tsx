@@ -396,7 +396,7 @@ export const Experience = () => {
                         </span>
                         <span className="text-[10px] opacity-80">{milestone.latexFormula.standard}</span>
                       </div>
-                      <div className="py-1 px-2 rounded-xl bg-background/80 dark:bg-card/80 border border-border/40 text-center overflow-x-auto text-primary">
+                      <div className="py-1 px-2 rounded-xl bg-background/80 dark:bg-card/80 border border-border/40 text-center text-primary overflow-hidden">
                         <MathTex math={milestone.latexFormula.equation} block={true} className="text-xs sm:text-sm" />
                       </div>
                     </div>

@@ -1,7 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Linkedin, Mail, Phone, Copy, Check, ExternalLink, ArrowUp, ShieldCheck, Clock, MapPin } from 'lucide-react';
+import { 
+  Linkedin, Mail, Phone, Copy, Check, ExternalLink, ArrowUp, ShieldCheck, Clock, MapPin,
+  ShieldAlert, Scale, FileText, CheckCircle2 
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 
 export const Footer = () => {
   const [copiedField, setCopiedField] = useState<string | null>(null);
@@ -261,11 +272,86 @@ export const Footer = () => {
             <p className="text-[11px]">Engineered with React 18, TypeScript &amp; TailwindCSS</p>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <span className="text-[11px] text-muted-foreground/80">Zero Tracking Cookies</span>
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4">
+            {/* Common Website & Engineering Disclaimer Modal */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <button
+                  className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-background dark:bg-card border border-border/80 hover:border-primary/50 text-foreground hover:text-primary transition-all text-xs font-medium shadow-sm cursor-pointer group"
+                  aria-label="Open engineering and website disclaimer"
+                >
+                  <Scale className="w-3.5 h-3.5 text-primary" />
+                  <span>Site Disclaimer</span>
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto rounded-3xl bg-background/98 dark:bg-[#070D1A]/98 border border-border/80 dark:border-white/10 backdrop-blur-2xl p-6 sm:p-8">
+                <DialogHeader className="text-left pb-4 border-b border-border/60 dark:border-white/10">
+                  <div className="flex items-center gap-2 text-primary font-mono text-xs font-bold uppercase tracking-wider mb-1">
+                    <ShieldAlert className="w-4 h-4 text-amber-500" />
+                    <span>Official Governance &amp; Legal Framework</span>
+                  </div>
+                  <DialogTitle className="text-xl sm:text-2xl font-bold font-grotesk text-foreground">
+                    Engineering, Educational &amp; Non-Affiliation Disclaimer
+                  </DialogTitle>
+                  <DialogDescription className="text-xs text-muted-foreground mt-1">
+                    Governing terms for toanilsharma.co.in, LiveSimulators.com, DesignCalculators.co.in, ReliabilityTools.co.in, and ElectroSafe.homes.
+                  </DialogDescription>
+                </DialogHeader>
+
+                <div className="space-y-3.5 pt-4 text-xs sm:text-sm text-foreground/85 leading-relaxed">
+                  <div className="p-3.5 rounded-2xl bg-secondary/50 dark:bg-card/50 border border-border/70 dark:border-white/10 space-y-1">
+                    <strong className="text-foreground font-bold flex items-center gap-1.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                      1. Personal Technical Philanthropy
+                    </strong>
+                    <p className="text-muted-foreground text-xs leading-normal">
+                      This portfolio and its affiliated calculators are created, maintained, and self-funded by Anil Sharma as an independent, non-commercial public service initiative to democratize engineering education and workforce training globally. All platforms operate free of advertising, subscription paywalls, or commercial monetisation.
+                    </p>
+                  </div>
+
+                  <div className="p-3.5 rounded-2xl bg-secondary/50 dark:bg-card/50 border border-border/70 dark:border-white/10 space-y-1">
+                    <strong className="text-foreground font-bold flex items-center gap-1.5">
+                      <Scale className="w-4 h-4 text-blue-500 shrink-0" />
+                      2. Non-Affiliation &amp; Independence
+                    </strong>
+                    <p className="text-muted-foreground text-xs leading-normal">
+                      All viewpoints, methodologies, educational commentary, and mathematical tools presented herein represent the personal perspectives of Anil Sharma in his individual technical capacity. They do not constitute official corporate positions, engineering endorsements, or commercial statements of Reliance Industries Limited, Ambuja Cements Limited, or any former or current employers or affiliates.
+                    </p>
+                  </div>
+
+                  <div className="p-3.5 rounded-2xl bg-secondary/50 dark:bg-card/50 border border-border/70 dark:border-white/10 space-y-1">
+                    <strong className="text-foreground font-bold flex items-center gap-1.5">
+                      <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
+                      3. Engineering Calculations &amp; Model Limitations
+                    </strong>
+                    <p className="text-muted-foreground text-xs leading-normal">
+                      While calculation engines and interactive simulations implement recognized industry standards (e.g., IEEE 1584-2018, IEEE 399, IEC 60909, NFPA 70E, API 617, ISO 14224), they are provided exclusively for educational analysis, classroom instruction, and conceptual screening. They do not substitute for formal engineering studies, vendor design documents, stamped professional deliverables, or site safety permits.
+                    </p>
+                  </div>
+
+                  <div className="p-3.5 rounded-2xl bg-secondary/50 dark:bg-card/50 border border-border/70 dark:border-white/10 space-y-1">
+                    <strong className="text-foreground font-bold flex items-center gap-1.5">
+                      <FileText className="w-4 h-4 text-cyan-500 shrink-0" />
+                      4. Mandatory Professional Engineer Verification
+                    </strong>
+                    <p className="text-muted-foreground text-xs leading-normal">
+                      Live plant operations, equipment commissioning, switchgear racking, and high-voltage maintenance must strictly follow facility-specific operating manuals, formal short-circuit/arc flash analyses (via certified software like ETAP, SKM, or EasyPower), and review by a licensed Professional Engineer (PE) or accredited regulatory authority.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-border/60 dark:border-white/10 flex items-center justify-between text-[11px] text-muted-foreground">
+                  <span>Last Updated: October 2026</span>
+                  <span className="font-mono text-primary">Anil Sharma Technical Philanthropy</span>
+                </div>
+              </DialogContent>
+            </Dialog>
+
+            <span className="text-[11px] text-muted-foreground/80 hidden sm:inline">Zero Tracking Cookies</span>
+
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-background dark:bg-card border border-border/70 hover:border-primary/50 text-foreground hover:text-primary transition-all text-xs font-medium shadow-sm group"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-background dark:bg-card border border-border/70 hover:border-primary/50 text-foreground hover:text-primary transition-all text-xs font-medium shadow-sm group cursor-pointer"
               aria-label="Scroll to top of page"
             >
               <span>Back to Top</span>
