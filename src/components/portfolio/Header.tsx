@@ -8,11 +8,11 @@ import { cn } from '@/lib/utils';
 const navItems = [
   { href: '#about', label: 'About' },
   { href: '#expertise', label: 'Expertise' },
-  { href: '#experience', label: 'Career' },
+  { href: '#experience', label: 'Journey Map' },
   { href: '#simulators', label: 'Simulators', badge: 'Live' },
   { href: '#projects', label: 'Platforms' },
+  { href: '#architecture', label: 'Architecture' },
   { href: '#awards', label: 'Accolades' },
-  { href: '#testimonials', label: 'Reviews' },
   { href: '#faq', label: 'FAQ' },
 ];
 
@@ -33,7 +33,7 @@ export const Header = () => {
       setScrollProgress(Math.min(100, Math.max(0, progress)));
 
       // Detect active section
-      const sections = ['home', 'about', 'philosophy', 'expertise', 'experience', 'simulators', 'projects', 'awards', 'testimonials', 'faq', 'contact']
+      const sections = ['home', 'about', 'philosophy', 'expertise', 'experience', 'simulators', 'projects', 'architecture', 'awards', 'faq', 'contact']
         .map(id => document.getElementById(id));
 
       let current = 'home';
@@ -93,7 +93,7 @@ export const Header = () => {
                 </span>
                 <span 
                   className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 rounded-full border-2 border-background animate-pulse" 
-                  title="Available for Advisory & Turnarounds"
+                  title="Open-Access Engineering Education • Non-Commercial"
                 />
               </div>
               <div className="flex flex-col">
@@ -137,16 +137,17 @@ export const Header = () => {
               })}
             </nav>
 
-            {/* Right Action Stack: Theme Toggle & Primary Consultation CTA */}
+            {/* Right Action Stack: Theme Toggle & Explore Tools Button */}
             <div className="flex items-center space-x-2.5 sm:space-x-3">
               <ThemeToggle />
 
-              <a href="#contact" className="hidden sm:inline-flex">
+              <a href="#simulators" className="hidden sm:inline-flex">
                 <Button 
                   size="sm" 
                   className="rounded-full px-4 h-9 font-semibold text-xs bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-md shadow-blue-500/20 group"
                 >
-                  <span>Let's Talk</span>
+                  <Sparkles className="mr-1.5 h-3.5 w-3.5" />
+                  <span>Explore Free Tools</span>
                   <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
               </a>
@@ -210,24 +211,25 @@ export const Header = () => {
                     </div>
                     
                     <a 
-                      href="#contact" 
+                      href="#simulators" 
                       onClick={() => setMobileMenuOpen(false)}
                       className="block w-full"
                     >
                       <Button className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-                        Book Consultation
+                        <Sparkles className="mr-2 h-4 w-4" />
+                        Explore Live Simulators
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </a>
 
                     <a 
-                      href="/Anil-Sharma-CV-2025.docx" 
-                      download
+                      href="#contact" 
+                      onClick={() => setMobileMenuOpen(false)}
                       className="block w-full"
                     >
                       <Button variant="outline" className="w-full rounded-xl text-xs">
-                        <Download className="mr-2 h-3.5 w-3.5" />
-                        Download Executive CV
+                        <Mail className="mr-2 h-3.5 w-3.5" />
+                        Academic &amp; Student Inquiries
                       </Button>
                     </a>
                   </div>

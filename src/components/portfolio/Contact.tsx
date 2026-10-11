@@ -3,30 +3,19 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Phone, Mail, Linkedin, MapPin, Send, Loader2, Download, Calendar, CheckCircle2, Copy, Check, Sparkles } from 'lucide-react';
+import { Phone, Mail, Linkedin, MapPin, Send, Loader2, Sparkles, BookOpen, ShieldCheck, Heart } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 import { toast } from '@/hooks/use-toast';
 
 const contactDetails = [
-  { icon: Phone, title: "Phone (Direct)", lines: ["+91 7600025028", "+91 9724179160"], hrefs: ["tel:+917600025028", "tel:+919724179160"] },
   { icon: Mail, title: "Email (Direct)", lines: ["toanilsharma@gmail.com", "anil_roopnagar@yahoo.com"], hrefs: ["mailto:toanilsharma@gmail.com", "mailto:anil_roopnagar@yahoo.com"] },
   { icon: Linkedin, title: "LinkedIn Profile", lines: ["linkedin.com/in/toanilsharma"], hrefs: ["https://www.linkedin.com/in/toanilsharma"] },
-  { icon: MapPin, title: "Headquarters & Availability", lines: ["Mumbai, India", "Available for Global & On-Site Projects"] },
+  { icon: Phone, title: "Phone", lines: ["+91 7600025028"], hrefs: ["tel:+917600025028"] },
+  { icon: MapPin, title: "Location", lines: ["India", "Non-Commercial Community Educational Outreach"], hrefs: [] },
 ];
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [copiedField, setCopiedField] = useState<string | null>(null);
-
-  const copyToClipboard = (text: string, label: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedField(label);
-    toast({
-      title: "Copied to clipboard!",
-      description: `${label}: ${text}`,
-    });
-    setTimeout(() => setCopiedField(null), 2500);
-  };
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -44,7 +33,7 @@ export const Contact = () => {
       if (data.success) {
         toast({
           title: "Message Sent Successfully!",
-          description: "Thank you for reaching out. Anil Sharma will reply shortly.",
+          description: "Thank you for reaching out. Anil Sharma will respond to your query shortly.",
         });
         (event.target as HTMLFormElement).reset();
       } else {
@@ -68,37 +57,37 @@ export const Contact = () => {
   return (
     <Section id="contact" className="relative py-24 overflow-hidden">
       
-      {/* Pre-Footer Executive Conversion Banner */}
+      {/* Pre-Footer Non-Commercial Initiative Banner */}
       <div className="relative mb-20 p-8 sm:p-12 md:p-16 rounded-3xl bg-gradient-to-r from-blue-700 via-indigo-700 to-cyan-600 text-white shadow-2xl overflow-hidden max-w-6xl mx-auto">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="relative z-10 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 text-white text-xs font-mono font-semibold tracking-wide mb-4 backdrop-blur-sm">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>EXECUTIVE ADVISORY &amp; OPERATIONAL TURNAROUNDS</span>
+            <Heart className="w-3.5 h-3.5 text-rose-300" />
+            <span>NON-COMMERCIAL TECHNICAL PHILANTHROPY</span>
           </div>
           
           <h2 className="font-grotesk text-2xl sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.15]">
-            Ready to elevate your facility to 99.8% uptime and zero preventable failures?
+            Empowering the Global Engineering Community with 100% Free Tools.
           </h2>
           
           <p className="mt-4 text-sm sm:text-base text-white/90 leading-relaxed max-w-2xl">
-            Available for advisory boards, turnaround audits, substation automation consultations, 
-            and enterprise workforce training across heavy process industries.
+            All virtual laboratories, mathematical calculators, and reliability simulators are built independently 
+            as an open educational initiative. Free for students, educators, and field practitioners worldwide.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4 items-center">
-            <a href="#contact-form">
+            <a href="#simulators">
               <Button size="lg" className="h-12 px-6 rounded-xl bg-white text-blue-900 hover:bg-white/90 font-bold shadow-lg shadow-black/20 group">
-                <span>Book Scoping Consultation</span>
-                <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <Sparkles className="mr-2 h-4 w-4 text-primary" />
+                <span>Explore Live Simulators (65+)</span>
               </Button>
             </a>
 
-            <a href="/Anil-Sharma-CV-2025.docx" download>
+            <a href="#projects">
               <Button size="lg" variant="outline" className="h-12 px-5 rounded-xl border-white/30 text-white hover:bg-white/10 font-semibold backdrop-blur-sm">
-                <Download className="mr-2 h-4 w-4" />
-                <span>Download Executive CV (.docx)</span>
+                <BookOpen className="mr-2 h-4 w-4" />
+                <span>150+ Design Calculators</span>
               </Button>
             </a>
           </div>
@@ -107,24 +96,24 @@ export const Contact = () => {
 
       <div id="contact-form" className="max-w-6xl mx-auto">
         <SectionHeader>
-          <SectionLabel>Direct Communication</SectionLabel>
+          <SectionLabel>Knowledge Sharing</SectionLabel>
           <SectionTitle>
-            Initiate <TextGradient>Executive Contact</TextGradient>
+            Connect &amp; <TextGradient>Share Feedback</TextGradient>
           </SectionTitle>
           <p className="mt-3 max-w-2xl mx-auto text-muted-foreground text-sm sm:text-base">
-            Reach out directly to discuss turnaround consulting, RCM implementation, 
-            learning academy workshops, or engineering platforms.
+            Have a suggestion for a new engineering simulator, calculation verification, 
+            or an academic inquiry? Reach out to connect.
           </p>
         </SectionHeader>
 
         <div className="grid lg:grid-cols-12 gap-10 sm:gap-12 items-start mt-10">
           
-          {/* Direct Details & Verification (5 Cols) */}
-          <div className="lg:col-span-5 space-y-6 p-7 sm:p-8 rounded-3xl bg-secondary/40 dark:bg-card/40 border border-border/70 dark:border-white/10 backdrop-blur-md">
+          {/* Direct Details & Philanthropic Clarity (5 Cols) */}
+          <div className="lg:col-span-5 space-y-6 p-7 sm:p-8 rounded-3xl bg-secondary/40 dark:bg-[#0B0F19]/90 border border-border/70 dark:border-white/10 backdrop-blur-md">
             <div>
-              <h3 className="font-grotesk text-xl font-bold text-foreground">Direct Contact Channels</h3>
+              <h3 className="font-grotesk text-xl font-bold text-foreground">Communication Channels</h3>
               <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-                Prompt response within 24 hours. Confidentiality respected for all industrial plant queries.
+                Open channels for tool feedback, academic queries, and technical discussions.
               </p>
             </div>
 
@@ -159,59 +148,59 @@ export const Contact = () => {
               })}
             </div>
 
-            {/* Availability Capsule */}
-            <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-foreground flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-              <span>
-                <strong>Immediate Availability:</strong> Open for non-executive board advisory, turnaround scoping, and technical keynotes across India and overseas.
+            {/* Non-Commercial Statement Capsule */}
+            <div className="p-4 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-xs text-foreground flex items-start gap-2.5">
+              <ShieldCheck className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span className="leading-relaxed">
+                <strong>Non-Commercial Initiative:</strong> All web applications and calculators are created as a personal educational hobby. Free forever, independent of corporate employment, with no commercial services or consulting offered.
               </span>
             </div>
           </div>
 
-          {/* Contact Web Form (7 Cols) */}
-          <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl bg-background/90 dark:bg-card/90 border border-border/80 dark:border-white/10 shadow-2xl backdrop-blur-md">
-            <h3 className="font-grotesk text-xl font-bold text-foreground mb-1">Send a Confidential Message</h3>
-            <p className="text-xs text-muted-foreground mb-6">Fill in the parameters below to receive an executive briefing or proposal.</p>
+          {/* Feedback Form (7 Cols) */}
+          <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl bg-background/90 dark:bg-[#0B0F19]/90 border border-border/80 dark:border-white/10 shadow-2xl backdrop-blur-md">
+            <h3 className="font-grotesk text-xl font-bold text-foreground mb-1">Send a Message</h3>
+            <p className="text-xs text-muted-foreground mb-6">Drop a note regarding simulator suggestions, mathematical corrections, or academic queries.</p>
             
             <form onSubmit={onSubmit} className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-foreground">Full Name</label>
-                  <Input name="name" placeholder="e.g. Rajesh Kumar" required className="rounded-xl h-11" />
+                  <label className="text-xs font-semibold text-foreground">Your Name</label>
+                  <Input name="name" placeholder="e.g. Rahul Sharma" required className="rounded-xl h-11" />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-foreground">Corporate / Official Email</label>
-                  <Input name="email" type="email" placeholder="name@company.com" required className="rounded-xl h-11" />
+                  <label className="text-xs font-semibold text-foreground">Email Address</label>
+                  <Input name="email" type="email" placeholder="name@domain.com" required className="rounded-xl h-11" />
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-foreground">Phone Number</label>
+                  <label className="text-xs font-semibold text-foreground">Phone (Optional)</label>
                   <Input name="phone" type="tel" placeholder="+91 98765 43210" className="rounded-xl h-11" />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-foreground">Area of Engagement</label>
-                  <Select name="service" defaultValue="consulting">
+                  <label className="text-xs font-semibold text-foreground">Topic of Inquiry</label>
+                  <Select name="service" defaultValue="feedback">
                     <SelectTrigger className="rounded-xl h-11">
-                      <SelectValue placeholder="Select Area" />
+                      <SelectValue placeholder="Select Topic" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="consulting">Plant Reliability &amp; RCM Consulting</SelectItem>
-                      <SelectItem value="turnaround">Turnaround &amp; Substation Automation</SelectItem>
-                      <SelectItem value="training">L&amp;D Corporate Academy Workshops</SelectItem>
-                      <SelectItem value="platforms">LiveSimulators &amp; Engineering Tools</SelectItem>
-                      <SelectItem value="advisory">Advisory Board / Speaking</SelectItem>
+                      <SelectItem value="feedback">Tool Feedback &amp; Feature Suggestion</SelectItem>
+                      <SelectItem value="student">Academic / Engineering Student Question</SelectItem>
+                      <SelectItem value="standards">IEEE / IEC / ASME Standards Discussion</SelectItem>
+                      <SelectItem value="reliability">Reliability &amp; Physics Exchange</SelectItem>
+                      <SelectItem value="general">General Connection</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-foreground">Brief Project / Operational Scope</label>
+                <label className="text-xs font-semibold text-foreground">Message</label>
                 <Textarea 
                   name="message" 
-                  placeholder="Describe your plant challenges, critical assets, or timeline..." 
+                  placeholder="Share your thoughts on the tools, suggest a new standard to implement, or ask a technical question..." 
                   rows={4} 
                   required 
                   className="rounded-xl resize-none" 
@@ -222,11 +211,11 @@ export const Contact = () => {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Transmitting Message...
+                    Sending Message...
                   </>
                 ) : (
                   <>
-                    <span>Submit Executive Inquiry</span>
+                    <span>Send Message</span>
                     <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </>
                 )}
@@ -238,4 +227,4 @@ export const Contact = () => {
       </div>
     </Section>
   );
-};
+};

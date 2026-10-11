@@ -38,7 +38,7 @@ const awardsData = [
     title: "2x Leadership in Reliability",
     years: "2020, 2023",
     org: "Central Engineering Services",
-    description: "Honored for conceptualizing the automated load shedding architecture across 27 substations (220kV to 6.6kV) and unlocking ₹8 Crore in direct spares inventory savings.",
+    description: "Honored for conceptualizing plant-wide automated load shedding architectures across high-voltage distribution networks and driving substantial spares inventory optimization through FMEA categorization.",
     theme: {
       accent: "text-emerald-500",
       border: "hover:border-emerald-500/50",

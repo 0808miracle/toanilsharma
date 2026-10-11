@@ -70,19 +70,19 @@ export const Footer = () => {
             </div>
 
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Transforming industrial reliability, asset integrity, and continuous process safety across 15+ world-scale petrochemical plants and global engineering pipelines.
+              Dedicated to open-access engineering education, industrial reliability principles, and empowering students and engineers globally with free, enterprise-grade calculation tools.
             </p>
 
-            {/* Live Timezone & Availability Capsule */}
+            {/* Live Timezone & Community Initiative Capsule */}
             <div className="inline-flex flex-col space-y-1.5 p-3 rounded-xl bg-background/80 dark:bg-background/50 border border-border/80 dark:border-white/10 text-xs">
               <div className="flex items-center space-x-2 text-foreground font-medium">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Available for Advisory &amp; Turnarounds</span>
+                <span>Non-Commercial • Open Engineering Initiative</span>
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground text-[11px]">
                 <span className="flex items-center">
                   <MapPin className="w-3 h-3 mr-1 text-primary" />
-                  Mumbai, India
+                  India
                 </span>
                 <span className="flex items-center">
                   <Clock className="w-3 h-3 mr-1 text-primary" />
@@ -152,21 +152,21 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Column 3: Executive Navigation */}
+          {/* Column 3: Navigation */}
           <div>
             <h4 className="font-grotesk font-bold text-sm tracking-wide mb-4 text-foreground uppercase">
-              Executive
+              Navigation
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About &amp; Credentials</a></li>
               <li><a href="#expertise" className="text-muted-foreground hover:text-primary transition-colors">Core Competencies</a></li>
               <li><a href="#philosophy" className="text-muted-foreground hover:text-primary transition-colors">Zero-Breakdown Creed</a></li>
               <li><a href="#experience" className="text-muted-foreground hover:text-primary transition-colors">Career Timeline (28y)</a></li>
-              <li><a href="#calculator" className="text-muted-foreground hover:text-primary transition-colors">Plant ROI Modeler</a></li>
-              <li><a href="#awards" className="text-muted-foreground hover:text-primary transition-colors">Accolades &amp; Trophies</a></li>
-              <li><a href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors">Client Endorsements</a></li>
+              <li><a href="#calculator" className="text-muted-foreground hover:text-primary transition-colors">Reliability Modeler</a></li>
+              <li><a href="#architecture" className="text-muted-foreground hover:text-primary transition-colors">Tool Architecture</a></li>
+              <li><a href="#awards" className="text-muted-foreground hover:text-primary transition-colors">Accolades &amp; Honors</a></li>
               <li><a href="#faq" className="text-muted-foreground hover:text-primary transition-colors">Technical FAQ</a></li>
-              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Consultation Booking</a></li>
+              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Academic &amp; Student Inquiries</a></li>
             </ul>
           </div>
 
@@ -232,8 +232,8 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://toolboxtalk.co.in" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center group">
-                  <span>ToolboxTalk.co.in (AI)</span>
+                <a href="https://arcflashinfo.netlify.app" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center group">
+                  <span>ArcFlash Tools (IEEE 1584)</span>
                   <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
@@ -246,7 +246,7 @@ export const Footer = () => {
               <li className="pt-2">
                 <div className="p-2.5 rounded-lg bg-background/60 dark:bg-background/40 border border-border/60 text-[11px] text-muted-foreground">
                   <ShieldCheck className="w-4 h-4 text-primary mb-1 inline mr-1" />
-                  All 5 platforms are 100% free, ad-free, and dedicated to the global engineering community.
+                  All engineering platforms are 100% free, ad-free, and dedicated to the global engineering community.
                 </div>
               </li>
             </ul>

@@ -114,6 +114,12 @@ export default {
         "fade-in-up": "fade-in-up 0.5s ease-out forwards",
         marquee: "marquee 30s linear infinite",
       },
+      boxShadow: {
+        'scada-glow': '0 0 25px rgba(15, 76, 255, 0.25)',
+        'scada-glow-lg': '0 0 35px rgba(15, 76, 255, 0.35)',
+        'neon-cobalt': '0 0 20px rgba(59, 130, 246, 0.35)',
+        'neon-cyan': '0 0 20px rgba(6, 182, 212, 0.35)',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

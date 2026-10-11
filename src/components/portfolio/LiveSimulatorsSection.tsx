@@ -17,6 +17,7 @@ import {
   CheckCircle2,
   Sparkles
 } from 'lucide-react';
+import { MathTex } from '@/components/ui/MathTex';
 
 interface SimulatorLab {
   id: string;
@@ -49,7 +50,7 @@ const simulatorLabs: SimulatorLab[] = [
       'Sinusoidal PWM inverter synthesis with FFT harmonic decomposition',
       'SiC MOSFET double-pulse test & dynamic switching dissipation'
     ],
-    formula: 'V_out = V_in / (1 - D) • η = P_out / (P_out + P_sw + P_cond)',
+    formula: 'V_{\\text{out}} = \\frac{V_{\\text{in}}}{1 - D} \\cdot \\eta = \\frac{P_{\\text{out}}}{P_{\\text{out}} + P_{\\text{sw}} + P_{\\text{cond}}}',
     url: 'https://livesimulators.com/lab/power-electronics-lab',
     accentColor: 'from-cyan-500/20 to-blue-600/20',
     highlight: 'Float64 Real-Time Numerical Solvers'
@@ -61,14 +62,14 @@ const simulatorLabs: SimulatorLab[] = [
     category: 'power',
     categoryLabel: 'Substation & Grid Automation',
     tagline: 'Substation load flow, transformer test analysis & automated load shedding',
-    description: 'Dynamic grid modeling inspired by 27 automated industrial substations. Interactive 3-phase symmetrical fault analysis, transformer OC/SC parameter extraction, and frequency-based load shedding.',
+    description: 'Dynamic grid modeling inspired by industrial electrical distribution networks. Interactive 3-phase symmetrical fault analysis, transformer OC/SC parameter extraction, and frequency-based load shedding.',
     standards: ['IEEE 399 (Brown Book)', 'IEC 60909', 'IEEE 242'],
     features: [
       'Interactive 3-Phase balanced & unbalanced fault impedance solver',
       'Automated frequency/voltage load shedding priority matrix',
       'Transformer open-circuit & short-circuit equivalent circuit extraction'
     ],
-    formula: 'I_sc = V_LL / (√3 • Z_th) • Δf = (P_gen - P_load) / (2H • f_0)',
+    formula: 'I_{\\text{sc}} = \\frac{V_{\\text{LL}}}{\\sqrt{3} \\cdot Z_{\\text{th}}} \\quad \\Big| \\quad \\Delta f = \\frac{P_{\\text{gen}} - P_{\\text{load}}}{2H \\cdot f_0}',
     url: 'https://livesimulators.com/lab/power-systems-lab',
     accentColor: 'from-blue-600/20 to-indigo-600/20',
     highlight: '220kV to 6.6kV Grid Scenarios'
@@ -87,7 +88,7 @@ const simulatorLabs: SimulatorLab[] = [
       'Dual-feed 2N redundant busbar failure mode mitigation',
       'Battery string runtime estimation via Peukert exponent modeling'
     ],
-    formula: 't = H • (C / (I • H))^k • THD_v < 3% under non-linear crest factor 3:1',
+    formula: 't = H \\cdot \\left(\\frac{C}{I \\cdot H}\\right)^k \\quad \\Big| \\quad \\text{THD}_v < 3\\%',
     url: 'https://livesimulators.com/lab/safeops-ups',
     accentColor: 'from-emerald-500/20 to-teal-600/20',
     highlight: 'Zero-Transfer-Time Simulation'
@@ -106,7 +107,7 @@ const simulatorLabs: SimulatorLab[] = [
       'Substation earth mesh step & touch potential risk distribution',
       'Hazard Risk Category (HRC 1-4) PPE compliance interactive selector'
     ],
-    formula: 'E_i = 4.184 • C_f • E_n • (t / 0.2) • (610^x / D^x) cal/cm²',
+    formula: 'E_i = 4.184 \\cdot C_f \\cdot E_n \\cdot \\left(\\frac{t}{0.2}\\right) \\cdot \\left(\\frac{610^x}{D^x}\\right) \\text{ cal/cm}^2',
     url: 'https://livesimulators.com/lab/electrolive-electrical-safety',
     accentColor: 'from-amber-500/20 to-orange-600/20',
     highlight: 'Zero-Incident Safety Engineering'
@@ -125,7 +126,7 @@ const simulatorLabs: SimulatorLab[] = [
       'Harmonic resonance amplitude peak estimation with damping ratio ζ',
       'Influence coefficient method for 2-plane field vibration trim balancing'
     ],
-    formula: 'M q̈ + (C + Ω G) q̇ + K q = F_unbalance(Ω) • ω_cr = √(k / m)',
+    formula: 'M \\ddot{q} + (C + \\Omega G) \\dot{q} + K q = F_{\\text{unbal}}(\\Omega) \\quad \\Big| \\quad \\omega_{\\text{cr}} = \\sqrt{\\frac{k}{m}}',
     url: 'https://mech.livesimulators.com/',
     accentColor: 'from-purple-500/20 to-pink-600/20',
     highlight: 'Advanced API 617 / 684 Solver'
@@ -228,10 +229,10 @@ export const LiveSimulatorsSection = () => {
                   </p>
 
                   {/* Core Mathematical Formulation Box */}
-                  <div className="p-3 rounded-lg bg-secondary/40 border border-border/50 font-mono text-xs text-primary/90 flex items-center gap-2 overflow-x-auto">
+                  <div className="p-3 rounded-xl bg-secondary/50 dark:bg-card/70 border border-border/60 text-xs flex items-center gap-2 overflow-x-auto text-foreground">
                     <Activity className="w-4 h-4 text-primary shrink-0" />
-                    <span className="text-[11px] text-muted-foreground shrink-0">Formulation:</span>
-                    <span className="whitespace-nowrap">{lab.formula}</span>
+                    <span className="text-[11px] font-mono font-semibold text-muted-foreground shrink-0">Formulation:</span>
+                    <MathTex math={lab.formula} className="text-primary text-xs" />
                   </div>
 
                   {/* Key Capabilities */}

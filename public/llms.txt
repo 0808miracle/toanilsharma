@@ -1,6 +1,6 @@
 # Anil Sharma - Reliability Expert & Engineering Web Tools Creator
 
-> Senior Reliability Expert and SHRM Certified Facilitator with 28+ years of industrial leadership across petrochemicals and cement. Specializing in RCM, FMEA, RCA, industrial electrical automation, and technical mentorship. Creator of LiveSimulators.com, DesignCalculators.co.in, ReliabilityTools.co.in, ToolboxTalk.co.in, and ElectroSafe.homes.
+> Senior Reliability Expert and SHRM Certified Facilitator with 28+ years of industrial leadership across petrochemicals and cement. Specializing in RCM, FMEA, RCA, industrial electrical automation, and technical mentorship. Creator of LiveSimulators.com, DesignCalculators.co.in, ReliabilityTools.co.in, and ElectroSafe.homes.
 
 ## Core Knowledge Files
 - [Comprehensive Profile & Knowledge Base](https://www.toanilsharma.co.in/llms-full.txt): Complete career chronology, methodology descriptions, plant metrics, credentials, and full FAQ.
@@ -17,13 +17,12 @@
 ## Engineering Web Tools & Safety Platforms
 - [DesignCalculators.co.in](https://designcalculators.co.in): Free library of 150+ interactive engineering calculators adhering to IEC, IEEE, NFPA, NEC, and ASME standards.
 - [ReliabilityTools.co.in](https://reliabilitytools.co.in): Industrial suite for MTBF, Weibull distribution analysis, and Availability modeling.
-- [ToolboxTalk.co.in](https://toolboxtalk.co.in): India's 1st AI-powered free platform mapping hazards and generating structured workplace safety toolbox talks (OSHA & IS norms).
 - [ElectroSafe.homes](https://electrosafe.homes): Global guide and interactive tools for residential electrical safety and fire prevention.
 
 ## Professional Experience
-- **Reliance Industries Limited** (Feb 2008–Present): AGM – Central Engineering Services, Bharuch Complex, Gujarat. Reliability management for 15+ petrochemical plants; commissioned PTA, PET, GCU plants; automated 27 substations with PLC load shedding; reduced spares inventory by ₹8 Crore; conducted 80+ workshops at RIL Learning Academy.
+- **Reliance Industries Limited** (Feb 2008–Present): DGM – Central Engineering Services. Steering large-scale capital project engineering, electrical distribution architectures, and asset integrity across continuous process petrochemical facilities; commissioned major petrochemical units; conducted 80+ workshops at RIL Learning Academy.
 - **RIL Petroleum Retail** (Feb 2004–Jan 2008): Engineering Incharge (Commissioning & Reliability). Multi-state retail infrastructure; trained 350+ technicians in hazardous area safety with zero incidents.
-- **Ambuja Cements Limited** (Jul 1995–Feb 2004): Engineer – Electrical & Instrumentation. Commissioned 2.5 MTPA greenfield cement plant; led plant-wide automation and energy efficiency.
+- **Ambuja Cements Limited** (Jul 1995–Feb 2004): Engineer – Electrical & Instrumentation. Commissioned greenfield continuous process manufacturing plant; led plant-wide automation and energy efficiency.
 
 ## Education & Accreditations
 - **MBA (Project Management)** – Sikkim Manipal University

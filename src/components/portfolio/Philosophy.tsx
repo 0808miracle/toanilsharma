@@ -109,7 +109,7 @@ export const Philosophy = () => {
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-destructive font-bold text-base leading-none">✕</span>
-                <span>Inventory hoarding: uncataloged critical spares tying up tens of crores in working capital.</span>
+                <span>Inventory bloating: uncataloged critical spares tying up excessive working capital.</span>
               </li>
             </ul>
           </div>
@@ -141,7 +141,7 @@ export const Philosophy = () => {
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-emerald-500 font-bold text-base leading-none">✓</span>
-                <span>₹8 Crore spares reduction through rigorous criticality categorization in SAP-PM.</span>
+                <span>Substantial spares optimization through rigorous criticality categorization in SAP-PM.</span>
               </li>
             </ul>
           </div>

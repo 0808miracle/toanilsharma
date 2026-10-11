@@ -46,19 +46,6 @@ const projectsData = [
     link: "https://reliabilitytools.co.in",
   },
   {
-    image: "/images/toolboxtalk.svg",
-    title: "ToolboxTalk.co.in",
-    badge: "AI Safety Innovation",
-    description: "India's first AI-powered free platform that enables site engineers and supervisors to instantly generate structured toolbox talks by simply entering the work activity, mapping hazards and mitigation based on OSHA and IS norms.",
-    caseStudy: {
-      goal: "Empower ground-level site teams with instant, standardized hazard briefings.",
-      action: "Trained an intelligent mapping engine aligning field hazards to OSHA, IEC, and IS standards.",
-      result: "Instant structured safety talks eliminating high-risk field oversight."
-    },
-    metrics: ["AI Safety Tool", "Hazard Mapping", "OSHA & IS Norms"],
-    link: "https://toolboxtalk.co.in",
-  },
-  {
     image: "/images/electrosafe.webp",
     title: "ElectroSafe.homes",
     badge: "Public Safety",
