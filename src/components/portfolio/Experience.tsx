@@ -22,6 +22,7 @@ import {
   BookOpen
 } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
 import { MathTex } from '@/components/ui/MathTex';
 
 interface JourneyMilestone {
@@ -347,7 +348,10 @@ export const Experience = () => {
 
                 {/* Journey Milestone Card */}
                 <div className={`w-full sm:w-1/2 ${isEven ? 'sm:mr-8' : 'sm:ml-8'}`}>
-                  <div className="group relative p-6 sm:p-7 rounded-3xl bg-background/95 dark:bg-card/95 border border-border/80 dark:border-white/10 hover:border-primary/50 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1">
+                  <SpotlightCard 
+                    spotlightColor="rgba(59, 130, 246, 0.35)"
+                    className="p-6 sm:p-7 rounded-3xl bg-background/95 dark:bg-card/95 border border-border/80 dark:border-white/10 hover:border-primary/50 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1"
+                  >
                     
                     {/* Header info */}
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -383,7 +387,7 @@ export const Experience = () => {
                       {milestone.summary}
                     </p>
 
-                    {/* Pure Math LaTeX Box */}
+                    {/* Pure Math LaTeX Box with Copy functionality */}
                     <div className="mt-4 p-3 rounded-2xl bg-secondary/60 dark:bg-secondary/25 border border-border/60">
                       <div className="flex items-center justify-between text-[11px] font-mono text-muted-foreground mb-1.5">
                         <span className="font-semibold text-foreground flex items-center gap-1">
@@ -401,7 +405,7 @@ export const Experience = () => {
                     <div className="mt-4 pt-3 border-t border-border/50">
                       <button
                         onClick={() => setExpandedEra(isExpanded ? null : milestone.era)}
-                        className="w-full flex items-center justify-between text-xs font-semibold text-primary hover:text-primary/80 transition-colors py-1"
+                        className="w-full flex items-center justify-between text-xs font-semibold text-primary hover:text-primary/80 transition-colors py-1 cursor-pointer"
                       >
                         <span className="flex items-center gap-1.5">
                           <BookOpen className="w-3.5 h-3.5" />
@@ -431,7 +435,7 @@ export const Experience = () => {
                       ))}
                     </div>
 
-                  </div>
+                  </SpotlightCard>
                 </div>
 
               </div>

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
+import { ParticleGridCanvas } from '@/components/portfolio/ParticleGridCanvas';
 import { 
   ArrowRight, 
   PlayCircle, 
@@ -24,34 +26,41 @@ const missionStats = [
     label: "Virtual Labs & Simulators",
     subtext: "First-Principles Browser Physics",
     accent: "text-foreground",
-    borderGlow: "group-hover:border-blue-500/50"
+    borderGlow: "group-hover:border-blue-500/50",
+    href: "#simulators"
   },
   {
     value: "150+",
     label: "Engineering Calculators",
     subtext: "IEC, IEEE, ASME & API Standards",
     accent: "text-foreground",
-    borderGlow: "group-hover:border-cyan-500/50"
+    borderGlow: "group-hover:border-cyan-500/50",
+    href: "#projects"
   },
   {
     value: "100%",
     label: "Free & Open Access",
     subtext: "Zero Ads • Zero Paywalls • Zero Logs",
     accent: "text-blue-600 dark:text-cyan-400 font-extrabold",
-    borderGlow: "group-hover:border-emerald-500/50"
+    borderGlow: "group-hover:border-emerald-500/50",
+    href: "#philosophy"
   },
   {
     value: "28+",
     label: "Years Industrial Rigor",
     subtext: "Heavy Industry First-Principles",
     accent: "text-foreground",
-    borderGlow: "group-hover:border-indigo-500/50"
+    borderGlow: "group-hover:border-indigo-500/50",
+    href: "#experience"
   }
 ];
 
 export const Hero = () => {
   return (
     <section id="home" className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden">
+      {/* Interactive Particle Constellation Grid */}
+      <ParticleGridCanvas />
+
       {/* High-tech Background Ambient Grid & Radial Glow Mesh */}
       <div 
         className="absolute inset-0 bg-[radial-gradient(rgba(59,130,246,0.12)_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" 
@@ -126,25 +135,32 @@ export const Hero = () => {
               </a>
             </div>
 
-            {/* Impact Metric Cards */}
+            {/* Impact Metric Cards - WHOLE CARD CLICKABLE with Spotlight */}
             <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4 max-w-2xl mx-auto lg:mx-0">
               {missionStats.map((stat, index) => (
-                <div 
+                <a 
                   key={index}
-                  className={`group relative p-3.5 sm:p-4 rounded-2xl bg-secondary/50 dark:bg-[#0B0F19]/90 border border-border/70 dark:border-white/10 dark:shadow-[0_0_20px_rgba(15,76,255,0.12)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-[0_0_25px_rgba(15,76,255,0.25)] ${stat.borderGlow}`}
+                  href={stat.href}
+                  className="block select-none"
                 >
-                  <div className="flex items-baseline space-x-1 justify-center lg:justify-start">
-                    <span className={`text-2xl sm:text-3xl font-bold font-grotesk tracking-tight ${stat.accent}`}>
-                      {stat.value}
-                    </span>
-                  </div>
-                  <p className="mt-1 text-xs font-semibold text-foreground/90 leading-tight">
-                    {stat.label}
-                  </p>
-                  <p className="mt-0.5 text-[10px] text-muted-foreground leading-tight truncate">
-                    {stat.subtext}
-                  </p>
-                </div>
+                  <SpotlightCard
+                    spotlightColor="rgba(59, 130, 246, 0.35)"
+                    glowSize={200}
+                    className={`cursor-pointer text-left p-3.5 sm:p-4 rounded-2xl bg-secondary/50 dark:bg-[#0B0F19]/90 border border-border/70 dark:border-white/10 dark:shadow-[0_0_20px_rgba(15,76,255,0.12)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:hover:shadow-[0_0_25px_rgba(15,76,255,0.3)] ${stat.borderGlow}`}
+                  >
+                    <div className="flex items-baseline space-x-1 justify-center lg:justify-start">
+                      <span className={`text-2xl sm:text-3xl font-bold font-grotesk tracking-tight ${stat.accent}`}>
+                        {stat.value}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-xs font-semibold text-foreground/90 leading-tight group-hover:text-primary transition-colors">
+                      {stat.label}
+                    </p>
+                    <p className="mt-0.5 text-[10px] text-muted-foreground leading-tight truncate">
+                      {stat.subtext}
+                    </p>
+                  </SpotlightCard>
+                </a>
               ))}
             </div>
           </div>
@@ -183,7 +199,7 @@ export const Hero = () => {
               </div>
 
               {/* Floating Top-Left Micro-Badge */}
-              <div className="absolute -top-3 -left-3 sm:-left-4 p-2.5 sm:p-3 rounded-2xl bg-background/95 dark:bg-card/95 border border-border/80 dark:border-white/15 shadow-xl backdrop-blur-md flex items-center space-x-2.5">
+              <div className="absolute -top-3 -left-3 sm:-left-4 p-2.5 sm:p-3 rounded-2xl bg-background/95 dark:bg-card/95 border border-border/80 dark:border-white/15 shadow-xl backdrop-blur-md flex items-center space-x-2.5 animate-float-slow">
                 <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center flex-shrink-0">
                   <Award className="w-4 h-4" />
                 </div>
@@ -194,7 +210,7 @@ export const Hero = () => {
               </div>
 
               {/* Floating Bottom-Right Micro-Badge */}
-              <div className="absolute -bottom-3 -right-3 sm:-right-4 p-2.5 sm:p-3 rounded-2xl bg-background/95 dark:bg-card/95 border border-border/80 dark:border-white/15 shadow-xl backdrop-blur-md flex items-center space-x-2.5">
+              <div className="absolute -bottom-3 -right-3 sm:-right-4 p-2.5 sm:p-3 rounded-2xl bg-background/95 dark:bg-card/95 border border-border/80 dark:border-white/15 shadow-xl backdrop-blur-md flex items-center space-x-2.5 animate-float-reverse">
                 <div className="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center flex-shrink-0">
                   <ShieldCheck className="w-4 h-4" />
                 </div>

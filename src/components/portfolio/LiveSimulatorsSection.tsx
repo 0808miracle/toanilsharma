@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 import { LiveWaveformSimulator } from '@/components/portfolio/LiveWaveformSimulator';
+import { sounds } from '@/utils/soundEffects';
 import { 
   Zap, 
   Activity, 
@@ -15,7 +17,10 @@ import {
   RotateCw,
   Sliders,
   CheckCircle2,
-  Sparkles
+  Sparkles,
+  ArrowRight,
+  Flame,
+  Radio
 } from 'lucide-react';
 import { MathTex } from '@/components/ui/MathTex';
 
@@ -32,7 +37,9 @@ interface SimulatorLab {
   formula: string;
   url: string;
   accentColor: string;
+  glowColor: string;
   highlight: string;
+  icon: typeof Zap;
 }
 
 const simulatorLabs: SimulatorLab[] = [
@@ -52,8 +59,10 @@ const simulatorLabs: SimulatorLab[] = [
     ],
     formula: 'V_{\\text{out}} = \\frac{V_{\\text{in}}}{1 - D} \\cdot \\eta = \\frac{P_{\\text{out}}}{P_{\\text{out}} + P_{\\text{sw}} + P_{\\text{cond}}}',
     url: 'https://livesimulators.com/lab/power-electronics-lab',
-    accentColor: 'from-cyan-500/20 to-blue-600/20',
-    highlight: 'Float64 Real-Time Numerical Solvers'
+    accentColor: 'from-cyan-500 via-blue-500 to-indigo-600',
+    glowColor: 'group-hover:shadow-[0_0_35px_rgba(6,182,212,0.25)]',
+    highlight: 'Float64 Real-Time Numerical Solvers',
+    icon: Zap
   },
   {
     id: 'power-systems',
@@ -71,8 +80,10 @@ const simulatorLabs: SimulatorLab[] = [
     ],
     formula: 'I_{\\text{sc}} = \\frac{V_{\\text{LL}}}{\\sqrt{3} \\cdot Z_{\\text{th}}} \\quad \\Big| \\quad \\Delta f = \\frac{P_{\\text{gen}} - P_{\\text{load}}}{2H \\cdot f_0}',
     url: 'https://livesimulators.com/lab/power-systems-lab',
-    accentColor: 'from-blue-600/20 to-indigo-600/20',
-    highlight: '220kV to 6.6kV Grid Scenarios'
+    accentColor: 'from-blue-600 via-indigo-600 to-purple-600',
+    glowColor: 'group-hover:shadow-[0_0_35px_rgba(59,130,246,0.25)]',
+    highlight: '220kV to 6.6kV Grid Scenarios',
+    icon: Cpu
   },
   {
     id: 'safeops-ups',
@@ -90,8 +101,10 @@ const simulatorLabs: SimulatorLab[] = [
     ],
     formula: 't = H \\cdot \\left(\\frac{C}{I \\cdot H}\\right)^k \\quad \\Big| \\quad \\text{THD}_v < 3\\%',
     url: 'https://livesimulators.com/lab/safeops-ups',
-    accentColor: 'from-emerald-500/20 to-teal-600/20',
-    highlight: 'Zero-Transfer-Time Simulation'
+    accentColor: 'from-emerald-500 via-teal-500 to-cyan-600',
+    glowColor: 'group-hover:shadow-[0_0_35px_rgba(16,185,129,0.25)]',
+    highlight: 'Zero-Transfer-Time Simulation',
+    icon: Activity
   },
   {
     id: 'electrolive-safety',
@@ -109,8 +122,10 @@ const simulatorLabs: SimulatorLab[] = [
     ],
     formula: 'E_i = 4.184 \\cdot C_f \\cdot E_n \\cdot \\left(\\frac{t}{0.2}\\right) \\cdot \\left(\\frac{610^x}{D^x}\\right) \\text{ cal/cm}^2',
     url: 'https://livesimulators.com/lab/electrolive-electrical-safety',
-    accentColor: 'from-amber-500/20 to-orange-600/20',
-    highlight: 'Zero-Incident Safety Engineering'
+    accentColor: 'from-amber-500 via-orange-500 to-rose-600',
+    glowColor: 'group-hover:shadow-[0_0_35px_rgba(245,158,11,0.25)]',
+    highlight: 'Zero-Incident Safety Engineering',
+    icon: Flame
   },
   {
     id: 'mechanical-turbomachinery',
@@ -128,8 +143,10 @@ const simulatorLabs: SimulatorLab[] = [
     ],
     formula: 'M \\ddot{q} + (C + \\Omega G) \\dot{q} + K q = F_{\\text{unbal}}(\\Omega) \\quad \\Big| \\quad \\omega_{\\text{cr}} = \\sqrt{\\frac{k}{m}}',
     url: 'https://mech.livesimulators.com/',
-    accentColor: 'from-purple-500/20 to-pink-600/20',
-    highlight: 'Advanced API 617 / 684 Solver'
+    accentColor: 'from-purple-500 via-indigo-500 to-pink-600',
+    glowColor: 'group-hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]',
+    highlight: 'Advanced API 617 / 684 Solver',
+    icon: RotateCw
   }
 ];
 
@@ -143,19 +160,19 @@ export const LiveSimulatorsSection = () => {
   return (
     <Section id="simulators" className="bg-slate-950/20 relative overflow-hidden">
       {/* Background radial gradient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/10 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[550px] bg-primary/10 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="relative z-10">
         <SectionHeader>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-mono font-medium text-primary mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-mono font-medium text-primary mb-3 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            LIVE VIRTUAL LABORATORIES • FIRST-PRINCIPLES SOLVERS
+            LIVE VIRTUAL LABORATORIES • 60 FPS BROWSER SOLVERS
           </div>
           <SectionLabel>LiveSimulators Ecosystem</SectionLabel>
           <SectionTitle>
             Interactive <TextGradient>Virtual Engineering Labs</TextGradient>
           </SectionTitle>
-          <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg">
+          <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg leading-relaxed">
             Bridging 28 years of continuous process plant leadership with real-time web simulation. 
             Engineers, students, and plant operators can simulate complex physics, test fault scenarios, and explore 
             rigorous mathematical formulations directly in the browser—100% free and ad-free.
@@ -177,7 +194,7 @@ export const LiveSimulatorsSection = () => {
             <button
               key={tab.key}
               onClick={() => setActiveFilter(tab.key as any)}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
                 activeFilter === tab.key
                   ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-105'
                   : 'bg-secondary/60 text-muted-foreground hover:text-foreground hover:bg-secondary'
@@ -188,131 +205,145 @@ export const LiveSimulatorsSection = () => {
           ))}
         </div>
 
-        {/* Simulator Cards Grid */}
+        {/* Simulator Cards Grid - WHOLE CARD CLICKABLE */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {filteredLabs.map((lab) => (
-            <Card 
-              key={lab.id}
-              className="group relative bg-background/60 backdrop-blur-xl border border-border/60 hover:border-primary/50 transition-all duration-500 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between"
-            >
-              {/* Top ambient glow */}
-              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${lab.accentColor}`}></div>
-
-              <div>
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase px-2.5 py-1 rounded-md bg-primary/10 border border-primary/20">
-                        {lab.code}
-                      </span>
-                      <span className="text-xs text-muted-foreground font-medium">
-                        {lab.categoryLabel}
-                      </span>
-                    </div>
-                    <Badge variant="outline" className="text-[11px] font-mono border-emerald-500/30 text-emerald-400 bg-emerald-500/5">
-                      <Sparkles className="w-3 h-3 mr-1" />
-                      {lab.highlight}
-                    </Badge>
-                  </div>
-
-                  <CardTitle className="text-2xl font-bold font-grotesk tracking-tight group-hover:text-primary transition-colors flex items-center justify-between">
-                    <span>{lab.title}</span>
-                  </CardTitle>
-                  <p className="text-sm font-medium text-foreground/80 mt-1">
-                    {lab.tagline}
-                  </p>
-                </CardHeader>
-
-                <CardContent className="space-y-5 pb-6">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {lab.description}
-                  </p>
-
-                  {/* Core Mathematical Formulation Box */}
-                  <div className="p-3 rounded-xl bg-secondary/50 dark:bg-card/70 border border-border/60 text-xs flex items-center gap-2 overflow-x-auto text-foreground">
-                    <Activity className="w-4 h-4 text-primary shrink-0" />
-                    <span className="text-[11px] font-mono font-semibold text-muted-foreground shrink-0">Formulation:</span>
-                    <MathTex math={lab.formula} className="text-primary text-xs" />
-                  </div>
-
-                  {/* Key Capabilities */}
-                  <div className="space-y-2">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground block">
-                      Interactive Engineering Capabilities:
-                    </span>
-                    <ul className="space-y-1.5 text-xs text-foreground/85">
-                      {lab.features.map((feat, fIndex) => (
-                        <li key={fIndex} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Standards badges */}
-                  <div className="pt-2 flex flex-wrap items-center gap-1.5">
-                    <span className="text-[11px] text-muted-foreground mr-1">Standards:</span>
-                    {lab.standards.map((std, sIndex) => (
-                      <span 
-                        key={sIndex}
-                        className="px-2 py-0.5 rounded text-[10px] font-mono bg-secondary text-secondary-foreground border border-border/40"
-                      >
-                        {std}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </div>
-
-              {/* Bottom Action Footer */}
-              <div className="p-6 pt-0 border-t border-border/30 mt-4 bg-secondary/10 flex items-center justify-between">
-                <span className="text-xs text-muted-foreground font-mono">
-                  Browser-Based Numerical Solver
-                </span>
-                <a 
-                  href={lab.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block"
+          {filteredLabs.map((lab) => {
+            const Icon = lab.icon;
+            return (
+              <a 
+                key={lab.id}
+                href={lab.url}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group block cursor-pointer select-none text-left rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-all duration-500 hover:-translate-y-2"
+                aria-label={`Launch ${lab.title} (${lab.code})`}
+              >
+                <SpotlightCard 
+                  spotlightColor="rgba(59, 130, 246, 0.35)"
+                  onMouseEnter={() => sounds.playHover()}
+                  className={`relative h-full bg-background/70 dark:bg-card/70 backdrop-blur-xl border border-border/70 dark:border-white/10 group-hover:border-primary/60 transition-all duration-500 rounded-3xl overflow-hidden group-hover:shadow-2xl ${lab.glowColor} flex flex-col justify-between`}
                 >
-                  <Button size="sm" className="group/btn gap-2 font-medium">
-                    <span>Launch Lab</span>
-                    <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                  </Button>
-                </a>
-              </div>
-            </Card>
-          ))}
+                  {/* Top Ambient Gradient Accent Line */}
+                  <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${lab.accentColor}`}></div>
+
+                  <div>
+                    <CardHeader className="pb-4">
+                      <div className="flex items-center justify-between gap-2 mb-2">
+                        <div className="flex items-center gap-2">
+                          <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase px-2.5 py-1 rounded-md bg-primary/10 border border-primary/20 flex items-center gap-1.5">
+                            <Icon className="w-3.5 h-3.5" />
+                            {lab.code}
+                          </span>
+                          <span className="text-xs text-muted-foreground font-medium">
+                            {lab.categoryLabel}
+                          </span>
+                        </div>
+                        <Badge variant="outline" className="text-[11px] font-mono border-emerald-500/30 text-emerald-400 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors">
+                          <Sparkles className="w-3 h-3 mr-1" />
+                          {lab.highlight}
+                        </Badge>
+                      </div>
+
+                      <CardTitle className="text-2xl font-bold font-grotesk tracking-tight group-hover:text-primary transition-colors flex items-center justify-between">
+                        <span>{lab.title}</span>
+                        <div className="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 text-primary flex items-center justify-center shrink-0 opacity-80 group-hover:opacity-100 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                        </div>
+                      </CardTitle>
+                      <p className="text-sm font-medium text-foreground/80 mt-1">
+                        {lab.tagline}
+                      </p>
+                    </CardHeader>
+
+                    <CardContent className="space-y-5 pb-6">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {lab.description}
+                      </p>
+
+                      {/* Core Mathematical Formulation Box */}
+                      <div className="p-3 rounded-xl bg-secondary/50 dark:bg-card/70 border border-border/60 text-xs flex items-center gap-2 overflow-x-auto text-foreground group-hover:border-primary/30 transition-colors">
+                        <Activity className="w-4 h-4 text-primary shrink-0" />
+                        <span className="text-[11px] font-mono font-semibold text-muted-foreground shrink-0">Formulation:</span>
+                        <MathTex math={lab.formula} className="text-primary text-xs" />
+                      </div>
+
+                      {/* Key Capabilities */}
+                      <div className="space-y-2">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground block">
+                          Interactive Engineering Capabilities:
+                        </span>
+                        <ul className="space-y-1.5 text-xs text-foreground/85">
+                          {lab.features.map((feat, fIndex) => (
+                            <li key={fIndex} className="flex items-start gap-2">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                              <span>{feat}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Standards badges */}
+                      <div className="pt-2 flex flex-wrap items-center gap-1.5">
+                        <span className="text-[11px] text-muted-foreground mr-1">Standards:</span>
+                        {lab.standards.map((std, sIndex) => (
+                          <span 
+                            key={sIndex}
+                            className="px-2 py-0.5 rounded text-[10px] font-mono bg-secondary text-secondary-foreground border border-border/40"
+                          >
+                            {std}
+                          </span>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </div>
+
+                  {/* Bottom Action Footer */}
+                  <div className="p-6 pt-3 border-t border-border/40 mt-4 bg-secondary/15 flex items-center justify-between">
+                    <span className="text-xs text-muted-foreground font-mono flex items-center gap-1.5">
+                      <Radio className="w-3 h-3 text-emerald-400 animate-pulse" />
+                      60 FPS Browser Physics • Float64
+                    </span>
+                    <div className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
+                      <span>Launch Interactive Lab</span>
+                      <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </div>
+                  </div>
+                </SpotlightCard>
+              </a>
+            );
+          })}
         </div>
 
-        {/* Global Hub CTA Banner */}
-        <div className="relative rounded-2xl p-6 sm:p-8 bg-gradient-to-r from-slate-900 via-secondary/70 to-slate-900 border border-primary/20 shadow-2xl text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold text-primary">
-              <Zap className="w-3.5 h-3.5" />
-              <span>OVER 65+ ACTIVE FIRST-PRINCIPLES SIMULATORS</span>
+        {/* Global Hub CTA Banner - WHOLE CARD CLICKABLE */}
+        <a 
+          href="https://livesimulators.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group block cursor-pointer select-none rounded-3xl transition-all duration-500 hover:-translate-y-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          aria-label="Open LiveSimulators.com Catalog"
+        >
+          <div className="relative rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-slate-900 via-secondary/70 to-slate-900 border border-primary/30 group-hover:border-primary/60 shadow-2xl group-hover:shadow-[0_0_40px_rgba(0,102,255,0.25)] text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 transition-all duration-300">
+            <div className="space-y-2 max-w-2xl">
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold text-primary">
+                <Zap className="w-3.5 h-3.5" />
+                <span>OVER 65+ ACTIVE FIRST-PRINCIPLES SIMULATORS</span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold font-grotesk text-foreground group-hover:text-primary transition-colors">
+                Explore the Complete LiveSimulators Interactive Catalog
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Covering electrical transmission lines, chemical reactors (CSTR), civil Euler-Bernoulli beam deflections, 
+                quantum band diagrams, and planar 4-bar kinematics.
+              </p>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold font-grotesk">
-              Explore the Complete LiveSimulators Interactive Catalog
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              Covering electrical transmission lines, chemical reactors (CSTR), civil Euler-Bernoulli beam deflections, 
-              quantum band diagrams, and planar 4-bar kinematics.
-            </p>
+            <div className="shrink-0">
+              <Button size="lg" className="gap-2 shadow-lg shadow-primary/20 group-hover:scale-105 transition-all">
+                <span>Open LiveSimulators.com</span>
+                <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Button>
+            </div>
           </div>
-          <a 
-            href="https://livesimulators.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="shrink-0"
-          >
-            <Button size="lg" className="gap-2 shadow-lg shadow-primary/20">
-              <span>Open LiveSimulators.com</span>
-              <ExternalLink className="w-4 h-4" />
-            </Button>
-          </a>
-        </div>
+        </a>
       </div>
     </Section>
   );

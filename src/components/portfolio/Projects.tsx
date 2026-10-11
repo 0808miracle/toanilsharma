@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, BrainCircuit, Shield, Clock, Calculator, Target, Cpu, TrendingUp } from 'lucide-react';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
+import { ArrowRight, BrainCircuit, Shield, Clock, Calculator, Target, Cpu, TrendingUp, ExternalLink } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 
 const projectsData = [
@@ -70,7 +71,7 @@ export const Projects = () => {
         <SectionTitle>
           Empowering the Community through <TextGradient>Digital Innovation</TextGradient>
         </SectionTitle>
-        <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg">
+        <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg leading-relaxed">
           Beyond industrial leadership, my mission is to democratize high-precision engineering knowledge. 
           I have personally conceptualized and developed these suites to provide engineers, students, and professionals 
           with a <strong className="text-foreground">100% free, ad-free experience</strong>—fostering technical excellence and safety awareness worldwide.
@@ -79,95 +80,113 @@ export const Projects = () => {
 
       <div className="grid gap-12 lg:gap-16">
         {projectsData.map((project, index) => (
-          <div 
+          <a
             key={index}
-            className="group relative"
-            itemScope itemType="https://schema.org/CreativeWork"
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block cursor-pointer select-none text-left rounded-2xl sm:rounded-[2rem] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-all duration-500 hover:-translate-y-2"
+            itemScope 
+            itemType="https://schema.org/CreativeWork"
+            aria-label={`Explore ${project.title}`}
           >
             {/* Background Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-2xl sm:rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-            
-            <Card className="relative bg-background/80 backdrop-blur-xl border border-border/50 rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500 group-hover:translate-y-[-4px]">
-              <div className="flex flex-col lg:flex-row">
-                {/* Logo & Visual Area */}
-                <div className="lg:w-1/3 p-4 sm:p-6 lg:p-12 flex flex-col items-center justify-center bg-secondary/30 relative">
-                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--primary)_0,transparent_70%)]"></div>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative z-10 transition-all duration-700 group-hover:scale-110 flex items-center justify-center h-32 sm:h-48 w-full px-4">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      itemProp="image" 
-                      className="max-h-full max-w-full object-contain drop-shadow-2xl" 
-                    />
-                  </a>
-                  <div className="mt-8 flex flex-wrap gap-2 justify-center z-10">
-                    {project.metrics.map((metric, mIndex) => (
-                      <span key={mIndex} className="px-3 py-1 bg-background/50 border border-border/50 text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full opacity-70 group-hover:opacity-100 transition-opacity">
-                        {metric}
-                      </span>
-                    ))}
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-blue-500/20 to-cyan-500/20 rounded-2xl sm:rounded-[2rem] blur-xl opacity-20 group-hover:opacity-60 transition duration-500"></div>
+              
+              <SpotlightCard 
+                spotlightColor="rgba(59, 130, 246, 0.35)"
+                glowSize={450}
+                className="relative bg-background/80 dark:bg-card/80 backdrop-blur-xl border border-border/60 group-hover:border-primary/60 rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500 group-hover:shadow-[0_15px_45px_rgba(0,102,255,0.2)]"
+              >
+                <div className="flex flex-col lg:flex-row">
+                  {/* Logo & Visual Area */}
+                  <div className="lg:w-1/3 p-4 sm:p-6 lg:p-12 flex flex-col items-center justify-center bg-secondary/30 relative overflow-hidden">
+                    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--primary)_0,transparent_70%)]"></div>
+                    <div className="relative z-10 transition-all duration-500 group-hover:scale-105 flex items-center justify-center h-32 sm:h-48 w-full px-4">
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        itemProp="image" 
+                        className="max-h-full max-w-full object-contain drop-shadow-2xl" 
+                      />
+                    </div>
+                    <div className="mt-8 flex flex-wrap gap-2 justify-center z-10">
+                      {project.metrics.map((metric, mIndex) => (
+                        <span key={mIndex} className="px-3 py-1 bg-background/60 border border-border/60 text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full opacity-80 group-hover:opacity-100 group-hover:border-primary/40 transition-all">
+                          {metric}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                {/* Content Area */}
-                <div className="lg:w-2/3 p-4 sm:p-6 lg:p-12 flex flex-col">
-                  <div className="flex justify-between items-center mb-4">
-                    <Badge variant="outline" className="text-primary border-primary/20 px-4 py-1 rounded-full uppercase tracking-widest text-[10px] sm:text-xs">
-                      {project.badge}
-                    </Badge>
-                  </div>
-                  
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block group/title">
-                    <h3 className="text-3xl lg:text-4xl font-bold font-grotesk mb-4 group-hover/title:text-primary transition-colors" itemProp="name">
-                      {project.title}
-                    </h3>
-                  </a>
-                  
-                  <p className="text-lg text-muted-foreground mb-8 line-clamp-3 sm:line-clamp-2 overflow-wrap-anywhere break-words" itemProp="description">
-                    {project.description}
-                  </p>
-
-                  <div className="grid md:grid-cols-3 gap-6 mb-8 relative">
-                    {/* The Process Timeline Effect */}
-                    <div className="absolute top-1/2 left-0 right-0 h-px bg-border/50 hidden md:block"></div>
-                    
-                    {[
-                      { label: "Goal", value: project.caseStudy.goal, icon: Target, color: "text-blue-500" },
-                      { label: "Action", value: project.caseStudy.action, icon: Cpu, color: "text-primary" },
-                      { label: "Result", value: project.caseStudy.result, icon: TrendingUp, color: "text-green-500" },
-                    ].map((step, sIndex) => (
-                      <div key={sIndex} className="relative z-10 bg-background/50 backdrop-blur-sm p-4 rounded-xl border border-border/50">
-                        <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-secondary/50", step.color)}>
-                          <step.icon className="w-5 h-5" />
-                        </div>
-                        <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-muted-foreground mb-1">{step.label}</p>
-                        <p className="text-xs sm:text-sm font-medium leading-relaxed">{step.value}</p>
+                  {/* Content Area */}
+                  <div className="lg:w-2/3 p-4 sm:p-6 lg:p-12 flex flex-col">
+                    <div className="flex justify-between items-center mb-4">
+                      <Badge variant="outline" className="text-primary border-primary/20 px-4 py-1 rounded-full uppercase tracking-widest text-[10px] sm:text-xs group-hover:bg-primary/10 transition-colors">
+                        {project.badge}
+                      </Badge>
+                      <div className="inline-flex items-center gap-1.5 text-xs text-muted-foreground group-hover:text-primary transition-colors font-mono">
+                        <span>Click to open platform</span>
+                        <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                    
+                    <div className="inline-block group/title">
+                      <h3 className="text-3xl lg:text-4xl font-bold font-grotesk mb-4 group-hover:text-primary transition-colors flex items-center justify-between" itemProp="name">
+                        <span>{project.title}</span>
+                      </h3>
+                    </div>
+                    
+                    <p className="text-base sm:text-lg text-muted-foreground mb-8 line-clamp-3 sm:line-clamp-2 overflow-wrap-anywhere break-words leading-relaxed" itemProp="description">
+                      {project.description}
+                    </p>
 
-                  <div className="mt-auto flex items-center justify-between">
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" itemProp="url" className="w-full sm:w-auto">
-                      <Button size="lg" className="group/btn w-full sm:w-auto px-8 rounded-full">
-                        Explore Platform
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                      </Button>
-                    </a>
-                    <span className="hidden sm:block text-[10px] font-bold text-muted-foreground tracking-tighter uppercase">
-                      Engineering Innovation 
-                    </span>
+                    <div className="grid md:grid-cols-3 gap-6 mb-8 relative">
+                      {/* The Process Timeline Effect */}
+                      <div className="absolute top-1/2 left-0 right-0 h-px bg-border/50 hidden md:block"></div>
+                      
+                      {[
+                        { label: "Goal", value: project.caseStudy.goal, icon: Target, color: "text-blue-500" },
+                        { label: "Action", value: project.caseStudy.action, icon: Cpu, color: "text-primary" },
+                        { label: "Result", value: project.caseStudy.result, icon: TrendingUp, color: "text-green-500" },
+                      ].map((step, sIndex) => (
+                        <div key={sIndex} className="relative z-10 bg-background/60 dark:bg-secondary/40 backdrop-blur-sm p-4 rounded-xl border border-border/50 group-hover:border-primary/30 transition-colors">
+                          <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-secondary/60", step.color)}>
+                            <step.icon className="w-5 h-5" />
+                          </div>
+                          <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-muted-foreground mb-1">{step.label}</p>
+                          <p className="text-xs sm:text-sm font-medium leading-relaxed">{step.value}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-auto flex items-center justify-between">
+                      <div className="w-full sm:w-auto">
+                        <Button 
+                          size="lg" 
+                          className="w-full sm:w-auto px-8 rounded-full group-hover:bg-primary group-hover:text-primary-foreground shadow-md transition-all duration-300"
+                        >
+                          <span>Explore Platform</span>
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1.5" />
+                        </Button>
+                      </div>
+                      <span className="hidden sm:block text-[10px] font-bold text-muted-foreground tracking-tighter uppercase font-mono">
+                        Free &bull; Open-Access &bull; Zero-Ads
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Card>
-          </div>
+              </SpotlightCard>
+            </div>
+          </a>
         ))}
       </div>
     </Section>
   );
 };
 
-// Helper function for class merging since cn is often used in this project
+// Helper function for class merging
 function cn(...inputs: any[]) {
   return inputs.filter(Boolean).join(' ');
 }

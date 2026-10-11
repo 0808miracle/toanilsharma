@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 import { 
   Calculator, 
@@ -15,7 +16,9 @@ import {
   Factory, 
   Layers,
   Percent,
-  Sigma
+  Sigma,
+  Activity,
+  Gauge
 } from 'lucide-react';
 import { MathTex } from '@/components/ui/MathTex';
 
@@ -83,10 +86,7 @@ export const ReliabilityCalculator = () => {
     setSparesValueCr(preset.sparesValueCr);
   };
 
-  // Calculations based on Anil Sharma's RCM / FMEA / Spares Criticality benchmarks:
-  // - 38% reduction in unplanned trips (typical 30%-45% RCM improvement)
-  // - Avg 6.5 hours lost per trip (restoration + turnaround)
-  // - 18% inventory reduction through SAP-PM criticality & obsolescence analysis (Anil achieved ₹8 Cr reduction)
+  // Calculations based on Anil Sharma's RCM / FMEA / Spares Criticality benchmarks
   const results = useMemo(() => {
     const avgHoursPerTrip = 6.5;
     const currentDowntimeHours = unplannedTrips * avgHoursPerTrip;
@@ -95,6 +95,7 @@ export const ReliabilityCalculator = () => {
     // Projected improvements
     const tripReductionPercent = 38;
     const tripsAvoided = Math.round(unplannedTrips * (tripReductionPercent / 100));
+    const optimizedTrips = Math.max(1, unplannedTrips - tripsAvoided);
     const hoursSaved = tripsAvoided * avgHoursPerTrip;
     const annualDowntimeSavingsINR = hoursSaved * hourlyCost;
     const downtimeSavingsCr = annualDowntimeSavingsINR / 10000000;
@@ -111,9 +112,21 @@ export const ReliabilityCalculator = () => {
     const optimizedAvailability = Math.min(99.8, ((operatingHours - (currentDowntimeHours - hoursSaved)) / operatingHours) * 100);
     const availabilityGain = optimizedAvailability - baseAvailability;
 
+    // MTBF (Mean Time Between Failures in operating hours)
+    const currentMTBF = Math.round(operatingHours / Math.max(1, unplannedTrips));
+    const optimizedMTBF = Math.round(operatingHours / Math.max(1, optimizedTrips));
+
+    // Failure rate per 1,000 operating hours
+    const lambdaBase = ((unplannedTrips / operatingHours) * 1000).toFixed(2);
+    const lambdaOpt = ((optimizedTrips / operatingHours) * 1000).toFixed(2);
+
     return {
       tripsAvoided,
       hoursSaved,
+      currentMTBF,
+      optimizedMTBF,
+      lambdaBase,
+      lambdaOpt,
       downtimeSavingsCr: downtimeSavingsCr.toFixed(2),
       sparesCapitalReleasedCr: sparesCapitalReleasedCr.toFixed(2),
       totalAnnualBenefitCr: totalAnnualBenefitCr.toFixed(2),
@@ -267,6 +280,93 @@ export const ReliabilityCalculator = () => {
               </div>
             </div>
 
+            {/* DYNAMIC BATHTUB & RELIABILITY CURVE VISUALIZER */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-secondary/50 dark:bg-[#0B0F19]/90 border border-border/80 dark:border-white/10 space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-xs font-bold font-grotesk text-foreground">
+                  <Activity className="w-4 h-4 text-cyan-400" />
+                  <span>Dynamic Reliability Curve: Bathtub Model &amp; MTBF</span>
+                </div>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 font-semibold">
+                  Weibull &beta; &amp; &lambda;(t)
+                </span>
+              </div>
+
+              {/* Dynamic SVG Bathtub Curve */}
+              <div className="relative w-full h-32 bg-background/80 dark:bg-card/50 rounded-xl border border-border/50 p-2 overflow-hidden flex flex-col justify-end">
+                <svg className="w-full h-full overflow-visible" viewBox="0 0 320 90">
+                  <defs>
+                    <linearGradient id="optGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.4" />
+                      <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.0" />
+                    </linearGradient>
+                  </defs>
+
+                  {/* Grid lines */}
+                  <line x1="10" y1="20" x2="310" y2="20" stroke="currentColor" strokeOpacity="0.08" strokeDasharray="3,3" />
+                  <line x1="10" y1="50" x2="310" y2="50" stroke="currentColor" strokeOpacity="0.08" strokeDasharray="3,3" />
+                  <line x1="10" y1="80" x2="310" y2="80" stroke="currentColor" strokeOpacity="0.15" />
+
+                  {/* Reactive Unoptimized Baseline Curve (Red dashed) */}
+                  {/* Infant mortality -> Flat baseline -> Wearout */}
+                  <path
+                    d={`M 15 25 Q 45 ${50 + unplannedTrips * 0.25} 100 ${52 + unplannedTrips * 0.25} L 210 ${52 + unplannedTrips * 0.25} Q 260 ${45 - unplannedTrips * 0.3} 305 18`}
+                    fill="none"
+                    stroke="#f43f5e"
+                    strokeWidth="2"
+                    strokeDasharray="4,4"
+                    opacity="0.8"
+                  />
+
+                  {/* Optimized RCM Curve (Cyan solid, lower failure floor, extended wearout) */}
+                  <path
+                    d={`M 15 35 Q 55 68 110 70 L 240 70 Q 280 60 305 28`}
+                    fill="none"
+                    stroke="#06b6d4"
+                    strokeWidth="2.5"
+                  />
+
+                  {/* Shaded Area under Optimized Curve */}
+                  <path
+                    d={`M 15 35 Q 55 68 110 70 L 240 70 Q 280 60 305 28 L 305 80 L 15 80 Z`}
+                    fill="url(#optGrad)"
+                  />
+
+                  {/* Marker Points */}
+                  <circle cx="160" cy={`${52 + unplannedTrips * 0.25}`} r="4" fill="#f43f5e" />
+                  <circle cx="160" cy="70" r="4" fill="#06b6d4" />
+                </svg>
+
+                {/* Graph Labels */}
+                <div className="flex justify-between text-[9px] font-mono text-muted-foreground pt-1">
+                  <span>Infant Mortality</span>
+                  <span className="text-cyan-400 font-semibold">Useful Life Floor (&lambda;)</span>
+                  <span>Wear-Out Zone</span>
+                </div>
+              </div>
+
+              {/* Instantaneous Metrics Readout */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-center font-mono text-[11px]">
+                <div className="p-2 rounded-xl bg-background/80 dark:bg-card/60 border border-border/50">
+                  <span className="text-muted-foreground block text-[10px]">Base MTBF</span>
+                  <span className="font-bold text-foreground">{results.currentMTBF} hrs</span>
+                </div>
+                <div className="p-2 rounded-xl bg-background/80 dark:bg-card/60 border border-cyan-500/30">
+                  <span className="text-cyan-400 block text-[10px]">Target MTBF</span>
+                  <span className="font-bold text-cyan-400">{results.optimizedMTBF} hrs</span>
+                </div>
+                <div className="p-2 rounded-xl bg-background/80 dark:bg-card/60 border border-border/50">
+                  <span className="text-muted-foreground block text-[10px]">&lambda; (Base)</span>
+                  <span className="font-bold text-rose-400">{results.lambdaBase}/1k hrs</span>
+                </div>
+                <div className="p-2 rounded-xl bg-background/80 dark:bg-card/60 border border-emerald-500/30">
+                  <span className="text-emerald-400 block text-[10px]">&lambda; (Optimized)</span>
+                  <span className="font-bold text-emerald-400">{results.lambdaOpt}/1k hrs</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Governing Formulation */}
             <div className="p-3.5 rounded-2xl bg-secondary/50 dark:bg-card/50 border border-border/60 text-xs text-muted-foreground leading-relaxed space-y-2">
               <div className="flex items-center justify-between text-[11px] font-mono text-muted-foreground">
                 <span className="font-semibold text-foreground flex items-center gap-1.5">
@@ -316,7 +416,7 @@ export const ReliabilityCalculator = () => {
             </div>
 
             {/* Spares Inventory Capital Release Card */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-background/90 dark:bg-card/90 border border-border/80 dark:border-white/10 shadow-lg flex items-center justify-between">
+            <SpotlightCard className="p-5 sm:p-6 rounded-2xl flex items-center justify-between">
               <div>
                 <span className="text-xs text-muted-foreground uppercase font-bold tracking-wider block">
                   Spares Capital Released
@@ -331,10 +431,10 @@ export const ReliabilityCalculator = () => {
               <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
                 <TrendingUp className="w-6 h-6" />
               </div>
-            </div>
+            </SpotlightCard>
 
             {/* Target Plant Availability Card */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-background/90 dark:bg-card/90 border border-border/80 dark:border-white/10 shadow-lg flex items-center justify-between">
+            <SpotlightCard className="p-5 sm:p-6 rounded-2xl flex items-center justify-between">
               <div>
                 <span className="text-xs text-muted-foreground uppercase font-bold tracking-wider block">
                   Target Operating Availability
@@ -349,7 +449,7 @@ export const ReliabilityCalculator = () => {
               <div className="w-12 h-12 rounded-xl bg-blue-500/10 text-primary flex items-center justify-center shrink-0">
                 <Percent className="w-6 h-6" />
               </div>
-            </div>
+            </SpotlightCard>
 
             {/* Action CTA */}
             <a href="#contact" className="block pt-2">

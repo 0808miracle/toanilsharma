@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Copy, Check } from 'lucide-react';
 
 declare global {
   interface Window {
@@ -20,14 +21,24 @@ interface MathTexProps {
   math: string;
   block?: boolean;
   className?: string;
+  allowCopy?: boolean;
 }
 
 export const MathTex: React.FC<MathTexProps> = ({
   math,
   block = false,
   className = '',
+  allowCopy = true,
 }) => {
   const [html, setHtml] = useState<string>('');
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(math);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     let mounted = true;
@@ -76,10 +87,31 @@ export const MathTex: React.FC<MathTexProps> = ({
   if (html) {
     if (block) {
       return (
-        <div
-          className={`katex-block-container overflow-x-auto py-1 my-1 text-center font-normal ${className}`}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div className="group/math relative my-1">
+          <div
+            className={`katex-block-container overflow-x-auto py-1 text-center font-normal ${className}`}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+          {allowCopy && (
+            <button
+              onClick={handleCopy}
+              className="absolute right-1 top-1 opacity-0 group-hover/math:opacity-100 transition-opacity p-1 rounded-md bg-secondary/80 dark:bg-card/90 hover:bg-secondary text-muted-foreground hover:text-foreground text-[10px] font-mono flex items-center gap-1 border border-border/60 shadow-sm"
+              title="Copy LaTeX source code"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-3 h-3 text-emerald-500" />
+                  <span className="text-emerald-500 font-semibold">Copied</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-3 h-3" />
+                  <span className="hidden sm:inline">LaTeX</span>
+                </>
+              )}
+            </button>
+          )}
+        </div>
       );
     }
     return (

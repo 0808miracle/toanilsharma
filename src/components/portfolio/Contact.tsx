@@ -1,9 +1,23 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Phone, Mail, Linkedin, MapPin, Send, Loader2, Sparkles, BookOpen, ShieldCheck, Heart } from 'lucide-react';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
+import { 
+  Phone, 
+  Mail, 
+  Linkedin, 
+  MapPin, 
+  Send, 
+  Loader2, 
+  Sparkles, 
+  BookOpen, 
+  ShieldCheck, 
+  Heart,
+  MessageSquareCode,
+  CheckCircle2
+} from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 import { toast } from '@/hooks/use-toast';
 
@@ -14,8 +28,24 @@ const contactDetails = [
   { icon: MapPin, title: "Location", lines: ["India", "Non-Commercial Community Educational Outreach"], hrefs: [] },
 ];
 
+const quickIntents = [
+  { label: "💡 Propose Simulator", topic: "feedback", text: "Hello Anil, I'd like to suggest adding a new simulation laboratory model for..." },
+  { label: "🎓 Student Mentorship", topic: "student", text: "Hello Anil, I am an engineering student studying electrical/power systems and have a question regarding..." },
+  { label: "⚡ IEEE/IEC Standards", topic: "standards", text: "Hello Anil, I noticed the IEEE 1584 / IEC calculations on the platform and would like to discuss..." },
+  { label: "🤝 Keynote / Summit Connect", topic: "general", text: "Hello Anil, following your keynote at Bharat Electricity Summit, I would like to connect regarding..." }
+];
+
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedTopic, setSelectedTopic] = useState('feedback');
+  const [messageText, setMessageText] = useState('');
+  const [activeIntent, setActiveIntent] = useState<number | null>(null);
+
+  const handleApplyIntent = (intent: typeof quickIntents[0], idx: number) => {
+    setActiveIntent(idx);
+    setSelectedTopic(intent.topic);
+    setMessageText(intent.text);
+  };
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -36,6 +66,8 @@ export const Contact = () => {
           description: "Thank you for reaching out. Anil Sharma will respond to your query shortly.",
         });
         (event.target as HTMLFormElement).reset();
+        setMessageText('');
+        setActiveIntent(null);
       } else {
         toast({
           variant: "destructive",
@@ -121,29 +153,31 @@ export const Contact = () => {
               {contactDetails.map((item, index) => {
                 const Icon = item.icon;
                 return (
-                  <div key={index} className="flex items-start space-x-3.5 p-3 rounded-2xl bg-background/80 dark:bg-card/80 border border-border/60 dark:border-white/10">
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
-                      <Icon className="w-5 h-5" />
+                  <SpotlightCard key={index} className="p-3.5 rounded-2xl">
+                    <div className="flex items-start space-x-3.5">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-xs font-bold font-grotesk text-foreground uppercase tracking-wide">{item.title}</h4>
+                        {item.lines.map((line, i) => (
+                          item.hrefs?.[i] ? (
+                            <a 
+                              key={i} 
+                              href={item.hrefs[i]} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="block text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors truncate font-mono mt-0.5"
+                            >
+                              {line}
+                            </a>
+                          ) : (
+                            <p key={i} className="text-xs sm:text-sm text-muted-foreground mt-0.5">{line}</p>
+                          )
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="text-xs font-bold font-grotesk text-foreground uppercase tracking-wide">{item.title}</h4>
-                      {item.lines.map((line, i) => (
-                        item.hrefs?.[i] ? (
-                          <a 
-                            key={i} 
-                            href={item.hrefs[i]} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="block text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors truncate font-mono mt-0.5"
-                          >
-                            {line}
-                          </a>
-                        ) : (
-                          <p key={i} className="text-xs sm:text-sm text-muted-foreground mt-0.5">{line}</p>
-                        )
-                      ))}
-                    </div>
-                  </div>
+                  </SpotlightCard>
                 );
               })}
             </div>
@@ -157,11 +191,34 @@ export const Contact = () => {
             </div>
           </div>
 
-          {/* Feedback Form (7 Cols) */}
+          {/* Feedback Form with Quick Intent Chips (7 Cols) */}
           <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl bg-background/90 dark:bg-[#0B0F19]/90 border border-border/80 dark:border-white/10 shadow-2xl backdrop-blur-md">
             <h3 className="font-grotesk text-xl font-bold text-foreground mb-1">Send a Message</h3>
-            <p className="text-xs text-muted-foreground mb-6">Drop a note regarding simulator suggestions, mathematical corrections, or academic queries.</p>
+            <p className="text-xs text-muted-foreground mb-4">Drop a note regarding simulator suggestions, mathematical corrections, or academic queries.</p>
             
+            {/* Quick Intent Chips */}
+            <div className="mb-6">
+              <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider block mb-2">
+                Quick Subject Templates:
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {quickIntents.map((intent, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => handleApplyIntent(intent, idx)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                      activeIntent === idx
+                        ? 'bg-primary text-primary-foreground shadow-md shadow-primary/30 scale-105'
+                        : 'bg-secondary/70 dark:bg-card/70 border border-border/70 hover:border-primary/50 text-foreground/80'
+                    }`}
+                  >
+                    {intent.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <form onSubmit={onSubmit} className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
@@ -181,7 +238,7 @@ export const Contact = () => {
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-xs font-semibold text-foreground">Topic of Inquiry</label>
-                  <Select name="service" defaultValue="feedback">
+                  <Select name="service" value={selectedTopic} onValueChange={setSelectedTopic}>
                     <SelectTrigger className="rounded-xl h-11">
                       <SelectValue placeholder="Select Topic" />
                     </SelectTrigger>
@@ -200,10 +257,12 @@ export const Contact = () => {
                 <label className="text-xs font-semibold text-foreground">Message</label>
                 <Textarea 
                   name="message" 
+                  value={messageText}
+                  onChange={(e) => setMessageText(e.target.value)}
                   placeholder="Share your thoughts on the tools, suggest a new standard to implement, or ask a technical question..." 
                   rows={4} 
                   required 
-                  className="rounded-xl resize-none" 
+                  className="rounded-xl resize-none font-sans text-sm" 
                 />
               </div>
 
@@ -227,4 +286,4 @@ export const Contact = () => {
       </div>
     </Section>
   );
-};
+};

@@ -1,4 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
 import { Award, ShieldCheck, Trophy, Sparkles, CheckCircle, Star } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 
@@ -90,14 +91,15 @@ export const Awards = () => {
         {awardsData.map((award, index) => {
           const Icon = award.icon;
           return (
-            <Card 
+            <SpotlightCard 
               key={index} 
+              spotlightColor="rgba(59, 130, 246, 0.35)"
               className={`group relative bg-background/80 dark:bg-card/80 backdrop-blur-md border border-border/70 dark:border-white/10 ${award.theme.border} transition-all duration-300 rounded-3xl overflow-hidden hover:shadow-2xl ${award.theme.glow} hover:-translate-y-1.5 flex flex-col justify-between`}
             >
               {/* Top Luxury Metallic Gradient Line */}
               <div className={`h-1.5 bg-gradient-to-r ${award.theme.topGradient}`} />
 
-              <CardContent className="p-6 sm:p-7 flex flex-col justify-between h-full">
+              <div className="p-6 sm:p-7 flex flex-col justify-between h-full">
                 <div>
                   {/* Badge & Emblem */}
                   <div className="flex items-center justify-between mb-5">
@@ -127,8 +129,8 @@ export const Awards = () => {
                 <p className="text-xs text-muted-foreground leading-relaxed pt-3 border-t border-border/60 dark:border-white/10">
                   {award.description}
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </SpotlightCard>
           );
         })}
       </div>

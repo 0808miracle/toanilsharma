@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Settings, Zap, Bot, Presentation, Shield, Laptop } from 'lucide-react';
+import { Settings, Zap, Bot, Presentation, Shield, Laptop, CheckCircle2 } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
 
 const expertiseData = [
   { icon: Settings, title: "Reliability & Integrity", description: "Focused on keeping industrial plants running without breakdowns using RCM and TPM.", features: ["Asset Integrity Management (AIM)", "Risk-Based Inspection (RBI)", "TPM & Lean Maintenance", "RCA & FMEA Expert"] },
@@ -20,25 +20,29 @@ export const Expertise = () => {
           A Spectrum of <TextGradient>Technical Expertise</TextGradient>
         </SectionTitle>
       </SectionHeader>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
         {expertiseData.map((item, index) => (
-          <Card key={index} className="hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-            <CardHeader>
-              <item.icon className="w-10 h-10 mb-4 text-primary" />
-              <CardTitle>{item.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">{item.description}</p>
-              <ul className="space-y-2 text-sm">
-                {item.features.map((feature, i) => (
-                  <li key={i} className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          <SpotlightCard 
+            key={index} 
+            spotlightColor="rgba(59, 130, 246, 0.3)"
+            className="p-6 sm:p-7 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5"
+          >
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <item.icon className="w-6 h-6" />
+              </div>
+              <h3 className="font-grotesk font-bold text-lg sm:text-xl text-foreground mb-2">{item.title}</h3>
+              <p className="text-muted-foreground text-xs sm:text-sm mb-6 leading-relaxed">{item.description}</p>
+            </div>
+            <ul className="space-y-2.5 text-xs sm:text-sm pt-4 border-t border-border/50">
+              {item.features.map((feature, i) => (
+                <li key={i} className="flex items-center text-foreground/90 font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-primary mr-2 shrink-0" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </SpotlightCard>
         ))}
       </div>
     </Section>

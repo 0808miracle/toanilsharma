@@ -41,5 +41,5 @@ export const SectionTitle = ({ children, className }: { children: React.ReactNod
 );
 
 export const TextGradient = ({ children, className }: { children: React.ReactNode, className?: string }) => (
-    <span className={cn("text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500", className)}>{children}</span>
+    <span className={cn("text-shimmer font-bold inline-block", className)}>{children}</span>
 );

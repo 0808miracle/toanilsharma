@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
-import { Menu, ArrowRight, Sparkles, Phone, Mail, Download, ExternalLink } from 'lucide-react';
+import { Menu, ArrowRight, Sparkles, Phone, Mail, Download, ExternalLink, Search, Volume2, VolumeX } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { CommandMenu } from '@/components/portfolio/CommandMenu';
+import { sounds } from '@/utils/soundEffects';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -21,6 +23,18 @@ export const Header = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [commandOpen, setCommandOpen] = useState(false);
+  const [soundEnabled, setSoundEnabled] = useState(false);
+
+  useEffect(() => {
+    setSoundEnabled(sounds.isEnabled());
+  }, []);
+
+  const toggleSound = () => {
+    const next = !soundEnabled;
+    setSoundEnabled(next);
+    sounds.setEnabled(next);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,9 +151,44 @@ export const Header = () => {
               })}
             </nav>
 
-            {/* Right Action Stack: Theme Toggle & Explore Tools Button */}
-            <div className="flex items-center space-x-2.5 sm:space-x-3">
+            {/* Right Action Stack: Search ⌘K, Theme Toggle & Explore Tools Button */}
+            <div className="flex items-center space-x-2 sm:space-x-2.5">
+              {/* Quick Command Launcher Trigger */}
+              <button
+                onClick={() => setCommandOpen(true)}
+                className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/60 dark:bg-card/60 hover:bg-secondary dark:hover:bg-card border border-border/70 dark:border-white/10 text-muted-foreground hover:text-foreground text-xs font-medium transition-all shadow-sm"
+                title="Search virtual labs, calculators, standards (Ctrl+K or Cmd+K)"
+              >
+                <Search className="w-3.5 h-3.5 text-primary" />
+                <span className="text-[11px]">Search</span>
+                <kbd className="pointer-events-none hidden lg:inline-flex h-4 select-none items-center gap-0.5 rounded border border-border/60 bg-background px-1.5 font-mono text-[9px] font-medium text-muted-foreground opacity-80">
+                  <span className="text-[10px]">⌘</span>K
+                </kbd>
+              </button>
+
+              <button
+                onClick={() => setCommandOpen(true)}
+                className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-secondary/60 dark:bg-card/60 border border-border/70 text-muted-foreground hover:text-foreground"
+                aria-label="Search"
+              >
+                <Search className="w-4 h-4 text-primary" />
+              </button>
+
               <ThemeToggle />
+
+              {/* Optional Tactile Acoustic Audio Toggle */}
+              <button
+                onClick={toggleSound}
+                className="flex items-center justify-center w-9 h-9 rounded-full bg-secondary/60 dark:bg-card/60 hover:bg-secondary dark:hover:bg-card border border-border/70 dark:border-white/10 text-muted-foreground hover:text-foreground transition-all cursor-pointer"
+                title={soundEnabled ? "Mute Tactile Audio FX" : "Enable Tactile Audio FX (Synthesized)"}
+                aria-label="Toggle Sound FX"
+              >
+                {soundEnabled ? (
+                  <Volume2 className="w-4 h-4 text-primary animate-pulse" />
+                ) : (
+                  <VolumeX className="w-4 h-4 opacity-50" />
+                )}
+              </button>
 
               <a href="#simulators" className="hidden sm:inline-flex">
                 <Button 
@@ -147,7 +196,7 @@ export const Header = () => {
                   className="rounded-full px-4 h-9 font-semibold text-xs bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-md shadow-blue-500/20 group"
                 >
                   <Sparkles className="mr-1.5 h-3.5 w-3.5" />
-                  <span>Explore Free Tools</span>
+                  <span>Explore Tools</span>
                   <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
               </a>
@@ -239,6 +288,9 @@ export const Header = () => {
           </div>
         </div>
       </header>
+
+      {/* Global Command Menu / Cmd+K Launcher */}
+      <CommandMenu open={commandOpen} setOpen={setCommandOpen} />
     </>
   );
 };

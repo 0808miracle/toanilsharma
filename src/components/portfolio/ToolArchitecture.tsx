@@ -13,6 +13,7 @@ import {
   ServerOff
 } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
+import { SpotlightCard } from '@/components/ui/SpotlightCard';
 
 const architecturePillars = [
   {
@@ -98,8 +99,9 @@ export const ToolArchitecture: React.FC = () => {
           {architecturePillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
-              <div 
+              <SpotlightCard 
                 key={pillar.id}
+                spotlightColor="rgba(59, 130, 246, 0.35)"
                 className="group relative rounded-2xl bg-background/80 dark:bg-[#0B0F19]/90 border border-border/80 dark:border-white/10 p-6 sm:p-7 shadow-sm hover:shadow-xl dark:shadow-[0_0_25px_rgba(15,76,255,0.18)] dark:hover:shadow-[0_0_35px_rgba(15,76,255,0.35)] dark:hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between backdrop-blur-md"
               >
                 <div>
@@ -151,7 +153,7 @@ export const ToolArchitecture: React.FC = () => {
                   </div>
                 </div>
 
-              </div>
+              </SpotlightCard>
             );
           })}
         </div>
