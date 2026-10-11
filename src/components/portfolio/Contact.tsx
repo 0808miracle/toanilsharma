@@ -50,8 +50,12 @@ export const Contact = () => {
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
-    const formData = new FormData(event.currentTarget);
-    formData.append("access_key", "1c2bc895-94d2-45e4-899d-e42b8b544b83");
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", "eda3fe32-10e1-432f-8324-47cc9393d2e9");
+    formData.set("service", selectedTopic);
+    formData.append("subject", `New Inquiry from Anil Sharma Portfolio: ${selectedTopic}`);
+    formData.append("from_name", "Anil Sharma Portfolio");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -65,9 +69,10 @@ export const Contact = () => {
           title: "Message Sent Successfully!",
           description: "Thank you for reaching out. Anil Sharma will respond to your query shortly.",
         });
-        (event.target as HTMLFormElement).reset();
+        form.reset();
         setMessageText('');
         setActiveIntent(null);
+        setSelectedTopic('feedback');
       } else {
         toast({
           variant: "destructive",
@@ -220,6 +225,7 @@ export const Contact = () => {
             </div>
 
             <form onSubmit={onSubmit} className="space-y-5">
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <label className="text-xs font-semibold text-foreground">Your Name</label>
