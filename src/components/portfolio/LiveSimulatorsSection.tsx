@@ -23,6 +23,7 @@ import {
   Radio
 } from 'lucide-react';
 import { MathTex } from '@/components/ui/MathTex';
+import { trackOutboundClick } from '@/utils/analytics';
 
 interface SimulatorLab {
   id: string;
@@ -219,6 +220,7 @@ export const LiveSimulatorsSection = () => {
                 href={lab.url}
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={() => trackOutboundClick(lab.title, lab.url, lab.category)}
                 className="group block cursor-pointer select-none text-left rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-all duration-500 hover:-translate-y-2"
                 aria-label={`Launch ${lab.title} (${lab.code})`}
               >
@@ -323,6 +325,7 @@ export const LiveSimulatorsSection = () => {
           href="https://livesimulators.com" 
           target="_blank" 
           rel="noopener noreferrer"
+          onClick={() => trackOutboundClick('LiveSimulators.com Catalog', 'https://livesimulators.com', 'global_hub')}
           className="group block cursor-pointer select-none rounded-3xl transition-all duration-500 hover:-translate-y-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           aria-label="Open LiveSimulators.com Catalog"
         >

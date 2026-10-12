@@ -16,6 +16,7 @@ import {
   Factory
 } from 'lucide-react';
 import { TextGradient } from '@/components/portfolio/Section';
+import { trackOutboundClick } from '@/utils/analytics';
 
 const missionStats = [
   {
@@ -171,6 +172,7 @@ export const Hero = () => {
                 href="https://www.linkedin.com/in/toanilsharma" 
                 target="_blank" 
                 rel="noopener noreferrer" 
+                onClick={() => trackOutboundClick('LinkedIn Profile', 'https://www.linkedin.com/in/toanilsharma', 'social')}
                 className="w-full sm:w-auto"
                 aria-label="Visit Anil Sharma's official LinkedIn profile"
               >

@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 import { useInView } from '@/hooks/useInView';
+import { trackDownload } from '@/utils/analytics';
 
 const AnimatedCounter = ({ to }: { to: number }) => {
   const [count, setCount] = useState(0);
@@ -169,15 +170,31 @@ export const About = () => {
             </SpotlightCard>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3.5">
             <a href="#simulators">
-              <Button size="lg" className="w-full sm:w-auto group h-12 px-6 rounded-xl font-bold bg-primary hover:bg-primary/90">
+              <Button size="lg" className="w-full sm:w-auto group h-12 px-5 rounded-xl font-bold bg-primary hover:bg-primary/90 shadow-md shadow-primary/20">
                 Explore Live Simulators <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
             <a href="#projects">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto h-12 px-6 rounded-xl font-semibold border-border/70 dark:border-white/10">
-                View 150+ Design Calculators
+              <Button size="lg" variant="outline" className="w-full sm:w-auto h-12 px-5 rounded-xl font-semibold border-border/70 dark:border-white/10 hover:border-primary/40">
+                150+ Design Calculators
+              </Button>
+            </a>
+            <a 
+              href="/downloads/Anil_Sharma_Executive_Profile.pdf" 
+              download="Anil_Sharma_Executive_Profile.pdf"
+              onClick={() => trackDownload('Anil_Sharma_Executive_Profile.pdf')}
+              className="w-full sm:w-auto"
+              aria-label="Download Anil Sharma Executive Profile One-Pager (PDF)"
+            >
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="w-full sm:w-auto h-12 px-5 rounded-xl font-semibold border-blue-500/40 text-blue-600 dark:text-cyan-400 hover:bg-blue-500/10 hover:border-blue-500 transition-all shadow-sm group"
+              >
+                <Download className="mr-2 h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
+                <span>Executive Bio (PDF)</span>
               </Button>
             </a>
           </div>

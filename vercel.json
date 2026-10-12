@@ -88,6 +88,19 @@
       ]
     },
     {
+      "source": "/downloads/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/pdf"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
@@ -119,7 +132,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets/|images/|llms\\.txt|llms-full\\.txt|ai\\.txt|manifesto\\.md|robots\\.txt|sitemap\\.xml|site\\.webmanifest|favicon|apple-touch-icon|.*\\..*).*)",
+      "source": "/((?!assets/|images/|downloads/|llms\\.txt|llms-full\\.txt|ai\\.txt|manifesto\\.md|robots\\.txt|sitemap\\.xml|site\\.webmanifest|favicon|apple-touch-icon|.*\\..*).*)",
       "destination": "/index.html"
     }
   ]
