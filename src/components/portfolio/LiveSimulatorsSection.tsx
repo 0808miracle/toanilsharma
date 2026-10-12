@@ -150,8 +150,18 @@ const simulatorLabs: SimulatorLab[] = [
   }
 ];
 
+type SimulatorFilter = 'all' | 'electrical' | 'power' | 'safety' | 'mechanical';
+
+const filterTabs: { key: SimulatorFilter; label: string }[] = [
+  { key: 'all', label: 'All Laboratories' },
+  { key: 'electrical', label: 'Power Electronics & UPS' },
+  { key: 'power', label: 'Substation & Grid' },
+  { key: 'safety', label: 'Arc Flash & Safety' },
+  { key: 'mechanical', label: 'Turbomachinery & Dynamics' }
+];
+
 export const LiveSimulatorsSection = () => {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'electrical' | 'power' | 'safety' | 'mechanical'>('all');
+  const [activeFilter, setActiveFilter] = useState<SimulatorFilter>('all');
 
   const filteredLabs = activeFilter === 'all' 
     ? simulatorLabs 
@@ -184,16 +194,10 @@ export const LiveSimulatorsSection = () => {
 
         {/* Filter Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {[
-            { key: 'all', label: 'All Laboratories' },
-            { key: 'electrical', label: 'Power Electronics & UPS' },
-            { key: 'power', label: 'Substation & Grid' },
-            { key: 'safety', label: 'Arc Flash & Safety' },
-            { key: 'mechanical', label: 'Turbomachinery & Dynamics' }
-          ].map((tab) => (
+          {filterTabs.map((tab) => (
             <button
               key={tab.key}
-              onClick={() => setActiveFilter(tab.key as any)}
+              onClick={() => setActiveFilter(tab.key)}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
                 activeFilter === tab.key
                   ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-105'

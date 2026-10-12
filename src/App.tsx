@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { CanonicalManager } from "@/components/CanonicalManager";
 import Index from "./pages/Index";
 
 // Code-split standalone subpages
@@ -24,10 +25,15 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <CanonicalManager />
         <ScrollToTop />
         <Suspense fallback={<PageFallback />}>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<Index targetSection="about" />} />
+            <Route path="/services" element={<Index targetSection="expertise" />} />
+            <Route path="/blog" element={<Index targetSection="insights" />} />
+            <Route path="/contact" element={<Index targetSection="contact" />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/disclaimer" element={<Terms />} />

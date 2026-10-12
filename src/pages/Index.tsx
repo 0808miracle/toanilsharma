@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Header } from '@/components/portfolio/Header';
 import { Hero } from '@/components/portfolio/Hero';
 import { LogoWall } from '@/components/portfolio/LogoWall';
@@ -25,7 +25,23 @@ const SectionLoader = () => (
   </div>
 );
 
-const Index = () => {
+interface IndexProps {
+  targetSection?: string;
+}
+
+const Index = ({ targetSection }: IndexProps) => {
+  useEffect(() => {
+    if (targetSection) {
+      const scrollTimer = setTimeout(() => {
+        const el = document.getElementById(targetSection);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+      return () => clearTimeout(scrollTimer);
+    }
+  }, [targetSection]);
+
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 selection:text-primary transition-colors duration-300">
       <Header />

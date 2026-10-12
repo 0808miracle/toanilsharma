@@ -1,6 +1,53 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.toanilsharma.co.in"
+        }
+      ],
+      "destination": "https://toanilsharma.co.in/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        }
+      ]
+    },
     {
       "source": "/(llms.txt|llms-full.txt|ai.txt|manifesto.md)",
       "headers": [
@@ -15,6 +62,19 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=3600, s-maxage=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(favicon.*|apple-touch-icon.*|android-chrome.*|site\\.webmanifest)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
         }
       ]
     },
@@ -47,7 +107,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets/|images/|llms\\.txt|llms-full\\.txt|robots\\.txt|sitemap\\.xml|site\\.webmanifest|favicon|apple-touch-icon|.*\\..*).*)",
+      "source": "/((?!assets/|images/|llms\\.txt|llms-full\\.txt|ai\\.txt|manifesto\\.md|robots\\.txt|sitemap\\.xml|site\\.webmanifest|favicon|apple-touch-icon|.*\\..*).*)",
       "destination": "/index.html"
     }
   ]

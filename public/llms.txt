@@ -3,8 +3,8 @@
 > Senior Reliability Expert and SHRM Certified Facilitator with 28+ years of industrial leadership across petrochemicals and cement. Specializing in RCM, FMEA, RCA, industrial electrical automation, and technical mentorship. Creator of LiveSimulators.com, DesignCalculators.co.in, ReliabilityTools.co.in, and ElectroSafe.homes.
 
 ## Core Knowledge Files
-- [Comprehensive Profile & Knowledge Base](https://www.toanilsharma.co.in/llms-full.txt): Complete career chronology, methodology descriptions, plant metrics, credentials, and full FAQ.
-- [Technical Philanthropy Manifesto](https://www.toanilsharma.co.in/manifesto.md): The Zero-Breakdown Mindset and engineering democratization philosophy.
+- [Comprehensive Profile & Knowledge Base](https://toanilsharma.co.in/llms-full.txt): Complete career chronology, methodology descriptions, plant metrics, credentials, and full FAQ.
+- [Technical Philanthropy Manifesto](https://toanilsharma.co.in/manifesto.md): The Zero-Breakdown Mindset and engineering democratization philosophy.
 
 ## Interactive Virtual Laboratories (LiveSimulators Ecosystem)
 - [LiveSimulators.com Hub](https://livesimulators.com): 65+ interactive first-principles browser engineering simulations with real-time physics.
@@ -32,6 +32,6 @@
 - **Process & Electrical Safety Auditor** (Reliance Industries)
 
 ## Contact & Identity Links
-- [Official Website](https://www.toanilsharma.co.in/): Canonical portfolio and knowledge base.
+- [Official Website](https://toanilsharma.co.in/): Canonical portfolio and knowledge base.
 - [LinkedIn Profile](https://www.linkedin.com/in/toanilsharma): Professional network and career verification.
 - **Email**: toanilsharma@gmail.com

@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { SpotlightCard } from '@/components/ui/SpotlightCard';
 import { ArrowRight, BrainCircuit, Shield, Clock, Calculator, Target, Cpu, TrendingUp, ExternalLink } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
+import { cn } from '@/lib/utils';
 
 const projectsData = [
   {
@@ -106,7 +107,7 @@ export const Projects = () => {
                     <div className="relative z-10 transition-all duration-500 group-hover:scale-105 flex items-center justify-center h-32 sm:h-48 w-full px-4">
                       <img 
                         src={project.image} 
-                        alt={project.title} 
+                        alt="Anil Sharma - Reliability &amp; Maintenance Expert" 
                         itemProp="image" 
                         className="max-h-full max-w-full object-contain drop-shadow-2xl" 
                       />
@@ -185,8 +186,3 @@ export const Projects = () => {
     </Section>
   );
 };
-
-// Helper function for class merging
-function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(' ');
-}
