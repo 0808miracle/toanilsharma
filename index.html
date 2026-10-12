@@ -42,10 +42,16 @@
     <meta name="twitter:image" content="https://toanilsharma.co.in/images/anil-sharma.png">
     <meta name="twitter:creator" content="@anilsharma_reliability">
 
-    <!-- Google Fonts Preconnect -->
+    <!-- Resource Hints & CDN Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preload Critical LCP Hero Image -->
+    <link rel="preload" as="image" href="/images/anil-sharma.webp" type="image/webp" fetchpriority="high">
 
     <!-- Favicon & Touch Icons (Cache-Busted for Immediate Propagation) -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=as-v2">
@@ -107,7 +113,14 @@
           "knowsLanguage": ["English", "Hindi"],
           "description": "Official website of Anil Sharma, Reliability & Maintenance Expert & E&I Specialist with 28+ years industrial experience, integrating AI & Web Development into engineering solutions.",
           "knowsAbout": ["Reliability Engineering", "Maintenance Optimization", "E&I Systems", "Project Execution", "AI Engineering Solutions", "Web Simulation Development", "RCM", "FMEA", "RCA", "Electrical Safety", "Industrial Automation", "Operational Excellence", "TPM", "Lean Manufacturing"],
-          "hasCredential": ["MBA Project Management", "Diploma in Electrical Engineering", "SHRM Certified Facilitator", "ISO 9001/14001 Lead Auditor", "Certified Process & Electrical Safety Auditor"]
+          "hasCredential": ["MBA Project Management", "Diploma in Electrical Engineering", "SHRM Certified Facilitator", "ISO 9001/14001 Lead Auditor", "Certified Process & Electrical Safety Auditor"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Technical Mentorship & Professional Consultation",
+            "email": "toanilsharma@gmail.com",
+            "telephone": "+91-7600025028",
+            "availableLanguage": ["English", "Hindi"]
+          }
         },
         {
           "@type": "SoftwareApplication",
@@ -155,19 +168,6 @@
           "applicationCategory": "SafetyApplication",
           "url": "https://electrosafe.homes",
           "description": "Global safety guide and risk assessor for home electrical fire prevention.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "DesignCalculators.co.in",
-          "operatingSystem": "Web",
-          "applicationCategory": "EngineeringApplication",
-          "url": "https://designcalculators.co.in",
-          "description": "Comprehensive library of 150+ engineering calculators based on IEC, IEEE, and NFPA standards.",
           "offers": {
             "@type": "Offer",
             "price": "0",
