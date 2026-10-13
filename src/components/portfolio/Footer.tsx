@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Linkedin, Mail, Phone, Copy, Check, ExternalLink, ArrowUp, ShieldCheck, Clock, MapPin,
+  Linkedin, Github, Mail, Phone, Copy, Check, ExternalLink, ArrowUp, ShieldCheck, Clock, MapPin,
   ShieldAlert, Scale, FileText, CheckCircle2, Shield
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -94,7 +94,7 @@ export const Footer = () => {
               <div className="flex items-center space-x-3 text-muted-foreground text-[11px]">
                 <span className="flex items-center">
                   <MapPin className="w-3 h-3 mr-1 text-primary" />
-                  India
+                  Bharuch, Gujarat, India
                 </span>
                 <span className="flex items-center">
                   <Clock className="w-3 h-3 mr-1 text-primary" />
@@ -146,6 +146,15 @@ export const Footer = () => {
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://github.com/toanilsharma" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-9 h-9 rounded-lg bg-background/80 dark:bg-background/50 border border-border/70 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all shadow-sm"
+                aria-label="GitHub Profile"
+              >
+                <Github className="w-4 h-4" />
               </a>
               <a 
                 href="mailto:toanilsharma@gmail.com" 

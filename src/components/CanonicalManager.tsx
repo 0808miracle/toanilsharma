@@ -25,6 +25,22 @@ const PAGE_METADATA: Record<string, { title: string; ogTitle?: string; descripti
     title: 'Contact Anil Sharma | Industrial Reliability Consultant',
     description: 'Get in touch with Anil Sharma for industrial reliability consulting, corporate training workshops, plant audits, and keynote speaking.'
   },
+  '/tools': {
+    title: 'Free Engineering Tools & Calculators | Anil Sharma',
+    description: 'Explore 150+ IEC/IEEE/NFPA design calculators, ReliabilityTools.co.in (Weibull, MTBF), and ElectroSafe.homes created by Anil Sharma.'
+  },
+  '/training': {
+    title: 'Reliability Training & Engineering Mentorship | Anil Sharma',
+    description: 'SHRM Certified Facilitator and Lead Auditor. Trained 200+ engineers in RCM, FMEA, electrical safety, and industrial reliability.'
+  },
+  '/experience/reliance-industries': {
+    title: 'Reliance Industries Leadership | Anil Sharma (2008–Present)',
+    description: 'Senior Reliability, Projects & Maintenance Expert at Reliance Industries, overseeing reliability and greenfield petrochemical projects.'
+  },
+  '/methodologies/rcm': {
+    title: 'RCM & Asset Integrity Methodologies | Anil Sharma',
+    description: 'Specialist in Reliability Centered Maintenance (RCM), FMEA, RCA, TPM, PLC load shedding, and arc flash safety.'
+  },
   '/terms': {
     title: 'Terms of Service & Engineering Disclaimer | Anil Sharma',
     description: 'Terms of service and engineering disclaimer for Anil Sharma\'s technical tools and portfolio.'

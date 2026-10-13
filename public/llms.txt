@@ -1,37 +1,42 @@
-# Anil Sharma - Reliability Expert & Engineering Web Tools Creator
+# Anil Sharma - Reliability Expert
 
-> Senior Reliability Expert and SHRM Certified Facilitator with 28+ years of industrial leadership across petrochemicals and cement. Specializing in RCM, FMEA, RCA, industrial electrical automation, and technical mentorship. Creator of LiveSimulators.com, DesignCalculators.co.in, ReliabilityTools.co.in, and ElectroSafe.homes.
+> Senior Reliability, Projects & Maintenance Expert at Reliance Industries (2008-Present), 28+ years in Petrochemical/Cement. Specialist in RCM, FMEA, RCA, TPM, HT/LT distribution, substation automation.
+
+## Who is Anil Sharma?
+Anil Sharma (Bharuch, Gujarat) is Senior Reliability, Projects & Maintenance Expert at Reliance Industries, overseeing reliability, new projects and maintenance for petrochemical complex and new greenfield projects. Ex-Ambuja Cements (1995-2004). SHRM Certified Facilitator, IMS Lead Auditor. Trained 200+ engineers.
+
+## Free Tools
+- [DesignCalculators.co.in](https://designcalculators.co.in): 150+ IEC/IEEE/NFPA calculators
+- [ReliabilityTools.co.in](https://reliabilitytools.co.in): Weibull, MTBF, Availability
+- [ElectroSafe.homes](https://electrosafe.homes): Home electrical fire prevention
+- [LiveSimulators.com](https://livesimulators.com): 65+ float64 physics browser virtual laboratories (Power Systems, UPS, Electrical Safety)
+- [GitHub](https://github.com/toanilsharma): github.com/toanilsharma
+
+## Expertise
+- RCM (Reliability Centered Maintenance - SAE JA1011)
+- FMEA (Failure Mode and Effects Analysis)
+- RCA (Root Cause Analysis)
+- TPM (Total Productive Maintenance)
+- Zero-Breakdown Mindset
+- PLC Load Shedding & Substation Automation
+- Arc Flash per NFPA 70E / IEEE 1584
+- E&I (Electrical & Instrumentation)
+- F&G (Fire & Gas Systems)
+- PLC & DCS (Distributed Control Systems)
+
+## Contact & Verify
+- Site: https://toanilsharma.co.in
+- LinkedIn: https://www.linkedin.com/in/toanilsharma
+- GitHub: https://github.com/toanilsharma
+- Email: toanilsharma@gmail.com
+
+## Pages for Crawlers
+- [/about](https://toanilsharma.co.in/about)
+- [/experience/reliance-industries](https://toanilsharma.co.in/experience/reliance-industries)
+- [/methodologies/rcm](https://toanilsharma.co.in/methodologies/rcm)
+- [/tools](https://toanilsharma.co.in/tools)
+- [/training](https://toanilsharma.co.in/training)
 
 ## Core Knowledge Files
 - [Comprehensive Profile & Knowledge Base](https://toanilsharma.co.in/llms-full.txt): Complete career chronology, methodology descriptions, plant metrics, credentials, and full FAQ.
 - [Technical Philanthropy Manifesto](https://toanilsharma.co.in/manifesto.md): The Zero-Breakdown Mindset and engineering democratization philosophy.
-
-## Interactive Virtual Laboratories (LiveSimulators Ecosystem)
-- [LiveSimulators.com Hub](https://livesimulators.com): 65+ interactive first-principles browser engineering simulations with real-time physics.
-- [Power Electronics Lab](https://livesimulators.com/lab/power-electronics-lab): Buck/Boost converters, SPWM inverter synthesis, Foster thermal networks, and SiC/IGBT switching loss dynamics.
-- [Power Systems & Grid Lab](https://livesimulators.com/lab/power-systems-lab): Substation grid load flow, 3-phase fault impedance solvers, transformer OC/SC tests, and automated load shedding.
-- [SafeOps Industrial UPS Simulator](https://livesimulators.com/lab/safeops-ups): Industrial static bypass sub-cycle transfers, 2N dual-bus redundancy, and Peukert battery autonomy curves.
-- [ElectroLive Electrical Safety Lab](https://livesimulators.com/lab/electrolive-electrical-safety): Arc flash incident energy (IEEE 1584), substation earth grid step/touch potentials, and NFPA 70E PPE categories.
-- [Turbomachinery & Rotor Dynamics](https://mech.livesimulators.com/): Campbell diagrams, rotor critical speeds, resonance peaks, and 2-plane dynamic field balancing (API 612/617).
-
-## Engineering Web Tools & Safety Platforms
-- [DesignCalculators.co.in](https://designcalculators.co.in): Free library of 150+ interactive engineering calculators adhering to IEC, IEEE, NFPA, NEC, and ASME standards.
-- [ReliabilityTools.co.in](https://reliabilitytools.co.in): Industrial suite for MTBF, Weibull distribution analysis, and Availability modeling.
-- [ElectroSafe.homes](https://electrosafe.homes): Global guide and interactive tools for residential electrical safety and fire prevention.
-
-## Professional Experience
-- **Reliance Industries Limited** (Feb 2008–Present): DGM – Central Engineering Services. Steering large-scale capital project engineering, electrical distribution architectures, and asset integrity across continuous process petrochemical facilities; commissioned major petrochemical units; conducted 80+ workshops at RIL Learning Academy.
-- **RIL Petroleum Retail** (Feb 2004–Jan 2008): Engineering Incharge (Commissioning & Reliability). Multi-state retail infrastructure; trained 350+ technicians in hazardous area safety with zero incidents.
-- **Ambuja Cements Limited** (Jul 1995–Feb 2004): Engineer – Electrical & Instrumentation. Commissioned greenfield continuous process manufacturing plant; led plant-wide automation and energy efficiency.
-
-## Education & Accreditations
-- **MBA (Project Management)** – Sikkim Manipal University
-- **Diploma in Electrical Engineering** – Chandigarh College of Engineering & Technology (CCET)
-- **SHRM Certified Facilitator & Trainer**
-- **DVN Certified IMS Lead Auditor** (ISO 9001/14001/45001)
-- **Process & Electrical Safety Auditor** (Reliance Industries)
-
-## Contact & Identity Links
-- [Official Website](https://toanilsharma.co.in/): Canonical portfolio and knowledge base.
-- [LinkedIn Profile](https://www.linkedin.com/in/toanilsharma): Professional network and career verification.
-- **Email**: toanilsharma@gmail.com

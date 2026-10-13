@@ -8,6 +8,7 @@ import {
   Phone, 
   Mail, 
   Linkedin, 
+  Github,
   MapPin, 
   Send, 
   Loader2, 
@@ -24,8 +25,9 @@ import { toast } from '@/hooks/use-toast';
 const contactDetails = [
   { icon: Mail, title: "Email (Direct)", lines: ["toanilsharma@gmail.com", "anil_roopnagar@yahoo.com"], hrefs: ["mailto:toanilsharma@gmail.com", "mailto:anil_roopnagar@yahoo.com"] },
   { icon: Linkedin, title: "LinkedIn Profile", lines: ["linkedin.com/in/toanilsharma"], hrefs: ["https://www.linkedin.com/in/toanilsharma"] },
+  { icon: Github, title: "GitHub & Code", lines: ["github.com/toanilsharma"], hrefs: ["https://github.com/toanilsharma"] },
   { icon: Phone, title: "Phone", lines: ["+91 7600025028"], hrefs: ["tel:+917600025028"] },
-  { icon: MapPin, title: "Location", lines: ["India", "Non-Commercial Community Educational Outreach"], hrefs: [] },
+  { icon: MapPin, title: "Location", lines: ["Bharuch, Gujarat, India", "Reliance Petrochemical Operations & Projects"], hrefs: [] },
 ];
 
 const quickIntents = [

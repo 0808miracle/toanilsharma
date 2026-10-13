@@ -12,6 +12,7 @@ import {
   Calculator,
   ExternalLink,
   Linkedin,
+  Github,
   GraduationCap,
   Factory
 } from 'lucide-react';
@@ -79,9 +80,9 @@ export const Hero = () => {
             <div className="inline-flex max-w-2xl items-center gap-2.5 rounded-full border border-blue-500/25 bg-blue-50/90 dark:bg-blue-950/40 px-4 py-2 text-xs text-blue-900 dark:text-blue-200 backdrop-blur-md shadow-sm text-left mb-6 hover:border-blue-500/40 transition-colors">
               <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
               <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                <span className="font-semibold text-blue-950 dark:text-blue-100">Personal Technical Philanthropy</span>
+                <span className="font-semibold text-blue-950 dark:text-blue-100">Senior Reliability, Projects &amp; Maintenance Expert</span>
                 <span className="text-blue-400 hidden sm:inline">•</span>
-                <span className="text-blue-700/80 dark:text-blue-300/80">DGM &bull; Central Engineering Services, Reliance Industries</span>
+                <span className="text-blue-700/80 dark:text-blue-300/80">Reliance Industries (Bharuch, Gujarat)</span>
               </div>
             </div>
 
@@ -183,6 +184,26 @@ export const Hero = () => {
                 >
                   <Linkedin className="mr-2 h-4 w-4 fill-current transition-transform group-hover:scale-110" />
                   <span>LinkedIn Profile</span>
+                  <ExternalLink className="ml-1.5 h-3.5 w-3.5 opacity-70" />
+                </Button>
+              </a>
+
+              {/* GitHub Profile Direct Link */}
+              <a 
+                href="https://github.com/toanilsharma" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                onClick={() => trackOutboundClick('GitHub Profile', 'https://github.com/toanilsharma', 'social')}
+                className="w-full sm:w-auto"
+                aria-label="Visit Anil Sharma's official GitHub profile"
+              >
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="w-full sm:w-auto h-12 px-4 rounded-xl font-semibold border-border/80 dark:border-white/15 bg-background/50 hover:bg-secondary/70 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 group shadow-sm"
+                >
+                  <Github className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
+                  <span>GitHub</span>
                   <ExternalLink className="ml-1.5 h-3.5 w-3.5 opacity-70" />
                 </Button>
               </a>

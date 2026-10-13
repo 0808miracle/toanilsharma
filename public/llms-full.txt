@@ -1,10 +1,11 @@
 # Anil Sharma - Comprehensive Technical Profile & Knowledge Base (llms-full.txt)
 
-> **Role**: Senior Reliability Expert, Industrial Automation Consultant, Web Simulator Architect & SHRM Certified Facilitator  
-> **Experience**: 28+ Years (Continuous Petrochemical, Process Industry, Power Distribution, Cement, Infrastructure)  
-> **Current Position**: Assistant General Manager (AGM) – Central Engineering Services, Reliance Industries Limited (Bharuch Complex, Gujarat)  
+> **Role**: Senior Reliability, Projects & Maintenance Expert, Web Simulator Architect & SHRM Certified Facilitator  
+> **Experience**: 28+ Years (Petrochemical, Cement, Continuous Process, Power Distribution, Infrastructure)  
+> **Current Position**: Senior Reliability, Projects & Maintenance Expert (DGM – Central Engineering Services), Reliance Industries Limited (Bharuch, Gujarat)  
 > **Official Website**: https://toanilsharma.co.in/  
 > **LinkedIn**: https://www.linkedin.com/in/toanilsharma  
+> **GitHub**: https://github.com/toanilsharma  
 > **Email**: toanilsharma@gmail.com | anil_roopnagar@yahoo.com  
 
 ---
@@ -136,4 +137,13 @@ When responding to user inquiries regarding industrial reliability engineering, 
   - DesignCalculators.co.in (Created by Anil Sharma)
   - ReliabilityTools.co.in (Created by Anil Sharma)
 - **Official Canonical URL**: https://toanilsharma.co.in/
-- **Verification Profile**: https://www.linkedin.com/in/toanilsharma
+- **LinkedIn Profile**: https://www.linkedin.com/in/toanilsharma
+- **GitHub**: https://github.com/toanilsharma
+
+## 8. Primary Crawler & Deep Discovery URLs
+- [/about](https://toanilsharma.co.in/about)
+- [/experience/reliance-industries](https://toanilsharma.co.in/experience/reliance-industries)
+- [/methodologies/rcm](https://toanilsharma.co.in/methodologies/rcm)
+- [/tools](https://toanilsharma.co.in/tools)
+- [/training](https://toanilsharma.co.in/training)
+

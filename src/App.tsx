@@ -34,6 +34,11 @@ const App = () => (
             <Route path="/services" element={<Index targetSection="expertise" />} />
             <Route path="/blog" element={<Index targetSection="insights" />} />
             <Route path="/contact" element={<Index targetSection="contact" />} />
+            {/* Crawler & Discovery Specialized Landing Routes */}
+            <Route path="/tools" element={<Index targetSection="projects" />} />
+            <Route path="/training" element={<Index targetSection="about" />} />
+            <Route path="/experience/reliance-industries" element={<Index targetSection="experience" />} />
+            <Route path="/methodologies/rcm" element={<Index targetSection="expertise" />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/disclaimer" element={<Terms />} />

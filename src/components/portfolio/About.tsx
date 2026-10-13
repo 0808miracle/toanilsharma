@@ -124,12 +124,12 @@ export const About = () => {
               Professional Background &amp; Engineering Scope
             </h3>
             <p className="text-sm leading-relaxed text-foreground/80">
-              Senior engineering professional with over <strong className="text-primary font-bold">28 years</strong> of hands-on industrial leadership across continuous process and petrochemical manufacturing complexes. Dedicated specialist in plant reliability (RCM/FMEA), electrical power distribution, automation architectures, and engineering capability development.
+              Anil Sharma (Bharuch, Gujarat) is Senior Reliability, Projects &amp; Maintenance Expert at Reliance Industries, overseeing reliability, new projects and maintenance for petrochemical complexes and new greenfield projects. Ex-Ambuja Cements (1995–2004). SHRM Certified Facilitator, IMS Lead Auditor. Trained 200+ engineers across industrial domains.
             </p>
           </div>
           
           <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
-            Industrial engineering leader and SHRM Certified Facilitator with extensive operational experience across continuous process plants. Passionate about applying first-principles physics to plant reliability, while authoring 100% free, open-access engineering simulation platforms for the worldwide engineering community.
+            With over <strong className="text-primary font-bold">28 years</strong> in Petrochemical and Cement continuous operations, specializing in RCM, FMEA, RCA, TPM, HT/LT distribution, and substation automation, while authoring 100% free, open-access engineering simulation platforms for the worldwide engineering community.
           </p>
 
           <div className="space-y-4 mb-8">

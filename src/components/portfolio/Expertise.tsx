@@ -3,12 +3,12 @@ import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from
 import { SpotlightCard } from '@/components/ui/SpotlightCard';
 
 const expertiseData = [
-  { icon: Settings, title: "Reliability & Integrity", description: "Focused on keeping industrial plants running without breakdowns using RCM and TPM.", features: ["Asset Integrity Management (AIM)", "Risk-Based Inspection (RBI)", "TPM & Lean Maintenance", "RCA & FMEA Expert"] },
-  { icon: Zap, title: "Electrical Systems", description: "Management of high-voltage power systems and critical industrial assets.", features: ["HT/LT System Reliability", "Infrastructure Protection", "Manpower Optimization", "Condition Monitoring"] },
-  { icon: Bot, title: "Smart Automation", description: "Implementing SCADA and DCS for better control and efficiency in manufacturing.", features: ["Digital Twin Strategy", "Distributed Control (DCS)", "Intelligent Load Management", "Digital Transformation"] },
-  { icon: Presentation, title: "Technical Mentorship", description: "Helpful training for engineers as a SHRM Certified facilitator.", features: ["Leadership Mentoring", "Technical Facilitation", "Change Management", "Skill Building"] },
-  { icon: Shield, title: "Risk & Standards", description: "Ensuring safety by following global engineering standards with a simple mindset.", features: ["Process Safety (NFPA/IEEE)", "ISO 55000 (Asset Mgmt)", "Root Cause Mastery", "Safety Culture Design"] },
-  { icon: Laptop, title: "Digital Solutions", description: "Building free engineering tools to help students and working professionals.", features: ["Tool Conceptualization", "Engineering Algorithms", "Free Community Resources", "Ad-Free Platforms"] },
+  { icon: Settings, title: "Reliability & Integrity", description: "Focused on keeping industrial plants running without breakdowns using RCM and TPM.", features: ["RCM (SAE JA1011) & FMEA", "Root Cause Analysis (RCA)", "TPM & Lean Maintenance", "Zero-Breakdown Mindset"] },
+  { icon: Zap, title: "Electrical Systems (HT/LT)", description: "Management of high-voltage power systems and critical industrial assets.", features: ["HT/LT Distribution & Substation Automation", "PLC Automated Load Shedding", "Arc Flash (NFPA 70E / IEEE 1584)", "Condition Monitoring"] },
+  { icon: Bot, title: "Smart Automation & E&I", description: "Implementing SCADA, PLC, and DCS for better control and uptime in manufacturing.", features: ["E&I (Electrical & Instrumentation)", "F&G (Fire & Gas Systems)", "PLC & DCS Architectures", "Digital Twin & Telemetry"] },
+  { icon: Presentation, title: "Technical Mentorship", description: "Corporate and technical facilitation for engineers as a SHRM Certified Facilitator.", features: ["Trained 200+ Engineers", "IMS Lead Auditor (ISO 9001/14001)", "Leadership Mentoring", "Process & Electrical Safety"] },
+  { icon: Shield, title: "Risk & Standards", description: "Ensuring absolute safety by adhering to global engineering standards.", features: ["NFPA 70E / IEEE 1584 Arc Safety", "IEC & IEEE Substation Codes", "Asset Integrity Governance", "Root Cause Mastery"] },
+  { icon: Laptop, title: "Digital Solutions & Free Tools", description: "Building free engineering tools to help students and working professionals.", features: ["DesignCalculators.co.in (150+)", "ReliabilityTools.co.in (Weibull)", "ElectroSafe.homes Fire Safety", "LiveSimulators.com (65+ Labs)"] },
 ];
 
 export const Expertise = () => {
