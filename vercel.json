@@ -1,18 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.toanilsharma.co.in"
-        }
-      ],
-      "destination": "https://toanilsharma.co.in/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/robots.txt",
