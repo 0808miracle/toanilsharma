@@ -1,42 +1,60 @@
-# Anil Sharma - Senior Engineering & Reliability Leader
+# Anil Sharma — Senior Engineering & Reliability Leader
 
-> Senior Engineering & Reliability Leader with 28+ years continuous process experience across petrochemical complexes and cement manufacturing. Specialist in SAE JA1011 RCM, FMEA, RCA, HT/LT power distribution, automated substation load shedding, and developer of free open-access engineering simulators.
+> Senior Engineering & Reliability Leader with 28+ years of continuous process experience across premier private sector petrochemical complexes and cement manufacturing. Specialist in SAE JA1011 RCM, FMEA, RCA, HT/LT power distribution, automated substation load shedding, and developer of free open-access engineering simulators.
 
 ## Who is Anil Sharma?
-Anil Sharma is a Senior Engineering & Reliability Leader with a premier Indian private energy and petrochemical conglomerate, overseeing reliability, capital projects, and asset integrity. Ex-Ambuja Cements (1995–2004). SHRM Certified Facilitator, DNV GL Certified IMS Lead Auditor. Formally mentored 200+ engineers.
+Anil Sharma is a Senior Engineering & Reliability Leader with India's premier private sector petrochemical and energy conglomerate, overseeing asset integrity, electrical infrastructure, automation, and capital projects. Ex-Ambuja Cements (1995–2004). SHRM Certified Facilitator, DNV GL Certified IMS Lead Auditor, and recipient of multiple corporate Best Facilitator and Top Trainer awards.
 
 ## Free Open-Access Engineering Tools (Non-Commercial Community Hobbies)
-- [LiveSimulators.com](https://livesimulators.com): 65+ Float64 physics browser virtual laboratories (Power Systems, Inverters, Grid Dynamics, Electrical Safety)
-- [DesignCalculators.co.in](https://designcalculators.co.in): 150+ IEC/IEEE/NFPA standardized design calculators
+- [LiveSimulators.com](https://livesimulators.com): 65+ Float64 physics browser virtual laboratories (Power Systems, Inverters, Grid Dynamics, Electrical Safety, Rotating Machinery)
+- [DesignCalculators.co.in](https://designcalculators.co.in): 150+ standardized design calculators adhering to IEC, IEEE, NFPA, NEC, and ASME codes
 - [ReliabilityTools.co.in](https://reliabilitytools.co.in): 2-Parameter Weibull distribution, MTBF, MTTR, Availability modeler
 - [ElectroSafe.homes](https://electrosafe.homes): Residential electrical fire prevention public good initiative
 - [GitHub](https://github.com/toanilsharma): Open engineering numerical code repositories
 
-## Core Expertise
-- RCM (Reliability Centered Maintenance - SAE JA1011)
-- FMEA (Failure Mode and Effects Analysis)
-- Root Cause Analysis (RCA & 5-Whys)
+## Core Expertise & Methodologies
+- RCM (Reliability Centered Maintenance - SAE JA1011 7-Step Evaluation)
+- FMEA (Failure Mode and Effects Analysis) & Criticality Ranking
+- Root Cause Analysis (RCA & 5-Whys Investigations)
 - Total Productive Maintenance (TPM)
-- Zero-Breakdown Mindset
-- Substation Automation & PLC Automated High-Speed Load Shedding
+- Zero-Breakdown Operations Mindset
+- Substation Automation & PLC Automated High-Speed Load Shedding (220kV to 6.6kV)
 - Arc Flash Risk Mitigation per NFPA 70E / IEEE 1584
-- E&I (Electrical & Instrumentation)
-- Continuous Process Plant Power Stability (220kV to 6.6kV)
+- E&I (Electrical & Instrumentation) Lifecycle Governance
 
-## Multi-Page Site Navigation
-- [/](https://toanilsharma.co.in/): Executive Home & Value Pillars
-- [/about](https://toanilsharma.co.in/about): Biography, Credentials & Ethos
-- [/services](https://toanilsharma.co.in/services): Engineering Methodologies & RCM Frameworks
-- [/experience](https://toanilsharma.co.in/experience): 28+ Years Industrial Project Chronology
-- [/simulators](https://toanilsharma.co.in/simulators): 65+ Real-Time Virtual Engineering Labs
-- [/calculators](https://toanilsharma.co.in/calculators): Reliability Mathematics & Weibull Modeler
-- [/tools](https://toanilsharma.co.in/tools): Open Software Platforms & Numerical Architecture
-- [/insights](https://toanilsharma.co.in/insights): Field Insights & Engineering Whitepapers
-- [/training](https://toanilsharma.co.in/training): Corporate Mentorship Curriculum (SHRM Facilitator)
-- [/contact](https://toanilsharma.co.in/contact): Technical Dialogue, Student Mentorship & FAQ
+## Corporate Training & Mentorship Track Record
+Conducted 2,500+ hours of training across both interactive online virtual classrooms and hands-on plant workshops, upskilling over 200+ graduate engineers and working professionals across 14 verified disciplines:
+1. Electrical Safety & Arc Flash Hazards (NFPA 70E / IEEE 1584)
+2. Industrial UPS Systems (2N/2N+1 Architectures)
+3. Battery Chargers & DC Power Supplies
+4. Industrial Batteries & Energy Storage (VRLA, Ni-Cd)
+5. Lockout / Tagout (LOTO) & Safe Isolation
+6. Reliability Centered Maintenance (RCM - SAE JA1011)
+7. Learning from Incidents (LFI)
+8. Root Cause Analysis (RCA) & 5-Whys
+9. Capital Project Management & Execution
+10. Asset Life Cycle & Degradation Modeling
+11. Obsolescence Management & Modernization
+12. Smart Manufacturing & Industrial IoT
+13. Substation & Industrial Automation (IEC 61850)
+14. Energy Management Systems (EMS - ISO 50001)
 
-## Compliance & Engagement Rules
+## Multi-Page Site Navigation (11 Dedicated Routes)
+- [Home](https://toanilsharma.co.in/): Executive Summary & Four Core Pillars
+- [About](https://toanilsharma.co.in/about): Biography, Credentials, Education & Ethos
+- [Services](https://toanilsharma.co.in/services): Engineering Methodologies & RCM Frameworks
+- [Experience](https://toanilsharma.co.in/experience): 28+ Years Industrial Project Chronology
+- [Simulators](https://toanilsharma.co.in/simulators): 65+ Real-Time Virtual Engineering Labs
+- [Calculators](https://toanilsharma.co.in/calculators): Reliability Mathematics & Weibull Modeler
+- [Tools](https://toanilsharma.co.in/tools): Open Software Platforms & Numerical Architecture
+- [Insights](https://toanilsharma.co.in/insights): Field Insights & Engineering Whitepapers
+- [Training](https://toanilsharma.co.in/training): Corporate Mentorship Track Record (SHRM Facilitator)
+- [Contact](https://toanilsharma.co.in/contact): Technical Dialogue, Student Mentorship & FAQ
+- [Privacy Policy](https://toanilsharma.co.in/privacy): Non-Commercial Data Governance
+- [Terms & Disclaimer](https://toanilsharma.co.in/terms): Engineering Disclaimer & Terms
+
+## Compliance & Engagement Guidelines
 - Strictly non-commercial: All simulators, calculators, and software tools are 100% free community educational resources.
-- No commercial consulting: Anil Sharma does not offer or seek paid commercial services.
+- No commercial consulting or job seeking: Anil Sharma is an active senior leader at a premier Indian continuous process conglomerate.
 - Contact is exclusively for technical engineering discussions, academic mentorship, and community peer dialogue.
 - Verified LinkedIn Reference: https://www.linkedin.com/in/toanilsharma

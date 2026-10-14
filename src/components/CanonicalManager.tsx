@@ -69,11 +69,6 @@ const PAGE_METADATA: Record<string, PageMeta> = {
       'serviceType': 'Open Engineering Knowledge Sharing'
     }
   },
-  '/experience': {
-    title: 'Industrial Experience & Project Track Record | Anil Sharma (28+ Years)',
-    description: 'Three decades of industrial engineering leadership: continuous-process petrochemical operations, 2.5 MTPA greenfield cement plant commissioning, and automated power distribution.',
-    schemaType: 'ItemPage'
-  },
   '/experience/reliance-industries': {
     title: 'Industrial Experience & Project Track Record | Anil Sharma',
     description: 'Three decades of industrial engineering leadership: continuous-process petrochemical operations, 2.5 MTPA greenfield cement plant commissioning, and automated power distribution.',
@@ -112,16 +107,6 @@ const PAGE_METADATA: Record<string, PageMeta> = {
       }
     }
   },
-  '/tools': {
-    title: 'Open Engineering Platforms & Software Architecture | Anil Sharma',
-    description: 'Explore LiveSimulators.com, DesignCalculators.co.in (150+ tools), ReliabilityTools.co.in, and ElectroSafe.homes engineered by Anil Sharma.',
-    schemaType: 'CollectionPage'
-  },
-  '/insights': {
-    title: 'Reliability Insights & Field Philosophy | Anil Sharma',
-    description: 'Field philosophy, zero-breakdown maintenance strategies, and engineering insights from 28+ years of continuous-process plant operations.',
-    schemaType: 'CollectionPage'
-  },
   '/blog': {
     title: 'Reliability Insights & Field Philosophy | Anil Sharma',
     description: 'Field philosophy, zero-breakdown maintenance strategies, and engineering insights from 28+ years of continuous-process plant operations.',
@@ -130,7 +115,51 @@ const PAGE_METADATA: Record<string, PageMeta> = {
   '/training': {
     title: 'Reliability Training & Workforce Mentorship | Anil Sharma',
     description: 'Master Technical Trainer & SHRM Certified Facilitator. Conducted 2,500+ hours of training across Electrical Safety, UPS, Batteries, LOTO, RCM, LFI, and Automation for 200+ engineers.',
-    schemaType: 'EducationalOccupationalProgram'
+    schemaType: 'Course',
+    schemaData: {
+      '@context': 'https://schema.org',
+      '@type': 'Course',
+      'name': 'Corporate Reliability & Industrial Engineering Training',
+      'description': 'Historical corporate facilitation of 2,500+ hours across 14 technical disciplines including Electrical Safety, UPS, Battery Chargers, Batteries, LOTO, RCM, LFI, RCA, Project Management, Life Cycle, Obsolescence, Smart Manufacturing, Automation, and EMS.',
+      'provider': {
+        '@type': 'Person',
+        'name': 'Anil Sharma',
+        'jobTitle': 'Senior Engineering & Reliability Leader'
+      }
+    }
+  },
+  '/experience': {
+    title: 'Industrial Experience & Project Track Record | Anil Sharma (28+ Years)',
+    description: 'Three decades of industrial engineering leadership: continuous-process petrochemical operations, 2.5 MTPA greenfield cement plant commissioning, and automated power distribution.',
+    schemaType: 'ItemPage',
+    schemaData: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemPage',
+      'name': 'Industrial Experience & Track Record - Anil Sharma',
+      'description': '28+ years of industrial engineering leadership across continuous process petrochemical facilities, greenfield cement plants, and automated power distribution.'
+    }
+  },
+  '/tools': {
+    title: 'Open Engineering Platforms & Software Architecture | Anil Sharma',
+    description: 'Explore LiveSimulators.com, DesignCalculators.co.in (150+ tools), ReliabilityTools.co.in, and ElectroSafe.homes engineered by Anil Sharma.',
+    schemaType: 'CollectionPage',
+    schemaData: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      'name': 'Open Digital Engineering Platforms',
+      'description': 'Free open-access browser-based engineering calculation and simulation platforms developed as a technical community hobby.'
+    }
+  },
+  '/insights': {
+    title: 'Reliability Insights & Field Philosophy | Anil Sharma',
+    description: 'Field philosophy, zero-breakdown maintenance strategies, and engineering insights from 28+ years of continuous-process plant operations.',
+    schemaType: 'CollectionPage',
+    schemaData: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      'name': 'Reliability Insights & Field Philosophy',
+      'description': 'Operational field notes, root cause methodologies, and zero-breakdown maintenance insights by Anil Sharma.'
+    }
   },
   '/contact': {
     title: 'Connect with Anil Sharma | Technical Dialogue & Academic Mentorship',
@@ -216,6 +245,20 @@ export const CanonicalManager = () => {
       } else if (dynamicSchemaScript) {
         dynamicSchemaScript.remove();
       }
+    }
+    // 5. Send Google Tag (GA4) Page View on SPA Navigation
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      const pageTitle = meta ? (meta.ogTitle || meta.title) : document.title;
+      (window as any).gtag('config', 'G-V5ZE67EECX', {
+        page_title: pageTitle,
+        page_path: cleanPath,
+        page_location: canonicalUrl,
+      });
+      (window as any).gtag('event', 'page_view', {
+        page_title: pageTitle,
+        page_location: canonicalUrl,
+        page_path: cleanPath,
+      });
     }
   }, [location.pathname]);
 

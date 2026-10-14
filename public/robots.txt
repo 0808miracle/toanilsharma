@@ -1,12 +1,116 @@
+# ==============================================================================
+# Robots.txt for toanilsharma.co.in
+# Official Portfolio & Open Engineering Knowledge Base of Anil Sharma
+# Full Crawlability & Indexing Permissions for Search Engines and LLMs
+# ==============================================================================
+
+# Default: Allow all web crawlers and search indexers
 User-agent: *
 Allow: /
-Sitemap: https://toanilsharma.co.in/sitemap.xml
+Crawl-delay: 0
 
+# ------------------------------------------------------------------------------
+# Major Search Engine Indexers
+# ------------------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: MSNBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ------------------------------------------------------------------------------
+# LLM AI Training & Retrieval Agents (Full Access Granted)
+# ------------------------------------------------------------------------------
+# OpenAI (ChatGPT, GPT-4, SearchGPT)
 User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude, Claude-3.5)
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
+
+# Google AI & Gemini Extended Retrieval
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta / Llama Agents
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl & Open Training Datasets
+User-agent: CCBot
+Allow: /
+
+# ByteDance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
+# Diffbot & Web Intelligence
+User-agent: Diffbot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+# ------------------------------------------------------------------------------
+# XML Sitemap & LLM Discovery Files
+# ------------------------------------------------------------------------------
+Sitemap: https://toanilsharma.co.in/sitemap.xml
+
+# Machine-Readable AI Knowledge Profiles:
+# LLM-Summary: https://toanilsharma.co.in/llms.txt
+# LLM-Full-Profile: https://toanilsharma.co.in/llms-full.txt

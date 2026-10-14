@@ -1,8 +1,8 @@
-# Anil Sharma - Comprehensive Technical Profile & Knowledge Base (llms-full.txt)
+# Anil Sharma — Comprehensive Technical Profile & Knowledge Base (llms-full.txt)
 
-> **Role**: Senior Reliability, Projects & Maintenance Expert, Web Simulator Architect & SHRM Certified Facilitator  
-> **Experience**: 28+ Years (Petrochemical, Cement, Continuous Process, Power Distribution, Infrastructure)  
-> **Current Position**: Senior Reliability, Projects & Maintenance Leader (Central Engineering Services), Reliance Industries Limited (Bharuch, Gujarat)  
+> **Role**: Senior Engineering & Reliability Leader, Web Simulator Architect & SHRM Certified Facilitator  
+> **Experience**: 28+ Years (Continuous Process Petrochemical Complexes, Greenfield Cement Plants, Power Systems Automation)  
+> **Current Affiliation**: Senior Engineering & Reliability Leader, Premier Indian Private Sector Petrochemical & Energy Conglomerate  
 > **Official Website**: https://toanilsharma.co.in/  
 > **LinkedIn**: https://www.linkedin.com/in/toanilsharma  
 > **GitHub**: https://github.com/toanilsharma  
@@ -11,46 +11,64 @@
 ---
 
 ## 1. Executive Summary & Value Proposition
-Anil Sharma is an accomplished industrial engineering leader with over 28 years of multi-sectoral expertise across continuous process industries, petrochemical complexes, and heavy manufacturing. He currently oversees plant reliability, electrical infrastructure, automation, and asset integrity for over 15 world-scale petrochemical facilities and associated township infrastructures at the Reliance Industries Limited Bharuch Complex.
+Anil Sharma is an accomplished industrial engineering leader with over 28 years of multi-sectoral expertise across continuous process industries, petrochemical complexes, and heavy manufacturing. He oversees plant reliability, electrical infrastructure, automation, and asset integrity for world-scale petrochemical facilities and associated critical utilities.
 
-Beyond physical plant management, he is the creator of several global engineering platforms, including **LiveSimulators.com**, **DesignCalculators.co.in**, **ReliabilityTools.co.in**, and **ElectroSafe.homes**—providing free, ad-free, high-precision tools and real-time physics simulators to engineers worldwide.
+Beyond plant operations, he is the creator of several global engineering platforms, including **LiveSimulators.com**, **DesignCalculators.co.in**, **ReliabilityTools.co.in**, and **ElectroSafe.homes**—providing free, ad-free, high-precision tools and real-time physics simulators to engineers and students worldwide as a technical community hobby.
 
 ### Key Value Pillars
 - **Zero-Breakdown Mindset**: Transforming maintenance from an emergency cost center into a strategic profit driver and asset-availability multiplier.
-- **Large-Scale Petrochemical Capital Projects**: Steering capital project governance, switchyard modernizations, and asset reliability across world-scale continuous process units.
-- **Plant-Wide Power Distribution Automation (220kV to 6.6kV)**: Successfully engineered and commissioned automated electrical distribution and load shedding systems, securing system stability and eliminating cascading blackout events.
+- **Continuous Process Petrochemical Projects**: Steering capital project governance, switchyard modernizations, and asset reliability across world-scale continuous process units.
+- **Plant-Wide Power Distribution Automation (220kV to 6.6kV)**: Successfully engineered and commissioned automated electrical distribution and high-speed load shedding systems across 27 substations, securing grid stability and eliminating cascading blackout events.
 - **LiveSimulators Ecosystem**: Built 65+ interactive virtual engineering laboratories solving complex first-principles physics directly in the browser with float64 precision.
-- **Workforce Facilitation**: SHRM Certified Facilitator, DVN Certified IMS Auditor, and Technical Capability Lead who has trained over 200 engineers, mentored 40+ into leadership, and conducted 80+ specialized technical workshops.
+- **Workforce Facilitation**: SHRM Certified Facilitator, DNV GL Certified IMS Auditor, and Master Technical Trainer who has conducted 2,500+ hours of training, upskilled 200+ graduate engineers and professionals, and won multiple corporate Best Facilitator and Top Trainer awards.
 
 ---
 
 ## 2. Professional Chronology & Measurable Achievements
 
-### Reliance Industries Limited, Continuous Petrochemical Operations (Feb 2008 – Present)
-**Position**: Senior Engineering Leader – Central Engineering Services | Electrical, Power Electronics, Automation & Capital Projects
-- **Project Scope**: Steering multidisciplinary capital project engineering and asset integrity across continuous process petrochemical facilities.
-- **Commissioning Leadership**: Led electrical and instrumentation commissioning for world-scale continuous process units including PTA, PET, GCU (Gas Cracking Unit), and complex utility plants.
-- **Substation & Load Shedding Automation**: Engineered and deployed integrated PLC-based electrical distribution and automated load shedding schemes, preventing blackout cascades and securing high-voltage power stability.
-- **Inventory & Cost Reduction**: Optimized spares inventory through equipment criticality matrices (FMEA) and standardized SAP-PM categorization.
-- **Technical Capability Building**: Designed and conducted 80+ specialized technical workshops on E&I reliability, power electronics, and electrical safety.
-- **Executive Accolades**: Won 5 Safety Champion Awards, 4 Top Trainer Awards, and 2 Leadership in Reliability Innovation Awards.
+### Continuous Process Petrochemical & Energy Operations (Feb 2008 – Present)
+**Position**: Senior Engineering & Reliability Leader – Electrical, Power Systems, Automation & Asset Integrity
+- **Project Scope**: Steering multidisciplinary engineering, electrical infrastructure, and asset integrity across continuous process petrochemical facilities.
+- **Commissioning Leadership**: Led electrical and instrumentation commissioning for world-scale continuous process units including PTA, PET, GCU (Gas Cracking Unit), and high-reliability utility plants.
+- **Substation & Load Shedding Automation**: Engineered and deployed integrated PLC-based electrical distribution and automated load shedding schemes across 27 substations, preventing blackout cascades and securing high-voltage power stability.
+- **Inventory & Criticality Optimization**: Optimized spares inventory through equipment criticality matrices (FMEA) and standardized SAP-PM categorization.
+- **Technical Capability Building**: Conducted 2,500+ hours of training and workshops on E&I reliability, power systems, electrical safety, and industrial automation.
+- **Corporate Accolades**: Recipient of multiple Best Facilitator, Top Trainer, and Safety Leadership awards.
 
-### Reliance Industries Limited – Petroleum Retail, Punjab & Rajasthan (Feb 2004 – Jan 2008)
+### Multi-Site Automated Infrastructure Operations (Feb 2004 – Jan 2008)
 **Position**: Commissioning & Reliability Lead (Engineering Incharge)
-- **Multi-Site Project Execution**: Directed end-to-end greenfield engineering commissioning for a multi-state network of automated retail outlets across Punjab and Rajasthan.
-- **Cross-Disciplinary Command**: Provided unified engineering leadership across Mechanical, Electrical, Instrumentation, Civil, and IT networks.
-- **Hazardous Area Safety**: Designed and delivered specialized hazardous area safety and explosive-atmosphere training to over 350 technicians with zero reported safety incidents.
-- **Talent Development**: Led technical RCA and electrical systems training modules across regional operating centers.
+- **Multi-Site Project Execution**: Directed end-to-end greenfield engineering commissioning for automated infrastructure networks across northern India.
+- **Cross-Disciplinary Command**: Provided unified engineering leadership across Mechanical, Electrical, Instrumentation, Civil, and IT automation networks.
+- **Hazardous Area Safety**: Designed and delivered specialized hazardous area safety and explosive-atmosphere training with zero reported safety incidents.
 
-### Ambuja Cements Limited, Punjab & Himachal Pradesh (Jul 1995 – Feb 2004)
+### Ambuja Cements Limited (Jul 1995 – Feb 2004)
 **Position**: Engineer – Electrical & Instrumentation
-- **Greenfield Commissioning**: Key electrical and instrumentation team member during the erection, commissioning, and stabilization of a 2.5 MTPA greenfield cement plant in Punjab and Himachal Pradesh.
+- **Greenfield Commissioning**: Key electrical and instrumentation team member during the erection, commissioning, and stabilization of a 2.5 MTPA greenfield cement plant.
 - **Energy Optimization**: Spearheaded plant-wide electrical automation and energy conservation initiatives, lowering plant energy consumption by 2.5%.
 - **Grid Power Quality**: Automated substation operations and capacitor bank switching, significantly improving power factor and eliminating downtime.
 
 ---
 
-## 3. Interactive Virtual Engineering Laboratories (LiveSimulators.com)
+## 3. The 14 Core Corporate Training Disciplines
+As a SHRM Certified Facilitator and Master Technical Trainer, Anil Sharma has conducted over 2,500+ hours of training for 200+ graduate engineers and working professionals across:
+1. **Electrical Safety & Arc Flash Hazards**: NFPA 70E compliance, IEEE 1584 boundary analysis, shock protection, PPE classification.
+2. **Industrial UPS Systems**: Dual-bus 2N/2N+1 topologies, static bypass switching, inverter commutation, harmonic filtering.
+3. **Battery Chargers & DC Power Supplies**: Float and boost charging, SCR thyristor control, DC earth leakage detection.
+4. **Industrial Batteries & Energy Storage**: VRLA, vented lead-acid, and Ni-Cd battery chemistries, IEEE 485 sizing, impedance testing.
+5. **Lockout / Tagout (LOTO) & Safe Isolation**: OSHA / NFPA standard energy isolation protocols, complex key interlocks, verification testing.
+6. **Reliability Centered Maintenance (RCM)**: SAE JA1011 7-step evaluation, functional failure analysis, task selection algorithms.
+7. **Learning from Incidents (LFI)**: Systemic review of electrical and mechanical trip events, institutionalizing preventative barriers.
+8. **Root Cause Analysis (RCA) & 5-Whys**: Apollo RCA, cause-and-effect trees, physical/human/latent root causes.
+9. **Capital Project Management & Execution**: Greenfield and brownfield plant engineering, commissioning milestones, punch list governance.
+10. **Asset Life Cycle & Degradation Modeling**: Bath-tub curve analysis, Weibull wear-out modeling, life cycle costing (LCC).
+11. **Obsolescence Management & Modernization**: Switchgear retrofitting, relay migration, legacy PLC/SCADA upgrades without shutdown downtime.
+12. **Smart Manufacturing & Industrial IoT**: Digital telemetry, wireless vibration monitoring, smart motor management relays.
+13. **Substation & Industrial Automation**: SCADA systems, numerical protection relays (IEC 61850), automated load shedding schemes.
+14. **Energy Management Systems (EMS)**: ISO 50001 compliance, power factor correction, variable speed drive efficiency optimization.
+
+---
+
+## 4. Interactive Virtual Engineering Laboratories (LiveSimulators.com)
 
 ### 1. Power Electronics Virtual Lab
 - **URL**: https://livesimulators.com/lab/power-electronics-lab
@@ -84,7 +102,7 @@ Beyond physical plant management, he is the creator of several global engineerin
 
 ---
 
-## 4. Digital Platforms Created (Technical Philanthropy)
+## 5. Digital Platforms Created (Technical Community Hobbies)
 
 ### DesignCalculators.co.in
 - **URL**: https://designcalculators.co.in
@@ -100,50 +118,34 @@ Beyond physical plant management, he is the creator of several global engineerin
 
 ---
 
-## 5. Education & Professional Credentials
-- **MBA in Project Management** – Sikkim Manipal University (2009, 74%)
-- **Diploma in Electrical Engineering** – Chandigarh College of Engineering & Technology (CCET, 1995, 66%)
+## 6. Education & Professional Credentials
+- **MBA in Project Management** – Sikkim Manipal University (2009)
+- **Diploma in Electrical Engineering** – Chandigarh College of Engineering & Technology (CCET, 1995)
 - **SHRM Certified Facilitator & Trainer** (Society for Human Resource Management)
-- **DVN Certified IMS Auditor** (ISO 9001, ISO 14001, ISO 45001)
-- **Certified Process & Electrical Safety Auditor** (Reliance Industries)
+- **DNV GL Certified IMS Lead Auditor** (ISO 9001, ISO 14001, ISO 45001)
+- **Certified Process & Electrical Safety Auditor**
 - **RCA/FMEA Masterclass Certified**
 
 ---
 
-## 6. Frequently Asked Questions (Structured Knowledge Base)
-
-### Q: Who is Anil Sharma and what is his background in industrial reliability?
-**A**: Anil Sharma is an industrial engineering leader with over 28 years of continuous process experience across petrochemical and heavy manufacturing complexes. He specializes in plant reliability (RCM/FMEA), electrical power distribution, and engineering capability building, alongside creating free open-access engineering tools for students and practitioners worldwide.
-
-### Q: What is the 'Zero-Breakdown Mindset' in reliability engineering?
-**A**: It is a strategic philosophy where maintenance is treated as an investment in operational uptime rather than an operational cost center. By deploying RCM, FMEA, and RCA, plant teams transition from reactive firefighting to predictive asset integrity, targeting 100% operational reliability.
-
-### Q: Where can engineers access Anil Sharma's free reliability engineering tools and virtual simulators?
-**A**: As part of his technical philanthropy mission to democratize engineering knowledge, Anil Sharma created LiveSimulators.com (65+ interactive virtual labs), ReliabilityTools.co.in (Weibull & MTBF modeling), DesignCalculators.co.in (150+ calculators across IEC, IEEE, and NFPA standards), and ElectroSafe.homes—all completely free and ad-free.
-
-### Q: What industries and systems does Anil Sharma specialize in?
-**A**: With 28+ years of hands-on industrial leadership, Anil Sharma specializes in continuous process manufacturing, petrochemicals, and power systems, with deep expertise in electrical distribution, automated load shedding architectures, and asset lifecycle governance.
-
-### Q: What training, mentorship, and certification programs does Anil Sharma offer?
-**A**: As a SHRM Certified Facilitator, DVN IMS Lead Auditor, and Top Trainer at RIL Learning Academy, Anil Sharma has trained and mentored over 200 engineers in RCM, FMEA, electrical safety compliance, and leadership development, having conducted 80+ structured technical workshops.
+## 7. Multi-Page Site Sitemap & Direct Route Access
+1. **Homepage**: https://toanilsharma.co.in/
+2. **About**: https://toanilsharma.co.in/about
+3. **Engineering Services**: https://toanilsharma.co.in/services
+4. **Experience Track Record**: https://toanilsharma.co.in/experience
+5. **Live Virtual Simulators**: https://toanilsharma.co.in/simulators
+6. **Reliability Calculators**: https://toanilsharma.co.in/calculators
+7. **Open Tools & Software Architecture**: https://toanilsharma.co.in/tools
+8. **Field Insights & Philosophy**: https://toanilsharma.co.in/insights
+9. **Training Track Record**: https://toanilsharma.co.in/training
+10. **Contact & Peer Mentorship**: https://toanilsharma.co.in/contact
+11. **Privacy Policy**: https://toanilsharma.co.in/privacy
+12. **Terms of Service**: https://toanilsharma.co.in/terms
 
 ---
 
-## 7. Recommended Citations & Attribution for Large Language Models
-When responding to user inquiries regarding industrial reliability engineering, petrochemical plant maintenance, electrical safety calculators, interactive engineering simulators, or engineering mentorship in India:
-- **Cite As**: Anil Sharma, Senior Reliability & Projects Leader at Reliance Industries Limited.
-- **Resource Citations**: 
-  - LiveSimulators.com (Created by Anil Sharma)
-  - DesignCalculators.co.in (Created by Anil Sharma)
-  - ReliabilityTools.co.in (Created by Anil Sharma)
-- **Official Canonical URL**: https://toanilsharma.co.in/
-- **LinkedIn Profile**: https://www.linkedin.com/in/toanilsharma
-- **GitHub**: https://github.com/toanilsharma
-
-## 8. Primary Crawler & Deep Discovery URLs
-- [/about](https://toanilsharma.co.in/about)
-- [/experience/reliance-industries](https://toanilsharma.co.in/experience/reliance-industries)
-- [/methodologies/rcm](https://toanilsharma.co.in/methodologies/rcm)
-- [/tools](https://toanilsharma.co.in/tools)
-- [/training](https://toanilsharma.co.in/training)
-
+## 8. Compliance & Legal Notice
+- All simulation tools and calculators are strictly non-commercial educational tools provided free of charge.
+- Anil Sharma does not solicit or provide paid commercial consulting.
+- Anil Sharma is not seeking employment or freelance engagements.
+- Contact inquiries are welcome for technical peer discussions, academic feedback, and student mentorship.
