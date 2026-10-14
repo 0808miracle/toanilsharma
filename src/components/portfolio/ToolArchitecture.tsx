@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { Section, SectionHeader, SectionLabel, SectionTitle, TextGradient } from '@/components/portfolio/Section';
 import { SpotlightCard } from '@/components/ui/SpotlightCard';
+import { cn } from '@/lib/utils';
 
 const architecturePillars = [
   {
@@ -24,6 +25,8 @@ const architecturePillars = [
     title: 'AI Safety Engines',
     badge: 'RAG & Semantic Guardrails',
     badgeColor: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20',
+    spotlightColor: 'rgba(99, 102, 241, 0.35)',
+    hoverBorder: 'hover:border-indigo-500/50',
     summary: 'Custom Prompt Engineering & RAG architectures ensuring engineering safety and calculation assistants are strictly grounded in verified IEEE, IEC, OSHA, and IS standards.',
     technicalDetails: [
       'Deterministic safety constraints preventing LLM hallucination',
@@ -35,11 +38,13 @@ const architecturePillars = [
   {
     id: 'physics-engines',
     icon: Cpu,
-    iconColor: 'text-blue-500',
-    iconBg: 'bg-blue-500/10 border-blue-500/20',
+    iconColor: 'text-cyan-500',
+    iconBg: 'bg-cyan-500/10 border-cyan-500/20',
     title: 'High-Performance Physics',
     badge: 'Browser-Native Float64',
-    badgeColor: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20',
+    badgeColor: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/20',
+    spotlightColor: 'rgba(6, 182, 212, 0.35)',
+    hoverBorder: 'hover:border-cyan-500/50',
     summary: 'Browser-native physics engines powering LiveSimulators, allowing complex electrical transient calculations to run instantly on low-end student hardware.',
     technicalDetails: [
       'Sub-millisecond numerical solvers running in client main thread',
@@ -56,6 +61,8 @@ const architecturePillars = [
     title: 'Zero-Ad, Zero-Tracker Architecture',
     badge: 'Privacy-First & Air-Gapped',
     badgeColor: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
+    spotlightColor: 'rgba(16, 185, 129, 0.35)',
+    hoverBorder: 'hover:border-emerald-500/50',
     summary: 'Engineered with privacy-first, lightweight frameworks to ensure a 100% distraction-free learning environment.',
     technicalDetails: [
       'Zero telemetry, tracking pixels, or third-party ad scripts',
@@ -101,8 +108,11 @@ export const ToolArchitecture: React.FC = () => {
             return (
               <SpotlightCard 
                 key={pillar.id}
-                spotlightColor="rgba(59, 130, 246, 0.35)"
-                className="group relative rounded-2xl bg-background/80 dark:bg-[#0B0F19]/90 border border-border/80 dark:border-white/10 p-6 sm:p-7 shadow-sm hover:shadow-xl dark:shadow-[0_0_25px_rgba(15,76,255,0.18)] dark:hover:shadow-[0_0_35px_rgba(15,76,255,0.35)] dark:hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between backdrop-blur-md"
+                spotlightColor={pillar.spotlightColor}
+                className={cn(
+                  "group relative rounded-2xl bg-background/80 dark:bg-[#0B0F19]/90 border border-border/80 dark:border-white/10 p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between backdrop-blur-md",
+                  pillar.hoverBorder
+                )}
               >
                 <div>
                   {/* Icon & Badge Header */}

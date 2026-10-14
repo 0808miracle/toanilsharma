@@ -1,27 +1,29 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
-import { Menu, ArrowRight, Sparkles, Phone, Mail, Download, ExternalLink, Search, Volume2, VolumeX } from 'lucide-react';
+import { Menu, ArrowRight, Sparkles, Search, Volume2, VolumeX, ShieldCheck } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { CommandMenu } from '@/components/portfolio/CommandMenu';
 import { sounds } from '@/utils/soundEffects';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { href: '/#about', label: 'About' },
-  { href: '/#expertise', label: 'Expertise' },
-  { href: '/#experience', label: 'Journey Map' },
-  { href: '/#simulators', label: 'Simulators', badge: 'Live' },
-  { href: '/#projects', label: 'Platforms' },
-  { href: '/#architecture', label: 'Architecture' },
-  { href: '/#awards', label: 'Accolades' },
-  { href: '/#faq', label: 'FAQ' },
+  { to: '/about', label: 'About' },
+  { to: '/services', label: 'Expertise' },
+  { to: '/experience', label: 'Journey' },
+  { to: '/simulators', label: 'Simulators', badge: 'Live' },
+  { to: '/calculators', label: 'Calculators' },
+  { to: '/tools', label: 'Platforms' },
+  { to: '/insights', label: 'Insights' },
+  { to: '/training', label: 'Training' },
+  { to: '/contact', label: 'Contact' },
 ];
 
 export const Header = () => {
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [commandOpen, setCommandOpen] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(false);
@@ -41,22 +43,9 @@ export const Header = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 20);
 
-      // Calculate scroll progress percentage
       const winHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = winHeight > 0 ? (scrollY / winHeight) * 100 : 0;
       setScrollProgress(Math.min(100, Math.max(0, progress)));
-
-      // Detect active section
-      const sections = ['home', 'about', 'philosophy', 'expertise', 'experience', 'simulators', 'projects', 'architecture', 'awards', 'faq', 'contact']
-        .map(id => document.getElementById(id));
-
-      let current = 'home';
-      sections.forEach(section => {
-        if (section && scrollY >= section.offsetTop - 140) {
-          current = section.id;
-        }
-      });
-      setActiveSection(current);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -66,7 +55,7 @@ export const Header = () => {
 
   return (
     <>
-      {/* 2px Global Reading Scroll Progress Indicator */}
+      {/* Global Scroll Progress Bar */}
       <div 
         className="fixed top-0 left-0 right-0 h-[2.5px] z-[60] bg-transparent pointer-events-none"
         aria-hidden="true"
@@ -77,13 +66,11 @@ export const Header = () => {
         />
       </div>
 
-      {/* Floating Glassmorphic Header Dock */}
+      {/* Floating Glassmorphic Header */}
       <header
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out px-4 sm:px-6 lg:px-8',
-          isScrolled 
-            ? 'py-3' 
-            : 'py-5'
+          isScrolled ? 'py-3' : 'py-5'
         )}
       >
         <div 
@@ -95,9 +82,9 @@ export const Header = () => {
           )}
         >
           <div className="flex items-center justify-between">
-            {/* Executive Brand & Monogram Logo */}
-            <a 
-              href="#home" 
+            {/* Executive Brand Logo */}
+            <Link 
+              to="/" 
               className="flex items-center space-x-3 group outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
               aria-label="Anil Sharma Home"
             >
@@ -117,23 +104,22 @@ export const Header = () => {
                   </span>
                 </div>
                 <span className="text-[11px] text-muted-foreground font-medium leading-tight tracking-wide flex items-center">
-                  Reliability Expert & Trainer
+                  Senior Engineering &amp; Reliability Leader
                 </span>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation Links */}
             <nav 
-              className="hidden lg:flex items-center space-x-1 xl:space-x-2 px-3 py-1.5 rounded-full bg-secondary/40 dark:bg-secondary/20 border border-border/40" 
+              className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 px-3 py-1.5 rounded-full bg-secondary/40 dark:bg-secondary/20 border border-border/40" 
               aria-label="Main Navigation"
             >
               {navItems.map(item => {
-                const sectionKey = item.href.replace('/#', '').replace('#', '');
-                const isActive = activeSection === sectionKey;
+                const isActive = location.pathname === item.to || (item.to !== '/' && location.pathname.startsWith(item.to));
                 return (
-                  <a
-                    key={item.href}
-                    href={item.href}
+                  <Link
+                    key={item.to}
+                    to={item.to}
                     className={cn(
                       'relative px-3 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 flex items-center space-x-1.5',
                       isActive
@@ -147,14 +133,14 @@ export const Header = () => {
                         {item.badge}
                       </span>
                     )}
-                  </a>
+                  </Link>
                 );
               })}
             </nav>
 
-            {/* Right Action Stack: Search ⌘K, Theme Toggle & Explore Tools Button */}
+            {/* Right Action Stack */}
             <div className="flex items-center space-x-2 sm:space-x-2.5">
-              {/* Quick Command Launcher Trigger */}
+              {/* Command Palette Trigger */}
               <button
                 onClick={() => setCommandOpen(true)}
                 className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/60 dark:bg-card/60 hover:bg-secondary dark:hover:bg-card border border-border/70 dark:border-white/10 text-muted-foreground hover:text-foreground text-xs font-medium transition-all shadow-sm"
@@ -177,11 +163,11 @@ export const Header = () => {
 
               <ThemeToggle />
 
-              {/* Optional Tactile Acoustic Audio Toggle */}
+              {/* Sound FX Toggle */}
               <button
                 onClick={toggleSound}
                 className="flex items-center justify-center w-9 h-9 rounded-full bg-secondary/60 dark:bg-card/60 hover:bg-secondary dark:hover:bg-card border border-border/70 dark:border-white/10 text-muted-foreground hover:text-foreground transition-all cursor-pointer"
-                title={soundEnabled ? "Mute Tactile Audio FX" : "Enable Tactile Audio FX (Synthesized)"}
+                title={soundEnabled ? "Mute Audio FX" : "Enable Tactile Audio FX"}
                 aria-label="Toggle Sound FX"
               >
                 {soundEnabled ? (
@@ -191,16 +177,17 @@ export const Header = () => {
                 )}
               </button>
 
-              <a href="#simulators" className="hidden sm:inline-flex">
+              {/* Direct Link to Simulators */}
+              <Link to="/simulators" className="hidden sm:inline-flex">
                 <Button 
                   size="sm" 
                   className="rounded-full px-4 h-9 font-semibold text-xs bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-md shadow-blue-500/20 group"
                 >
                   <Sparkles className="mr-1.5 h-3.5 w-3.5" />
-                  <span>Explore Tools</span>
+                  <span>Virtual Labs</span>
                   <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
-              </a>
+              </Link>
 
               {/* Mobile Menu Trigger */}
               <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -223,21 +210,34 @@ export const Header = () => {
                         </span>
                         <div>
                           <SheetTitle className="font-grotesk text-lg font-bold">Anil Sharma</SheetTitle>
-                          <p className="text-xs text-muted-foreground">Reliability Expert & Trainer</p>
+                          <p className="text-xs text-muted-foreground">Senior Engineering Leader</p>
                         </div>
                       </div>
                     </SheetHeader>
 
-                    {/* Navigation Links */}
+                    {/* Mobile Navigation Links */}
                     <div className="flex flex-col space-y-1.5 py-6">
+                      <Link
+                        to="/"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={cn(
+                          'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors',
+                          location.pathname === '/'
+                            ? 'bg-primary/10 text-primary font-semibold'
+                            : 'text-foreground hover:bg-secondary'
+                        )}
+                      >
+                        <span>Home</span>
+                      </Link>
+
                       {navItems.map(item => (
-                        <a
-                          key={item.href}
-                          href={item.href}
+                        <Link
+                          key={item.to}
+                          to={item.to}
                           onClick={() => setMobileMenuOpen(false)}
                           className={cn(
                             'flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors',
-                            activeSection === item.href.replace('/#', '').replace('#', '')
+                            location.pathname === item.to
                               ? 'bg-primary/10 text-primary font-semibold'
                               : 'text-foreground hover:bg-secondary'
                           )}
@@ -248,40 +248,14 @@ export const Header = () => {
                               {item.badge}
                             </span>
                           )}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
 
-                  {/* Drawer Footer Actions */}
-                  <div className="pt-6 border-t border-border/60 space-y-3">
-                    <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
-                      <span>Appearance</span>
-                      <ThemeToggle />
-                    </div>
-                    
-                    <a 
-                      href="#simulators" 
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block w-full"
-                    >
-                      <Button className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-                        <Sparkles className="mr-2 h-4 w-4" />
-                        Explore Live Simulators
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </a>
-
-                    <a 
-                      href="#contact" 
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block w-full"
-                    >
-                      <Button variant="outline" className="w-full rounded-xl text-xs">
-                        <Mail className="mr-2 h-3.5 w-3.5" />
-                        Academic &amp; Student Inquiries
-                      </Button>
-                    </a>
+                  <div className="pt-6 border-t border-border/60 text-xs text-muted-foreground">
+                    <p className="font-mono">Open-Access Engineering Education</p>
+                    <p className="text-[11px] mt-1">Non-Commercial • 100% Free Tools</p>
                   </div>
                 </SheetContent>
               </Sheet>
@@ -290,8 +264,10 @@ export const Header = () => {
         </div>
       </header>
 
-      {/* Global Command Menu / Cmd+K Launcher */}
+      {/* Global Command Menu Dialog */}
       <CommandMenu open={commandOpen} setOpen={setCommandOpen} />
     </>
   );
 };
+
+export default Header;

@@ -52,15 +52,15 @@ const journeyMilestones: JourneyMilestone[] = [
     era: "2026 – Present",
     yearRange: "2026 – Present",
     phaseTitle: "Capital Project Engineering & Asset Integrity • Mega Petrochemical Operations",
-    roleHighlight: "Senior Reliability, Projects & Maintenance Expert (DGM – Central Engineering Services)",
+    roleHighlight: "Senior Reliability, Projects & Maintenance Leader",
     organization: "Reliance Industries Limited",
     location: "Bharuch Complex, Gujarat (Petrochemicals & Greenfield Projects)",
     category: "executive",
     statusBadge: {
-      label: "2026 – Present • Senior Reliability & Projects Expert",
+      label: "2026 – Present • Senior Reliability & Projects Leader",
       type: "emerald",
     },
-    summary: "Senior Reliability, Projects & Maintenance Expert (DGM – Central Engineering Services). Overseeing reliability, new projects and maintenance for petrochemical complex and new greenfield projects, integrating high-reliability power systems, automated switchyards, advanced telemetry, and enterprise asset integrity standards.",
+    summary: "Senior Reliability, Projects & Maintenance Leader. Overseeing reliability, capital projects and electrical maintenance for petrochemical complex operations and new greenfield projects, integrating high-reliability power systems, automated switchyards, advanced telemetry, and enterprise asset integrity standards.",
     strategicImpact: [
       "Steering large-scale capital project expansions, equipment retrofits, and electrical infrastructure modernizations.",
       "Directing cross-functional engineering integrity across continuous process petrochemical facilities and industrial complexes.",
@@ -72,7 +72,7 @@ const journeyMilestones: JourneyMilestone[] = [
       title: "Total Lifecycle Asset Optimization",
       standard: "ISO 55000 / IEC 60300-3-3"
     },
-    tags: ["2026 – Present", "DGM Central Engineering", "Capital Projects", "Continuous Manufacturing", "Asset Integrity"]
+    tags: ["2026 – Present", "Senior Engineering Leadership", "Capital Projects", "Continuous Manufacturing", "Asset Integrity"]
   },
   {
     era: "2024 & Beyond",
@@ -234,8 +234,8 @@ export const Experience = () => {
         </SectionTitle>
         <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-sm sm:text-base leading-relaxed">
           From greenfield continuous process plant commissioning in 1995 to executive leadership in 
-          <strong className="text-foreground font-semibold"> large-scale petrochemical capital projects</strong> as 
-          <strong className="text-primary font-semibold"> DGM Central Engineering Services</strong> and nationwide engineering thought leadership.
+          <strong className="text-foreground font-semibold"> large-scale petrochemical capital projects</strong>,
+          asset integrity governance, and nationwide engineering thought leadership.
         </p>
       </SectionHeader>
 
@@ -255,7 +255,7 @@ export const Experience = () => {
                 </span>
               </div>
               <h3 className="font-grotesk font-extrabold text-2xl sm:text-3xl text-foreground tracking-tight">
-                DGM – Central Engineering Services
+                Senior Reliability &amp; Projects Leader
               </h3>
               <p className="text-primary font-semibold text-base sm:text-lg mt-1 flex items-center gap-2">
                 <span>Steering Capital Projects &amp; Asset Integrity in Continuous Petrochemical Operations</span>
@@ -288,7 +288,7 @@ export const Experience = () => {
       <div className="flex flex-wrap items-center justify-center gap-2 mb-12 max-w-3xl mx-auto px-4">
         {[
           { key: 'all', label: 'All Milestones (1995–2026)' },
-          { key: 'executive', label: '2026 DGM & 2024 Simulations' },
+          { key: 'executive', label: 'Executive Leadership & Simulations' },
           { key: 'petrochem', label: 'Petrochemical Complex' },
           { key: 'automation', label: 'Power & Automation' },
           { key: 'foundations', label: 'Greenfield & Foundations' },

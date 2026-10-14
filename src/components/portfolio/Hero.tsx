@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { SpotlightCard } from '@/components/ui/SpotlightCard';
 import { ParticleGridCanvas } from '@/components/portfolio/ParticleGridCanvas';
@@ -23,10 +24,10 @@ const missionStats = [
   {
     value: "28+",
     label: "Years Industrial Rigor",
-    subtext: "Reliance Industries & Ambuja",
+    subtext: "Petrochemicals & Continuous Process",
     accent: "text-foreground",
     borderGlow: "group-hover:border-blue-500/50",
-    href: "#experience"
+    href: "/experience"
   },
   {
     value: "65+",
@@ -34,7 +35,7 @@ const missionStats = [
     subtext: "Float64 Browser Physics",
     accent: "text-foreground",
     borderGlow: "group-hover:border-cyan-500/50",
-    href: "#simulators"
+    href: "/simulators"
   },
   {
     value: "150+",
@@ -42,7 +43,7 @@ const missionStats = [
     subtext: "IEC, IEEE, ASME & API Codes",
     accent: "text-foreground",
     borderGlow: "group-hover:border-indigo-500/50",
-    href: "#projects"
+    href: "/tools"
   },
   {
     value: "200+",
@@ -50,7 +51,7 @@ const missionStats = [
     subtext: "SHRM Facilitator & Lead Auditor",
     accent: "text-blue-600 dark:text-cyan-400 font-extrabold",
     borderGlow: "group-hover:border-emerald-500/50",
-    href: "#about"
+    href: "/about"
   }
 ];
 
@@ -82,7 +83,7 @@ export const Hero = () => {
               <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
                 <span className="font-semibold text-blue-950 dark:text-blue-100">Senior Reliability, Projects &amp; Maintenance Expert</span>
                 <span className="text-blue-400 hidden sm:inline">•</span>
-                <span className="text-blue-700/80 dark:text-blue-300/80">Reliance Industries (Bharuch, Gujarat)</span>
+                <span className="text-blue-700/80 dark:text-blue-300/80">28+ Years Continuous Process Experience</span>
               </div>
             </div>
 
@@ -146,7 +147,7 @@ export const Hero = () => {
             {/* CTA Hierarchy */}
             <div className="mt-8 flex flex-wrap gap-3.5 justify-center lg:justify-start items-center">
               {/* Primary Action */}
-              <a href="#simulators" className="w-full sm:w-auto">
+              <Link to="/simulators" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
                   className="w-full sm:w-auto h-12 px-6 rounded-xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] group"
@@ -154,10 +155,10 @@ export const Hero = () => {
                   <PlayCircle className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
                   Explore Live Virtual Labs (65+)
                 </Button>
-              </a>
+              </Link>
 
               {/* Secondary Action */}
-              <a href="#projects" className="w-full sm:w-auto">
+              <Link to="/tools" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
                   variant="outline" 
@@ -166,7 +167,7 @@ export const Hero = () => {
                   <Calculator className="mr-2 h-4 w-4 text-primary" />
                   <span>150+ Design Calculators</span>
                 </Button>
-              </a>
+              </Link>
 
               {/* LinkedIn Profile Direct Link */}
               <a 
@@ -212,10 +213,7 @@ export const Hero = () => {
             {/* Impact Metric Cards - WHOLE CARD CLICKABLE with Spotlight */}
             <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4 max-w-2xl mx-auto lg:mx-0">
               {missionStats.map((stat, index) => (
-                <a 
-                  key={index}
-                  href={stat.href}
-                  className="block select-none"
+                <Link key={index} to={stat.href} className="block select-none"
                 >
                   <SpotlightCard
                     spotlightColor="rgba(59, 130, 246, 0.35)"
@@ -234,7 +232,7 @@ export const Hero = () => {
                       {stat.subtext}
                     </p>
                   </SpotlightCard>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

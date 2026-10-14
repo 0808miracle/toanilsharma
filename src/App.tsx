@@ -6,9 +6,18 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { CanonicalManager } from "@/components/CanonicalManager";
-import Index from "./pages/Index";
 
-// Code-split standalone subpages
+// Code-split all standalone multi-page routes
+const Index = lazy(() => import("./pages/Index"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+const ExperiencePage = lazy(() => import("./pages/ExperiencePage"));
+const SimulatorsPage = lazy(() => import("./pages/SimulatorsPage"));
+const CalculatorsPage = lazy(() => import("./pages/CalculatorsPage"));
+const ToolsPage = lazy(() => import("./pages/ToolsPage"));
+const InsightsPage = lazy(() => import("./pages/InsightsPage"));
+const TrainingPage = lazy(() => import("./pages/TrainingPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -29,23 +38,33 @@ const App = () => (
         <ScrollToTop />
         <Suspense fallback={<PageFallback />}>
           <Routes>
+            {/* Primary Multi-Page Routes */}
             <Route path="/" element={<Index />} />
-            <Route path="/about" element={<Index targetSection="about" />} />
-            <Route path="/services" element={<Index targetSection="expertise" />} />
-            <Route path="/blog" element={<Index targetSection="insights" />} />
-            <Route path="/contact" element={<Index targetSection="contact" />} />
-            {/* Crawler & Discovery Specialized Landing Routes */}
-            <Route path="/tools" element={<Index targetSection="projects" />} />
-            <Route path="/training" element={<Index targetSection="about" />} />
-            <Route path="/experience/reliance-industries" element={<Index targetSection="experience" />} />
-            <Route path="/methodologies/rcm" element={<Index targetSection="expertise" />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/simulators" element={<SimulatorsPage />} />
+            <Route path="/calculators" element={<CalculatorsPage />} />
+            <Route path="/tools" element={<ToolsPage />} />
+            <Route path="/insights" element={<InsightsPage />} />
+            <Route path="/training" element={<TrainingPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+
+            {/* Semantic & Crawler Aliases */}
+            <Route path="/blog" element={<InsightsPage />} />
+            <Route path="/experience/reliance-industries" element={<ExperiencePage />} />
+            <Route path="/methodologies/rcm" element={<ServicesPage />} />
+
+            {/* Compliance & Policy Pages */}
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/disclaimer" element={<Terms />} />
-            {/* Automatic redirect for /resume and /cv to Home */}
-            <Route path="/resume" element={<Navigate to="/" replace />} />
-            <Route path="/cv" element={<Navigate to="/" replace />} />
-            {/* Catch-all 404 route */}
+
+            {/* Redirects to Executive Leadership Profile */}
+            <Route path="/resume" element={<Navigate to="/about" replace />} />
+            <Route path="/cv" element={<Navigate to="/about" replace />} />
+
+            {/* Catch-all 404 Route */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

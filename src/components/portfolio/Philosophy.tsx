@@ -16,6 +16,7 @@ import {
   Gauge
 } from 'lucide-react';
 import { MathTex } from '@/components/ui/MathTex';
+import { cn } from '@/lib/utils';
 
 const pillars = [
   {
@@ -25,6 +26,8 @@ const pillars = [
     description: "Eliminating the costly trap of reactive 'firefighting'. Every asset failure leaves early vibrational, thermal, and electrical signals that disciplined teams can predict and eliminate weeks in advance.",
     accent: "text-blue-500",
     bg: "from-blue-500/10 to-indigo-500/5",
+    spotlightColor: "rgba(59, 130, 246, 0.35)",
+    borderHover: "hover:border-blue-500/50"
   },
   {
     icon: ShieldCheck,
@@ -33,6 +36,8 @@ const pillars = [
     description: "Zero incidents are not an accidental stroke of luck; they are the direct mathematical byproduct of uncompromising asset integrity, certified hazardous area protocols, and thorough MOC governance.",
     accent: "text-emerald-500",
     bg: "from-emerald-500/10 to-teal-500/5",
+    spotlightColor: "rgba(16, 185, 129, 0.35)",
+    borderHover: "hover:border-emerald-500/50"
   },
   {
     icon: Users,
@@ -41,6 +46,8 @@ const pillars = [
     description: "World-class tools fail without team ownership. Training over 200 engineers has proven that when frontline operators truly understand the physics of failure, they treat the asset as their own.",
     accent: "text-indigo-500",
     bg: "from-indigo-500/10 to-purple-500/5",
+    spotlightColor: "rgba(99, 102, 241, 0.35)",
+    borderHover: "hover:border-indigo-500/50"
   },
 ];
 
@@ -330,7 +337,11 @@ export const Philosophy = () => {
             return (
               <SpotlightCard 
                 key={index}
-                className="p-6 sm:p-7 rounded-2xl flex flex-col justify-between"
+                spotlightColor={pillar.spotlightColor}
+                className={cn(
+                  "p-6 sm:p-7 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5",
+                  pillar.borderHover
+                )}
               >
                 <div>
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${pillar.bg} border border-border/60 flex items-center justify-center mb-5 ${pillar.accent} group-hover:scale-110 transition-transform`}>

@@ -44,7 +44,7 @@ function createExecutivePdf() {
   addText("EXECUTIVE ENGINEERING PROFILE & TECHNICAL PHILANTHROPY", 40, 805, '/F2', 8.5, 0.22, 0.74, 0.97);
   addText("ANIL SHARMA", 40, 770, '/F2', 26, 1.0, 1.0, 1.0);
   addText("Reliability & Maintenance Expert | E&I Specialist | Projects Execution | Trainer", 40, 748, '/F2', 11.5, 0.9, 0.95, 1.0);
-  addText("DGM - Central Engineering Services, Reliance Industries Limited (28+ Years Industrial Rigor)", 40, 730, '/F1', 9.5, 0.7, 0.8, 0.9);
+  addText("Senior Engineering & Reliability Leader (28+ Years Industrial Rigor)", 40, 730, '/F1', 9.5, 0.7, 0.8, 0.9);
 
   // Contact Info Ribbon
   fillRect(0, 680, width, 30, 0.94, 0.96, 0.98);

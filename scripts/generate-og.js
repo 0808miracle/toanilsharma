@@ -106,7 +106,7 @@ async function generateOgBanner() {
 
       <!-- Corporate Affiliation -->
       <text x="70" y="234" fill="#94A3B8" font-size="17" font-weight="500" class="font-sans">
-        DGM – Central Engineering Services • Reliance Industries Limited
+        Senior Engineering &amp; Reliability Leader • 28+ Years Industrial Rigor
       </text>
 
       <!-- Divider line -->

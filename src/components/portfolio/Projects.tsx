@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 const projectsData = [
   {
     featured: true,
-    image: "/images/livesimulators.svg",
+    image: "/images/livesimulators-preview.jpg",
     title: "LiveSimulators.com",
     badge: "Virtual Laboratory Cloud",
     description: "An advanced suite of 65+ interactive first-principles browser simulations and virtual engineering laboratories covering Power Electronics, Power Systems & Grid Automation, SafeOps UPS, ElectroLive Safety, and Turbomachinery.",

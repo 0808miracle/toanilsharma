@@ -30,7 +30,7 @@ const faqData: FAQItem[] = [
   {
     category: 'credentials',
     question: "Who is Anil Sharma and what is his core industrial leadership background?",
-    answer: "Anil Sharma is an industrial engineering leader with over 28 years of continuous process experience across petrochemical and heavy manufacturing complexes. Currently serving as Deputy General Manager (DGM) – Central Engineering Services at Reliance Industries Limited, he specializes in plant reliability (RCM/FMEA), high-reliability electrical distribution, automated switchyards, and technical capability building.",
+    answer: "Anil Sharma is an industrial engineering leader with over 28 years of continuous process experience across petrochemical and heavy manufacturing complexes. Currently serving as a Senior Reliability, Projects & Maintenance Leader with a premier Indian private energy & petrochemical conglomerate, he specializes in plant reliability (RCM/FMEA), high-reliability electrical distribution, automated switchyards, and technical capability building.",
     highlights: [
       "28+ years continuous operations leadership (Reliance Industries, Ambuja Cements)",
       "DNV GL Certified IMS Lead Auditor (ISO 9001 / 14001 / 45001)",

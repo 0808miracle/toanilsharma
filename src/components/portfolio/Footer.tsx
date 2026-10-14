@@ -179,15 +179,15 @@ export const Footer = () => {
               Navigation
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="/#about" className="text-muted-foreground hover:text-primary transition-colors">About &amp; Credentials</a></li>
-              <li><a href="/#expertise" className="text-muted-foreground hover:text-primary transition-colors">Core Competencies</a></li>
-              <li><a href="/#philosophy" className="text-muted-foreground hover:text-primary transition-colors">Zero-Breakdown Creed</a></li>
-              <li><a href="/#experience" className="text-muted-foreground hover:text-primary transition-colors">Career Timeline (28y)</a></li>
-              <li><a href="/#calculator" className="text-muted-foreground hover:text-primary transition-colors">Reliability Modeler</a></li>
-              <li><a href="/#architecture" className="text-muted-foreground hover:text-primary transition-colors">Tool Architecture</a></li>
-              <li><a href="/#awards" className="text-muted-foreground hover:text-primary transition-colors">Accolades &amp; Honors</a></li>
-              <li><a href="/#faq" className="text-muted-foreground hover:text-primary transition-colors">Technical FAQ</a></li>
-              <li><a href="/#contact" className="text-muted-foreground hover:text-primary transition-colors">Academic &amp; Student Inquiries</a></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About &amp; Credentials</Link></li>
+              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Engineering Expertise</Link></li>
+              <li><Link to="/experience" className="text-muted-foreground hover:text-primary transition-colors">Career Timeline (28y)</Link></li>
+              <li><Link to="/simulators" className="text-muted-foreground hover:text-primary transition-colors">Virtual Simulators</Link></li>
+              <li><Link to="/calculators" className="text-muted-foreground hover:text-primary transition-colors">Reliability Calculators</Link></li>
+              <li><Link to="/tools" className="text-muted-foreground hover:text-primary transition-colors">Software Platforms</Link></li>
+              <li><Link to="/insights" className="text-muted-foreground hover:text-primary transition-colors">Field Insights</Link></li>
+              <li><Link to="/training" className="text-muted-foreground hover:text-primary transition-colors">Mentorship Curriculum</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Technical Dialogue &amp; FAQ</Link></li>
             </ul>
           </div>
 
